@@ -10,9 +10,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "rounded-none border border-white/90 bg-[#f5f0e8] text-[#0a0f1e] uppercase tracking-[0.12em] text-xs px-8 py-4 h-auto hover:bg-white hover:bg-[#f5f0e8]/25 hover:text-white transition-colors duration-300",
+        default: "rounded-none border border-white/90 bg-[#f5f0e8] text-[#0a0f1e] uppercase tracking-[0.12em] text-xs px-8 py-4 h-auto hover:bg-white hover:bg-[#f5f0e8]/25 hover:text-white transition-colors duration-300 cursor-pointer",
         secondary:
-          "rounded-none border border-white/30 bg-transparent text-white/85 uppercase tracking-[0.12em] text-xs px-8 py-4 h-auto hover:border-white/70 hover:bg-[#f5f0e8]/25 hover:text-white transition-colors duration-300",
+          "rounded-none border border-white/30 bg-transparent text-white/85 uppercase tracking-[0.12em] text-xs px-8 py-4 h-auto hover:border-white/70 hover:bg-[#f5f0e8]/25 hover:text-white transition-colors duration-300 cursor-pointer",
+        accent:
+          "rounded-[3px] border-0 bg-gradient-to-br from-[#1d6aff] to-[#0ea5e9] text-white text-sm uppercase tracking-[0.025em] px-[1.1rem] py-[0.5rem] h-auto font-medium hover:opacity-90 hover:shadow-[0_0_18px_rgba(14,165,233,0.45)] transition-all duration-200 cursor-pointer",
       },
       size: {
         default:

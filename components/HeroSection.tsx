@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 // ── Idle animation parameters ────────────────────────────────────────────────
 // Cyan blob: wider, faster lemniscate
@@ -20,6 +21,7 @@ export default function HeroSection() {
     const bgRef = useRef<HTMLDivElement>(null);
     const cyanRef = useRef<HTMLDivElement>(null);
     const purpleRef = useRef<HTMLDivElement>(null);
+    const t = useTranslations("HeroSection");
 
     useEffect(() => {
         // ── Mobile guard — no JS animation, CSS handles it ──────────────────
@@ -65,7 +67,7 @@ export default function HeroSection() {
         observer.observe(section!);
 
         // ── Idle lemniscate — rAF throttled to 30 fps ───────────────────────
-        let t = 0;
+        let t2 = 0;
         let noiseT = Math.random() * 100;
         let startCx = 0, startCy = 0, startPx = 0, startPy = 0;
         let lastRafTime = 0;
@@ -77,7 +79,7 @@ export default function HeroSection() {
             if (now - lastRafTime < FRAME_MS) return;
             lastRafTime = now;
 
-            t += 0.008;
+            t2 += 0.008;
             noiseT += 0.003;
 
             // Layered sine noise for organic drift
@@ -86,13 +88,13 @@ export default function HeroSection() {
             const nPx = Math.sin(noiseT * 0.8 + 1) * 50 + Math.cos(noiseT * 1.2) * 35;
             const nPy = Math.cos(noiseT * 1.1 + 2) * 45 + Math.sin(noiseT * 0.6) * 20;
 
-            const tCx = Math.sin(t * C.fx + C.px) * C.ax + nCx;
-            const tCy = Math.cos(t * C.fy + C.py) * C.ay + nCy;
-            const tPx = Math.sin(t * P.fx + P.px) * P.ax + nPx;
-            const tPy = Math.cos(t * P.fy + P.py) * P.ay + nPy;
+            const tCx = Math.sin(t2 * C.fx + C.px) * C.ax + nCx;
+            const tCy = Math.cos(t2 * C.fy + C.py) * C.ay + nCy;
+            const tPx = Math.sin(t2 * P.fx + P.px) * P.ax + nPx;
+            const tPy = Math.cos(t2 * P.fy + P.py) * P.ay + nPy;
 
             // Smooth blend-in from wherever the blobs currently are
-            const raw = Math.min(t / INTRO_SECS, 1);
+            const raw = Math.min(t2 / INTRO_SECS, 1);
             const eased = raw < 1 ? raw * raw * (3 - 2 * raw) : 1;
 
             cx(startCx + (tCx - startCx) * eased || tCx);
@@ -103,7 +105,7 @@ export default function HeroSection() {
 
         function startIdle() {
             if (!isVisible || idleRafId) return;
-            t = 0;
+            t2 = 0;
             startCx = gsap.getProperty(cyan, "x") as number;
             startCy = gsap.getProperty(cyan, "y") as number;
             startPx = gsap.getProperty(purple, "x") as number;
@@ -177,7 +179,7 @@ export default function HeroSection() {
                     focusable="false"
                 >
                     <filter id="noiseFilter">
-                        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="2" />
+                        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={2} />
                         <feColorMatrix type="saturate" values="0" />
                         <feComponentTransfer>
                             <feFuncA type="discrete" tableValues="0 0 1 1" />
@@ -203,36 +205,33 @@ export default function HeroSection() {
                         priority
                     />
                     <div className="hero-card-overlay">
-                        <span className="hero-card-label">Spotlight on</span>
-                        <span className="hero-card-name">Balzac Paris</span>
+                        <span className="hero-card-label">{t("cardLabel")}</span>
+                        <span className="hero-card-name">{t("cardName")}</span>
                     </div>
                     <div className="hero-card-accent" />
                 </div>
 
                 {/* Right — text */}
                 <div className="hero-text">
-                    <p className="hero-tagline">Create. Develop. Perform.</p>
+                    <p className="hero-tagline">{t("tagline")}</p>
 
                     <h1 className="hero-heading">
-                        Web Agency
-                        <br />
-                        E-Commerce
-                        <br />
-                        Marketing
+                        {t("heading").split("\n").map((line, i, arr) => (
+                            <span key={i}>
+                                {line}
+                                {i < arr.length - 1 && <br />}
+                            </span>
+                        ))}
                     </h1>
 
-                    <p className="hero-description">
-                        We design e-commerce and corporate websites built to reflect your
-                        brand, streamline navigation, and maximise conversions. Demanding
-                        design, solid development, business vision, and long-term support.
-                    </p>
+                    <p className="hero-description">{t("description")}</p>
 
                     <div className="hero-ctas">
-                        <Button render={<a href="#" />}>
-                            Start your project
+                        <Button render={<a href="#" />} nativeButton={false}>
+                            {t("ctaPrimary")}
                         </Button>
-                        <Button variant="secondary" render={<a href="#" />}>
-                            Discover our work
+                        <Button variant="secondary" render={<a href="#" />} nativeButton={false}>
+                            {t("ctaSecondary")}
                         </Button>
                     </div>
                 </div>

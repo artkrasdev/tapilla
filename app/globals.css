@@ -108,7 +108,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
-    height: 56px;
+    height: 64px;
     /* Start fully transparent */
     background: transparent;
     transition:
@@ -133,9 +133,9 @@ body {
   }
 
   .site-header__link {
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 0.06em;
+    letter-spacing: -0.025em;
     color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     text-transform: capitalize;
@@ -151,9 +151,9 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.35rem;
+    font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.025em;
     text-transform: lowercase;
     color: #fff;
     text-decoration: none;
@@ -170,6 +170,119 @@ body {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+  }
+
+  /* ── Language picker dropdown ── */
+  .lang-picker {
+    position: relative;
+  }
+
+  .lang-picker__trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    height: 1.875rem;
+    padding: 0 0.65rem;
+    font-size: 0.775rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .lang-picker__trigger:hover,
+  .lang-picker__trigger--open {
+    background: rgba(255, 255, 255, 0.11);
+    border-color: rgba(255, 255, 255, 0.28);
+    color: #fff;
+  }
+
+  .lang-picker__icon {
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .lang-picker__label {
+    line-height: 1;
+  }
+
+  .lang-picker__chevron {
+    opacity: 0.6;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+  }
+
+  .lang-picker__chevron--open {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown panel */
+  .lang-picker__dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 200;
+    padding: 0.3rem;
+    animation: lang-dropdown-in 0.15s ease forwards;
+  }
+
+  @keyframes lang-dropdown-in {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Individual option */
+  .lang-picker__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .lang-picker__option:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .lang-picker__option--active {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  .lang-picker__check {
+    color: #fff;
+    flex-shrink: 0;
   }
 
   /* Shopify badge */
@@ -192,14 +305,14 @@ body {
   .site-header__badge-title {
     font-size: 0.55rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.025em;
     color: rgba(255, 255, 255, 0.85);
   }
 
   .site-header__badge-subtitle {
     font-size: 0.5rem;
     font-weight: 400;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.025em;
     color: rgba(255, 255, 255, 0.5);
   }
 
@@ -209,11 +322,9 @@ body {
     align-items: center;
     gap: 0.4rem;
     padding: 0.5rem 1.1rem;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
     text-transform: uppercase;
-    text-decoration: none;
     color: #fff;
     background: linear-gradient(135deg, #1d6aff 0%, #0ea5e9 100%);
     border-radius: 3px;

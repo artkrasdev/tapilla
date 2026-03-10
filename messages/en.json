@@ -1,0 +1,18 @@
+{
+    "Header": {
+        "agency": "The Agency",
+        "whatWeDo": "Our work",
+        "clients": "Clients",
+        "projects": "Projects",
+        "contact": "Contact us"
+    },
+    "HeroSection": {
+        "tagline": "Create. Develop. Perform.",
+        "heading": "Web Agency\nE-Commerce\nMarketing",
+        "description": "We design e-commerce and corporate websites built to reflect your brand, streamline navigation, and maximise conversions. Demanding design, solid development, business vision, and long-term support.",
+        "ctaPrimary": "Start your project",
+        "ctaSecondary": "Discover our work",
+        "cardLabel": "Spotlight on",
+        "cardName": "Balzac Paris"
+    }
+}
