@@ -93,6 +93,145 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   SITE HEADER
+══════════════════════════════════════════════════════════════════════ */
+
+@layer components {
+
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 56px;
+    /* Start fully transparent */
+    background: transparent;
+    transition:
+      background 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      backdrop-filter 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* After scroll — solid dark background */
+  .site-header--scrolled {
+    background: rgba(5, 8, 20, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Nav links ── */
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .site-header__link {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.2s ease;
+  }
+
+  .site-header__link:hover {
+    color: #fff;
+  }
+
+  /* ── Centred logo / wordmark ── */
+  .site-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.35rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: lowercase;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+  }
+
+  .site-header__logo:hover {
+    opacity: 0.8;
+  }
+
+  /* ── Right-side actions ── */
+  .site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  /* Shopify badge */
+  .site-header__badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.3rem 0.65rem;
+    border-radius: 4px;
+  }
+
+  .site-header__badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .site-header__badge-title {
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .site-header__badge-subtitle {
+    font-size: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Blue CTA button */
+  .site-header__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #1d6aff 0%, #0ea5e9 100%);
+    border-radius: 3px;
+    transition: opacity 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+  }
+
+  .site-header__cta:hover {
+    opacity: 0.88;
+    box-shadow: 0 0 18px rgba(14, 165, 233, 0.45);
+  }
+
+}
+
+/* end @layer components — site header */
+
+/* ══════════════════════════════════════════════════════════════════════
    HERO SECTION
 ══════════════════════════════════════════════════════════════════════ */
 
@@ -366,9 +505,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

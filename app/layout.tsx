@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Header from "@/components/Header";
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           "--font-secondary": '"PP Editorial New Ultra light", "Trebuchet MS", sans-serif',
         } as React.CSSProperties}
       >
+        <Header />
         {children}
       </body>
     </html>
