@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Button } from "@/components/ui/button";
 
 // ── Idle animation parameters ────────────────────────────────────────────────
 // Cyan blob: wider, faster lemniscate
@@ -202,7 +203,7 @@ export default function HeroSection() {
                         priority
                     />
                     <div className="hero-card-overlay">
-                        <span className="hero-card-label">Zoomé sur</span>
+                        <span className="hero-card-label">Spotlight on</span>
                         <span className="hero-card-name">Balzac Paris</span>
                     </div>
                     <div className="hero-card-accent" />
@@ -213,7 +214,7 @@ export default function HeroSection() {
                     <p className="hero-tagline">Create. Develop. Perform.</p>
 
                     <h1 className="hero-heading">
-                        Agence Web
+                        Web Agency
                         <br />
                         E-Commerce
                         <br />
@@ -221,19 +222,18 @@ export default function HeroSection() {
                     </h1>
 
                     <p className="hero-description">
-                        Nous concevons des sites e-commerce et corporate pensés pour
-                        refléter votre univers, fluidifier la navigation et maximiser les
-                        conversions. Design exigeant, développement solide, vision business
-                        et accompagnement long terme.
+                        We design e-commerce and corporate websites built to reflect your
+                        brand, streamline navigation, and maximise conversions. Demanding
+                        design, solid development, business vision, and long-term support.
                     </p>
 
                     <div className="hero-ctas">
-                        <a href="#" className="hero-btn-primary">
-                            Démarrer votre projet
-                        </a>
-                        <a href="#" className="hero-btn-secondary">
-                            Découvrir nos réalisations
-                        </a>
+                        <Button render={<a href="#" />}>
+                            Start your project
+                        </Button>
+                        <Button variant="secondary" render={<a href="#" />}>
+                            Discover our work
+                        </Button>
                     </div>
                 </div>
 
