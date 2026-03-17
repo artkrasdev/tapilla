@@ -20,5 +20,11 @@
         "slide2Name": "Project x Paris",
         "slide3Label": "Case study",
         "slide3Name": "Maison Kitsune"
+    },
+    "BrandsSection": {
+        "subtitle": "Stories that connect us",
+        "heading": "We support hundreds of brands, across all industries.",
+        "cta": "View our case studies",
+        "description": "For 25 years, Tapilla has merged technical expertise and Retail culture (40 years of group experience) to propel ambitious brands. We offer comprehensive support: upstream consulting, elite production, and post-launch performance monitoring."
     }
 }
