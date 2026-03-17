@@ -13,6 +13,12 @@
         "ctaPrimary": "Start your project",
         "ctaSecondary": "Discover our work",
         "cardLabel": "Spotlight on",
-        "cardName": "Balzac Paris"
+        "cardName": "Balzac Paris",
+        "slide1Label": "Spotlight on",
+        "slide1Name": "Balzac Paris",
+        "slide2Label": "Zoom on",
+        "slide2Name": "Project x Paris",
+        "slide3Label": "Case study",
+        "slide3Name": "Maison Kitsune"
     }
 }

@@ -8,11 +8,17 @@
     },
     "HeroSection": {
         "tagline": "Создаём. Разрабатываем. Продвигаем.",
-        "heading": "Веб-агентство\nE-Commerce\nМаркетинг",
+        "heading": "Веб-студия\nE-Commerce\nМаркетинг",
         "description": "Мы создаём интернет-магазины и корпоративные сайты, которые отражают ваш бренд, упрощают навигацию и максимизируют конверсию. Требовательный дизайн, надёжная разработка, бизнес-видение и долгосрочная поддержка.",
         "ctaPrimary": "Начать проект",
         "ctaSecondary": "Смотреть работы",
         "cardLabel": "В центре внимания",
-        "cardName": "Balzac Paris"
+        "cardName": "Balzac Paris",
+        "slide1Label": "В центре внимания",
+        "slide1Name": "Balzac Paris",
+        "slide2Label": "Подробнее о",
+        "slide2Name": "Project x Paris",
+        "slide3Label": "Кейс",
+        "slide3Name": "Maison Kitsune"
     }
 }
