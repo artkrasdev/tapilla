@@ -39,12 +39,7 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale} className={cn("font-sans", geist.variable)}>
-            <body
-                className={`${inter.variable} antialiased`}
-                style={{
-                    "--font-secondary": '"PP Editorial New Ultra light", "Trebuchet MS", sans-serif',
-                } as React.CSSProperties}
-            >
+            <body className={`${inter.variable} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     {children}

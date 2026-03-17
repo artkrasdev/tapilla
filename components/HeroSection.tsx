@@ -163,9 +163,12 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="hero-section">
+        <section
+            ref={sectionRef}
+            className="relative min-h-svh w-full overflow-hidden isolate bg-(--hero-bg) flex items-center"
+        >
 
-            {/* ── Animated blob layer ── */}
+            {/* ── Animated blob layer (stays as CSS — GSAP-driven) ── */}
             <div ref={bgRef} className="hero-bg">
                 <div ref={cyanRef} className="giant-blob blob-cyan" />
                 <div className="giant-blob blob-dark" />
@@ -193,10 +196,10 @@ export default function HeroSection() {
             </div>
 
             {/* ── Content ── */}
-            <div className="hero-content">
+            <div className="relative z-10 mx-auto w-full max-w-[1200px] flex flex-col items-center gap-12 px-6 py-24 md:flex-row md:items-center md:gap-16 md:px-8 lg:px-12">
 
                 {/* Left — image card */}
-                <div className="hero-card">
+                <div className="shrink-0 relative overflow-hidden rounded-2xl w-[210px] h-[300px] shadow-[0_8px_40px_rgba(0,0,0,0.6)]">
                     <Image
                         src="/hero-card.jpg"
                         alt="Balzac Paris project showcase"
@@ -204,18 +207,18 @@ export default function HeroSection() {
                         className="object-cover"
                         priority
                     />
-                    <div className="hero-card-overlay">
-                        <span className="hero-card-label">{t("cardLabel")}</span>
-                        <span className="hero-card-name">{t("cardName")}</span>
+                    <div className="absolute inset-x-0 bottom-0 flex flex-col justify-end pt-20 px-4 pb-4 bg-linear-to-t from-black/85 to-transparent">
+                        <span className="text-xs font-light text-white/70">{t("cardLabel")}</span>
+                        <span className="text-base font-semibold text-white">{t("cardName")}</span>
                     </div>
-                    <div className="hero-card-accent" />
+                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-cyan-400 to-blue-500" />
                 </div>
 
                 {/* Right — text */}
-                <div className="hero-text">
-                    <p className="hero-tagline">{t("tagline")}</p>
+                <div className="flex flex-col gap-6">
+                    <p className="text-[1.4rem] font-light tracking-tight text-white/60 font-secondary">{t("tagline")}</p>
 
-                    <h1 className="hero-heading">
+                    <h1 className="text-[clamp(3.5rem,7vw,8.5rem)] leading-[0.95] tracking-tight uppercase text-white drop-shadow-[0_2px_30px_rgba(0,0,0,0.4)]">
                         {t("heading").split("\n").map((line, i, arr) => (
                             <span key={i}>
                                 {line}
@@ -224,9 +227,9 @@ export default function HeroSection() {
                         ))}
                     </h1>
 
-                    <p className="hero-description">{t("description")}</p>
+                    <p className="max-w-[520px] text-base font-light leading-relaxed tracking-wide text-white/70">{t("description")}</p>
 
-                    <div className="hero-ctas">
+                    <div className="flex flex-wrap items-center gap-4 pt-2">
                         <Button render={<a href="#" />} nativeButton={false}>
                             {t("ctaPrimary")}
                         </Button>

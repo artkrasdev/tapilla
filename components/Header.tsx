@@ -52,58 +52,75 @@ export default function Header() {
     return (
         <header
             ref={headerRef}
-            className={cn("site-header", scrolled && "site-header--scrolled")}
+            className={cn(
+                "fixed top-0 left-0 right-0 z-100 flex items-center justify-between px-8 h-16 bg-transparent transition-[background,backdrop-filter,box-shadow] duration-450 ease-in-out",
+                scrolled && "bg-[rgba(5,8,20,0.96)] backdrop-blur-md shadow-[0_1px_0_rgba(255,255,255,0.06)]"
+            )}
         >
             {/* Left — nav links */}
-            <nav className="site-header__nav" aria-label="Main navigation">
-                <a href="#" className="site-header__link">{t("agency")}</a>
-                <a href="#" className="site-header__link">{t("whatWeDo")}</a>
-                <a href="#" className="site-header__link">{t("clients")}</a>
-                <a href="#" className="site-header__link">{t("projects")}</a>
+            <nav className="flex items-center gap-8" aria-label="Main navigation">
+                <a href="#" className="text-base font-normal -tracking-[0.025em] text-white/75 no-underline capitalize transition-colors duration-200 hover:text-white">{t("agency")}</a>
+                <a href="#" className="text-base font-normal -tracking-[0.025em] text-white/75 no-underline capitalize transition-colors duration-200 hover:text-white">{t("whatWeDo")}</a>
+                <a href="#" className="text-base font-normal -tracking-[0.025em] text-white/75 no-underline capitalize transition-colors duration-200 hover:text-white">{t("clients")}</a>
+                <a href="#" className="text-base font-normal -tracking-[0.025em] text-white/75 no-underline capitalize transition-colors duration-200 hover:text-white">{t("projects")}</a>
             </nav>
 
             {/* Centre — wordmark */}
-            <a href="/" className="site-header__logo" aria-label="agency — home">
+            <a
+                href="/"
+                className="absolute left-1/2 -translate-x-1/2 text-base font-light tracking-[0.025em] lowercase text-white no-underline whitespace-nowrap transition-opacity duration-200 hover:opacity-80"
+                aria-label="agency — home"
+            >
                 agency
             </a>
 
             {/* Right — language dropdown + CTA */}
-            <div className="site-header__actions">
+            <div className="flex items-center gap-5">
 
                 {/* Language picker */}
-                <div className="lang-picker" ref={dropdownRef}>
+                <div className="relative" ref={dropdownRef}>
                     <button
-                        className={cn("lang-picker__trigger", langOpen && "lang-picker__trigger--open")}
+                        className={cn(
+                            "inline-flex items-center gap-1.5 h-7.5 px-2.5 text-[0.775rem] font-medium tracking-[0.02em] text-white/85 bg-white/6 border border-white/14 rounded-md cursor-pointer transition-[background,border-color,color] duration-200 whitespace-nowrap",
+                            langOpen && "bg-white/11 border-white/28 text-white"
+                        )}
                         onClick={() => setLangOpen((v) => !v)}
                         aria-haspopup="listbox"
                         aria-expanded={langOpen}
                         aria-label="Select language"
                     >
-                        <Globe size={14} strokeWidth={1.5} className="lang-picker__icon" />
-                        <span className="lang-picker__label">{currentLocale.label}</span>
+                        <Globe size={14} strokeWidth={1.5} className="opacity-70 shrink-0" />
+                        <span className="leading-none">{currentLocale.label}</span>
                         <ChevronDown
                             size={12}
                             strokeWidth={2}
-                            className={cn("lang-picker__chevron", langOpen && "lang-picker__chevron--open")}
+                            className={cn(
+                                "opacity-60 shrink-0 transition-transform duration-200",
+                                langOpen && "rotate-180"
+                            )}
                         />
                     </button>
 
                     {langOpen && (
-                        <div className="lang-picker__dropdown" role="listbox" aria-label="Language options">
+                        <div
+                            className="absolute top-[calc(100%+0.5rem)] right-0 w-full bg-white/6 border border-white/18 rounded-lg backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden z-200 p-1 animate-[lang-dropdown-in_0.15s_ease_forwards]"
+                            role="listbox"
+                            aria-label="Language options"
+                        >
                             {LOCALES.map((loc) => (
                                 <button
                                     key={loc.code}
                                     role="option"
                                     aria-selected={loc.code === locale}
                                     className={cn(
-                                        "lang-picker__option",
-                                        loc.code === locale && "lang-picker__option--active"
+                                        "flex items-center justify-between gap-2 w-full py-2 px-2.5 text-[0.8rem] font-normal text-white/70 bg-transparent border-none rounded-[5px] cursor-pointer text-left transition-[background,color] duration-150 hover:bg-white/10 hover:text-white",
+                                        loc.code === locale && "text-white font-medium"
                                     )}
                                     onClick={() => switchLocale(loc.code)}
                                 >
                                     <span>{loc.label}</span>
                                     {loc.code === locale && (
-                                        <Check size={12} strokeWidth={2.5} className="lang-picker__check" />
+                                        <Check size={12} strokeWidth={2.5} className="text-white shrink-0" />
                                     )}
                                 </button>
                             ))}
