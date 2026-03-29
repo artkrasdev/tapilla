@@ -40,5 +40,31 @@
         "tech2": "Prestashop",
         "tech4": "Wordpress",
         "tech6": "Automation, N8N & SI Interfaces"
+    },
+    "FaqSection": {
+        "subtitle": "We clarify it all, no jargon",
+        "heading": "WE ANSWER YOUR\nQUESTIONS, SIMPLY",
+        "description": "Before working together, it's normal to have questions. Here are the answers to the most common ones — and if you have more, get in touch :)",
+        "cta": "Contact us",
+        "faq1": {
+            "q": "Why choose an e-commerce agency like Tapilla?",
+            "a": "We combine 25 years of tech expertise with deep retail culture. From strategy to post-launch optimisation, our full-stack team delivers measurable growth — not just pretty pages."
+        },
+        "faq2": {
+            "q": "What is your technical expertise on Shopify and Shopify Plus?",
+            "a": "We're certified Shopify Plus Partners. Our developers build custom themes, headless storefronts, complex checkout flows, and third-party integrations that scale with your business."
+        },
+        "faq3": {
+            "q": "How does your CRO and Data agency optimise my sales?",
+            "a": "We run continuous A/B tests, heatmap analyses, and funnel audits. Every recommendation is backed by data — so changes drive real revenue, not guesswork."
+        },
+        "faq4": {
+            "q": "How do you activate customer loyalty via CRM and Klaviyo?",
+            "a": "We design automated email and SMS flows — from welcome series to win-back campaigns — using Klaviyo's segmentation engine to deliver the right message at the right moment."
+        },
+        "faq5": {
+            "q": "Does Tapilla build institutional websites on Webflow or WordPress?",
+            "a": "Yes. For brands that need a corporate or editorial site alongside their store, we build on Webflow or WordPress with the same attention to design, performance, and SEO."
+        }
     }
 }
