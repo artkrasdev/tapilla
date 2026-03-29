@@ -4,22 +4,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@font-face {
-  font-family: "PP Editorial New";
-  src: url("/fonts/PPEditorialNew-Ultralight.otf") format("opentype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Editorial New";
-  src: url("/fonts/PPEditorialNew-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ── Design tokens ──────────────────────────────────────────────────── */
 :root {
 
@@ -34,14 +18,14 @@
   --border: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --radius: 0.625rem;
-  --font-secondary: "PP Editorial New", "Trebuchet MS", sans-serif;
+  --font-secondary: var(--font-cormorant), "Trebuchet MS", serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
-  --font-secondary: var(--font-secondary);
+  --font-secondary: var(--font-cormorant), "Trebuchet MS", serif;
   --color-ring: var(--ring);
   --color-border: var(--border);
   --color-destructive: var(--destructive);

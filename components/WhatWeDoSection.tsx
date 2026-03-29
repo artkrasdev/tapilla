@@ -79,7 +79,7 @@ export default function WhatWeDoSection() {
                 <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-12 md:gap-32 items-start">
 
                     {/* Col 1 — Section label */}
-                    <p className="text-[1.625rem] w-fit whitespace-nowrap font-light tracking-tight text-white/50 font-secondary md:pt-2">
+                    <p className="text-[1.625rem] w-fit whitespace-nowrap font-normal tracking-tight text-white/70 font-secondary md:pt-2">
                         {t("sectionLabel")}
                     </p>
 

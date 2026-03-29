@@ -14,7 +14,7 @@ export default function BrandsSection() {
                     {/* Left column */}
                     <div className="flex flex-col gap-6">
                         {/* Subtitle — matches HeroSection tagline */}
-                        <p className="text-[1.4rem] font-light tracking-tight text-white/60 font-secondary">
+                        <p className="text-[1.4rem] font-normal tracking-tight text-white/70 font-secondary">
                             {t("subtitle")}
                         </p>
 

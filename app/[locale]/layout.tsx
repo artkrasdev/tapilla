@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Geist } from "next/font/google";
+import { Inter, Geist, Cormorant } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
@@ -14,6 +14,12 @@ const inter = Inter({
     variable: "--font-inter",
     subsets: ["latin"],
     weight: ["300", "400", "500"],
+});
+
+const cormorant = Cormorant({
+    variable: "--font-cormorant",
+    subsets: ["latin"],
+    weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -39,7 +45,7 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale} className={cn("font-sans", geist.variable)}>
-            <body className={`${inter.variable} antialiased`}>
+            <body className={`${inter.variable} ${cormorant.variable} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     {children}

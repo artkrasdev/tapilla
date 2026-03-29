@@ -60,7 +60,7 @@ export default function FaqSection() {
                         <div className="flex items-start justify-between gap-8">
                             <div className="flex flex-col gap-2">
                                 {/* Subtitle */}
-                                <p className="text-[1.4rem] font-light tracking-tight text-white font-secondary">
+                                <p className="text-[1.4rem] font-normal tracking-tight text-white/70 font-secondary">
                                     {t("subtitle")}
                                 </p>
 

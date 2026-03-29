@@ -186,7 +186,7 @@ export default function HeroSection() {
 
                 {/* Right — text */}
                 <div className="flex flex-col gap-6 justify-center">
-                    <p className="text-[1.4rem] font-light tracking-tight text-white/60 font-secondary">{t("tagline")}</p>
+                    <p className="text-[1.4rem] font-normal tracking-tight text-white/70 font-secondary">{t("tagline")}</p>
 
                     <h1 className="text-[clamp(3.5rem,10vw,7.6rem)] leading-[0.95] tracking-tighter uppercase text-white [text-shadow:10px_8px_12px_rgba(0,0,0,0.20)]">
                         {t("heading").split("\n").map((line, i, arr) => (
