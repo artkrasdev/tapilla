@@ -26,5 +26,19 @@
         "heading": "We support hundreds of brands, across all industries.",
         "cta": "View our case studies",
         "description": "For 25 years, Tapilla has merged technical expertise and Retail culture (40 years of group experience) to propel ambitious brands. We offer comprehensive support: upstream consulting, elite production, and post-launch performance monitoring."
+    },
+    "WhatWeDoSection": {
+        "sectionLabel": "What We Do ?",
+        "brandTitle": "BRAND &\nEXPERIENCE",
+        "techTitle": "TECH &\nDATA",
+        "brand1": "Branding",
+        "brand2": "UX.UI Design",
+        "brand3": "Generative AI",
+        "brand4": "Content factory",
+        "brand5": "Edition, automated catalogue",
+        "tech1": "Shopify, Shopify B2B",
+        "tech2": "Prestashop",
+        "tech4": "Wordpress",
+        "tech6": "Automation, N8N & SI Interfaces"
     }
 }

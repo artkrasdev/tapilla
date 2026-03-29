@@ -90,7 +90,7 @@ export default function Header() {
                     <div className="relative" ref={dropdownRef}>
                         <button
                             className={cn(
-                                "inline-flex items-center gap-1.5 h-7.5 px-2.5 text-[0.775rem] font-medium tracking-[0.02em] text-white/85 bg-white/6 border border-white/14 rounded-md cursor-pointer transition-[background,border-color,color] duration-200 whitespace-nowrap",
+                                "inline-flex items-center gap-1.5 h-7.5 px-2.5 text-[0.775rem] font-medium tracking-[0.02em] text-white/85 bg-white/6 border border-white/14 rounded-[4px] cursor-pointer transition-[background,border-color,color] duration-200 whitespace-nowrap",
                                 langOpen && "bg-white/11 border-white/28 text-white"
                             )}
                             onClick={() => setLangOpen((v) => !v)}
@@ -112,7 +112,7 @@ export default function Header() {
 
                         {langOpen && (
                             <div
-                                className="absolute top-[calc(100%+0.5rem)] right-0 w-full bg-white/6 border border-white/18 rounded-lg backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.4)] overflow-hidden z-200 p-1 animate-[lang-dropdown-in_0.15s_ease_forwards]"
+                                className="absolute top-[calc(100%+0.5rem)] right-0 w-full bg-white/6 border border-white/18 rounded-[4px] backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] overflow-hidden z-200 p-1 animate-[lang-dropdown-in_0.15s_ease_forwards]"
                                 role="listbox"
                                 aria-label="Language options"
                             >
@@ -122,7 +122,7 @@ export default function Header() {
                                         role="option"
                                         aria-selected={loc.code === locale}
                                         className={cn(
-                                            "flex items-center justify-between gap-2 w-full py-2 px-2.5 text-[0.8rem] font-normal text-white/70 bg-transparent border-none rounded-[5px] cursor-pointer text-left transition-[background,color] duration-150 hover:bg-white/10 hover:text-white",
+                                            "flex items-center justify-between gap-2 w-full py-2 px-2.5 text-[0.8rem] font-normal text-white/70 bg-transparent border-none rounded-[3px] cursor-pointer text-left transition-[background,color] duration-150 hover:bg-white/10 hover:text-white",
                                             loc.code === locale && "text-white font-medium"
                                         )}
                                         onClick={() => switchLocale(loc.code)}
