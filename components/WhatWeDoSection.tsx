@@ -73,7 +73,7 @@ export default function WhatWeDoSection() {
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
-            <div className="relative z-10 w-full px-6 py-24 md:px-8 lg:px-8">
+            <div className="relative z-10 mx-auto w-full max-w-content px-6 py-24 md:px-8 lg:px-8">
 
                 {/* 2-column master grid: label | content */}
                 <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-12 md:gap-32 items-start">

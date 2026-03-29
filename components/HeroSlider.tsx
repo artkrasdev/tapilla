@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 // ── Slider config ────────────────────────────────────────────────────────────
@@ -12,33 +12,14 @@ export default function HeroSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [timerKey, setTimerKey] = useState(0);
     const slideCount = SLIDE_IMAGES.length;
-    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-    const goToSlide = useCallback(
-        (index: number) => {
-            setActiveSlide(index);
-            setTimerKey((k) => k + 1);
-            if (intervalRef.current) clearInterval(intervalRef.current);
-            intervalRef.current = setInterval(() => {
-                setActiveSlide((prev) => (prev + 1) % slideCount);
-                setTimerKey((k) => k + 1);
-            }, SLIDE_DURATION);
-        },
-        [slideCount],
-    );
-
-    useEffect(() => {
-        intervalRef.current = setInterval(() => {
-            setActiveSlide((prev) => (prev + 1) % slideCount);
-            setTimerKey((k) => k + 1);
-        }, SLIDE_DURATION);
-        return () => {
-            if (intervalRef.current) clearInterval(intervalRef.current);
-        };
-    }, [slideCount]);
+    const goToSlide = useCallback((index: number) => {
+        setActiveSlide(index);
+        setTimerKey((k) => k + 1);
+    }, []);
 
     return (
-        <div className="shrink-0 relative overflow-hidden rounded-lg w-[280px] min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex flex-col">
+        <div className="shrink-0 relative overflow-hidden rounded-lg w-[280px] min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex flex-col group">
 
             {/* Slides */}
             <div className="relative flex-1">
@@ -77,10 +58,11 @@ export default function HeroSlider() {
                         {i === activeSlide && (
                             <span
                                 key={timerKey}
-                                className="absolute inset-0 rounded-full bg-white origin-left"
+                                className="absolute inset-0 rounded-full bg-white origin-left group-hover:paused!"
                                 style={{
                                     animation: `timer-fill ${SLIDE_DURATION}ms linear forwards`,
                                 }}
+                                onAnimationEnd={() => goToSlide((activeSlide + 1) % slideCount)}
                             />
                         )}
                         {i < activeSlide && (
