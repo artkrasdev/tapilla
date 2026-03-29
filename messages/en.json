@@ -66,5 +66,35 @@
             "q": "Does Tapilla build institutional websites on Webflow or WordPress?",
             "a": "Yes. For brands that need a corporate or editorial site alongside their store, we build on Webflow or WordPress with the same attention to design, performance, and SEO."
         }
+    },
+    "Footer": {
+        "pillar1": "Imagine\n& Create",
+        "pillar2": "Develop &\nPropel",
+        "pillar3": "Support\n& Perform",
+        "ctaHeading": "WE HELP\nBRING YOUR\nPROJECTS TO LIFE.",
+        "tagline": "Create. Develop. Perform.",
+        "ctaButton": "Contact us",
+        "coordinates": "45°25'17\"N 04°22'07\"E",
+        "madeBy": "Made by Tapilla",
+        "phone": "+33 1 23 456 789",
+        "companyDescription": "Tapilla serves clients worldwide. Our team is based in Paris and Lyon, France.",
+        "email": "hello@tapilla.com",
+        "servicesTitle": "Our services",
+        "service1": "Brand & Experience",
+        "service2": "Tech & Data",
+        "service3": "Growth & Performance",
+        "service4": "Corporate website design",
+        "expertiseTitle": "Our expertise",
+        "expertise1": "Shopify Agency",
+        "expertise2": "Branding",
+        "expertise3": "WordPress",
+        "quickTitle": "Quick access",
+        "quick1": "Careers",
+        "quick2": "News & Articles",
+        "quick3": "Client Reviews",
+        "quick4": "Partners",
+        "copyright": "All rights reserved.",
+        "legal1": "Privacy Policy",
+        "legal2": "Legal Notice"
     }
 }

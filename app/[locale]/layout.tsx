@@ -3,6 +3,7 @@ import { Inter, Geist, Cormorant } from "next/font/google";
 import "../globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -49,6 +50,7 @@ export default async function LocaleLayout({
                 <NextIntlClientProvider messages={messages}>
                     <Header />
                     {children}
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>

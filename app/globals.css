@@ -132,8 +132,13 @@ body {
 
 /* ── Hero slider timer-fill animation ── */
 @keyframes timer-fill {
-  from { transform: scaleX(0); }
-  to   { transform: scaleX(1); }
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -141,8 +146,13 @@ body {
 ══════════════════════════════════════════════════════════════════════ */
 
 @keyframes marquee-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-section {
@@ -232,6 +242,122 @@ body {
 
   .marquee-section {
     padding: 1.25rem 0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════
+   FOOTER — accent-blue gradient box with noise
+══════════════════════════════════════════════════════════════════════ */
+
+.footer-section {
+  position: relative;
+}
+
+/* ── Gradient container ── */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #0b1221;
+}
+
+/* Gradient layer 1 — cyan-dominant, drifts right/down */
+.footer-gradient-1 {
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(6, 182, 212, 0.6), transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(99, 102, 241, 0.3), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0.7), transparent 40%);
+  animation: footer-drift-1 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Gradient layer 2 — purple-dominant, drifts left/up */
+.footer-gradient-2 {
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 65% 25%, rgba(99, 102, 241, 0.5), transparent 45%),
+    radial-gradient(circle at 30% 75%, rgba(6, 182, 212, 0.35), transparent 50%);
+  animation: footer-drift-2 35s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes footer-drift-1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(8%, 5%) scale(1.05);
+  }
+
+  100% {
+    transform: translate(-5%, 8%) scale(1.02);
+  }
+}
+
+@keyframes footer-drift-2 {
+  0% {
+    transform: translate(0, 0) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-10%, -5%) scale(1);
+  }
+
+  100% {
+    transform: translate(6%, -8%) scale(1.08);
+  }
+}
+
+/* ── Noise wrapper ── */
+.footer-noise {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-grain-anim {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.225;
+  animation: footer-grain 8s steps(6) infinite;
+  will-change: transform;
+}
+
+@keyframes footer-grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  16% {
+    transform: translate(-3%, -8%);
+  }
+
+  33% {
+    transform: translate(5%, 3%);
+  }
+
+  50% {
+    transform: translate(-7%, 5%);
+  }
+
+  66% {
+    transform: translate(4%, -6%);
+  }
+
+  83% {
+    transform: translate(-2%, 7%);
   }
 }
 
