@@ -72,7 +72,7 @@ export default function Header() {
     const currentLocale = LOCALES.find((l) => l.code === locale) ?? LOCALES[0];
 
     const navLinks = [
-        { label: t("agency"), href: "#" },
+        { label: t("agency"), href: `/${locale}/agency` },
         { label: t("whatWeDo"), href: `/${locale}/services` },
     ];
 

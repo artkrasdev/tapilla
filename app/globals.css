@@ -388,6 +388,19 @@ body {
   }
 }
 
+/* ══════════════════════════════════════════════════════════════════════
+   VALUE SLIDER — infinite horizontal scroll with text cards
+══════════════════════════════════════════════════════════════════════ */
+
+@keyframes value-slider-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

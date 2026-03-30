@@ -28,8 +28,8 @@ export default function PageHeader({ subtitle, heading, description, buttonText,
                     </div>
 
                     {/* Right column — description */}
-                    <div className="flex flex-col justify-center self-stretch max-w-[500px] gap-4 md:items-end">
-                        <p className="text-base font-light leading-5 tracking-tight text-white md:text-right">
+                    <div className="flex flex-col justify-center self-stretch max-w-[500px] gap-4 items-start">
+                        <p className="text-base font-light leading-5 tracking-tight text-white text-left">
                             {description}
                         </p>
                         {buttonText && buttonLink && (

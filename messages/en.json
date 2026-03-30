@@ -66,6 +66,52 @@
             "a": "Yes. For brands that need a corporate or editorial site alongside their store, we build on Webflow or WordPress with the same attention to design, performance, and SEO."
         }
     },
+    "AgencyPage": {
+        "subtitle": "The Agency",
+        "heading": "PASSIONATE ABOUT BRANDS AND DIGITAL TRANSFORMATION",
+        "description": "At Tapilla, we believe above all in encounters and ideas that come to life through people. For over 20 years, we have been accompanying brands on their digital adventure, combining creativity, expertise and attention to detail. Each project is a shared story, built on trust, passion and the desire to always go further.",
+        "buttonText": "Discover our services",
+        "buttonLink": "/en/services",
+        "Mission": {
+            "subtitle": "Our Mission",
+            "heading": "CREATING VALUE IN EVERY DIGITAL PROJECT",
+            "description": "At Tapilla, our mission is to transform our clients' ambitions into lasting digital successes. We combine expertise, creativity and innovation to imagine high-performance e-commerce solutions, designed for today and ready for tomorrow. Driven by people, excellence and integrity, we design projects that engage, inspire and create real value."
+        },
+        "Values": {
+            "onTime": {
+                "title": "On Time",
+                "subtitle": "We respect your time and your required deadlines. Our process is built to deliver on schedule. We plan ahead, communicate proactively and track each milestone, so you know what's happening and when."
+            },
+            "onBudget": {
+                "title": "On Budget",
+                "subtitle": "We don't believe in surprises and unexpected costs. We ensure that the scope of work is clearly and carefully defined, communicated and approved upfront before work begins. We're transparent and stick to the budget throughout the entire engagement."
+            },
+            "proactive": {
+                "title": "Proactive",
+                "subtitle": "Whether we have completed a task or modified a timeline, our team keeps you constantly updated at every point within your project or engagement to ensure you are always aware of the status."
+            },
+            "conversionFocused": {
+                "title": "Conversion-Focused",
+                "subtitle": "We're a conversion-focused agency. Every decision we make is influenced by what we can do to maximize your conversion rate and use Shopify and BigCommerce to its full potential."
+            },
+            "bespoke": {
+                "title": "Bespoke",
+                "subtitle": "We build fully custom solutions tailored to your brand and customer that are strategically defined to meet your requirements, solve your pain-points and maximize your growth."
+            },
+            "specialized": {
+                "title": "Specialized",
+                "subtitle": "We're a specialized, in-house, senior-level team that is trained and certified on the platforms and technologies we are partnered with. Each team member is skilled and experienced in eCommerce strategy, design, development and optimization."
+            },
+            "transparent": {
+                "title": "Transparent",
+                "subtitle": "You'll always know the status of your project or engagement and the dependencies, assumptions and risks they bring. From project milestones and financials to deliverables and timelines, we provide full transparency into every aspect."
+            },
+            "partnerPreferred": {
+                "title": "Partner Preferred",
+                "subtitle": "Our success is tied to yours. We invest in long-term partnerships with our clients, providing ongoing support, optimization, and strategic insights well beyond the build."
+            }
+        }
+    },
     "ServicesPage": {
         "subtitle": "To each brand, its own digital story",
         "heading": "SERVICES DESIGNED TO SUPPORT YOUR PROJECTS",
