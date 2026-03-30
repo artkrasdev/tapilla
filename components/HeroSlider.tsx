@@ -19,7 +19,7 @@ export default function HeroSlider() {
     }, []);
 
     return (
-        <div className="shrink-0 relative overflow-hidden rounded-lg w-[280px] min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex flex-col group">
+        <div className="hidden md:flex shrink-0 relative overflow-hidden rounded-lg w-[220px] lg:w-[280px] min-h-[340px] lg:min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex-col group">
 
             {/* Slides */}
             <div className="relative flex-1">

@@ -123,13 +123,6 @@ body {
   pointer-events: none;
 }
 
-/* ── Mobile: disable blobs ── */
-@media (max-width: 766px) {
-  .hero-bg {
-    display: none;
-  }
-}
-
 /* ── Hero slider timer-fill animation ── */
 @keyframes timer-fill {
   from {

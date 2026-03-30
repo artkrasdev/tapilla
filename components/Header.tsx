@@ -91,7 +91,7 @@ export default function Header() {
                     }}
                 />
 
-                <div className="relative z-10 mx-auto flex w-full max-w-content items-center justify-between px-8 h-16">
+                <div className="relative z-10 mx-auto flex w-full max-w-content items-center justify-between px-[5%] md:px-8 h-16">
 
                     {/* ═══ MOBILE: Burger button (left) ═══ */}
                     <button
