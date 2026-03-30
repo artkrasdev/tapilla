@@ -1,8 +1,7 @@
 {
     "Header": {
         "agency": "The Agency",
-        "whatWeDo": "Our work",
-
+        "whatWeDo": "Our services",
         "contact": "Contact us",
         "startProject": "Start your project"
     },
@@ -66,6 +65,11 @@
             "q": "Does Tapilla build institutional websites on Webflow or WordPress?",
             "a": "Yes. For brands that need a corporate or editorial site alongside their store, we build on Webflow or WordPress with the same attention to design, performance, and SEO."
         }
+    },
+    "ServicesPage": {
+        "subtitle": "To each brand, its own digital story",
+        "heading": "SERVICES DESIGNED TO SUPPORT YOUR PROJECTS",
+        "description": "At Tapilla, every project starts with a story — yours. We imagine, design and develop tailor-made digital ecosystems — from e-commerce sites to marketing strategy, through design and content management. Our mission: create online experiences that reflect your world, serve your ambitions and sustainably support your growth."
     },
     "Footer": {
         "pillar1": "Imagine\n& Create",
