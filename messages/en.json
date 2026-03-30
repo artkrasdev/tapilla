@@ -2,9 +2,9 @@
     "Header": {
         "agency": "The Agency",
         "whatWeDo": "Our work",
-        "clients": "Clients",
-        "projects": "Projects",
-        "contact": "Contact us"
+
+        "contact": "Contact us",
+        "startProject": "Start your project"
     },
     "HeroSection": {
         "tagline": "Create. Develop. Perform.",

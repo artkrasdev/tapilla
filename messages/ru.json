@@ -2,9 +2,9 @@
     "Header": {
         "agency": "Агентство",
         "whatWeDo": "Наши работы",
-        "clients": "Клиенты",
-        "projects": "Проекты",
-        "contact": "Связаться"
+
+        "contact": "Связаться",
+        "startProject": "Начать проект"
     },
     "HeroSection": {
         "tagline": "Создаём. Разрабатываем. Продвигаем.",
@@ -29,7 +29,7 @@
     },
     "WhatWeDoSection": {
         "sectionLabel": "Чем мы занимаемся ?",
-        "brandTitle": "БРЕНД И\nОПЫТ",
+        "brandTitle": "БРЕНД \nИ ОПЫТ",
         "techTitle": "ТЕХНОЛОГИИ\nИ ДАННЫЕ",
         "brand1": "Брендинг",
         "brand2": "UX/UI Дизайн",
