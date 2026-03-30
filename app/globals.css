@@ -219,6 +219,26 @@ body {
   pointer-events: none;
 }
 
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .marquee-container {
+    animation-duration: 16s;
+  }
+
+  .marquee-track {
+    gap: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .marquee-item {
+    height: 20px;
+  }
+
+  .marquee-section {
+    padding: 1.5rem 0;
+  }
+}
+
 /* Speed up a bit on smaller screens where fewer logos are visible */
 @media (max-width: 768px) {
   .marquee-container {
@@ -227,10 +247,11 @@ body {
 
   .marquee-track {
     gap: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .marquee-item {
-    height: 18px;
+    height: 16px;
   }
 
   .marquee-section {

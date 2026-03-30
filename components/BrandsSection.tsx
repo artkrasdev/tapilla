@@ -9,8 +9,8 @@ export default function BrandsSection() {
     return (
         <section className="relative w-full bg-black overflow-hidden">
             {/* Content — same wrapper as HeroSection */}
-            <div className="relative z-10 mx-auto w-full max-w-content px-6 py-24 md:px-8 lg:px-12">
-                <div className="flex flex-col gap-12 md:px-[4.7rem] md:flex-row md:items-start md:justify-between md:gap-30">
+            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12">
+                <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-20">
                     {/* Left column */}
                     <div className="flex flex-col gap-6">
                         {/* Subtitle — matches HeroSection tagline */}

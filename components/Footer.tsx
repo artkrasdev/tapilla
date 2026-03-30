@@ -35,11 +35,13 @@ function SocialPill({ icon, label, href }: { icon: React.ReactNode; label: strin
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm text-white/90 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
+            className="group flex flex-1 min-w-0 items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-white/20 px-2 sm:px-4 py-2 text-[clamp(0.65rem,2.5vw,0.875rem)] text-white/90 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
         >
-            {icon}
-            <span className="font-medium tracking-wide">{label}</span>
-            <ArrowNE className="text-white/60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <div className="shrink-0 scale-90 sm:scale-100">{icon}</div>
+            <span className="font-medium tracking-wide truncate">{label}</span>
+            <div className="shrink-0 hidden sm:block">
+                <ArrowNE className="text-white/60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </div>
         </a>
     );
 }
@@ -71,7 +73,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-black pb-6 px-6">
+        <footer className="bg-black pb-6 px-[5%] md:px-6">
             <div className="footer-section relative max-w-content mx-auto overflow-hidden rounded-lg">
 
                 {/* ── Animated gradient background ── */}
@@ -195,8 +197,8 @@ export default function Footer() {
                     </div>
 
                     {/* ═══ SOCIAL ROW ═══ */}
-                    <div className="mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-8">
-                        <div className="flex flex-wrap items-center justify-between gap-4">
+                    <div className="mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-8 overflow-hidden">
+                        <div className="flex flex-row flex-nowrap items-center justify-between gap-2 md:gap-4 w-full">
                             <SocialPill
                                 icon={<Instagram size={16} strokeWidth={1.5} />}
                                 label="Instagram"

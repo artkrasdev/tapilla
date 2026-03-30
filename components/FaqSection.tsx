@@ -23,11 +23,11 @@ export default function FaqSection() {
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
-            <div className="relative z-10 mx-auto w-full max-w-content px-6 py-24 md:px-8 lg:px-8">
+            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12">
                 {/* 2-column master grid: left sidebar | right content */}
-                <div className="grid grid-cols-1 md:grid-cols-[minmax(200px,320px)_1fr] gap-12 md:gap-[15rem] items-start">
+                <div className="grid grid-cols-1 md:grid-cols-[minmax(200px,280px)_1fr] lg:grid-cols-[minmax(200px,320px)_1fr] gap-12 md:gap-12 lg:gap-[15rem] items-start">
                     {/* ── Left column — image + description + CTA ── */}
-                    <div className="flex flex-col gap-6">
+                    <div className="hidden md:flex flex-col gap-6">
                         {/* Image */}
                         <div className="relative aspect-square w-full overflow-hidden rounded-sm">
                             <img
