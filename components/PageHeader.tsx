@@ -1,14 +1,19 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 interface PageHeaderProps {
-    subtitle: string;
-    heading: string;
-    description: string;
-    buttonText?: string;
+    /** next-intl namespace that exposes: subtitle, heading, description, and optionally buttonText */
+    namespace: string;
+    /** When provided alongside a buttonText translation key, renders the CTA button */
     buttonLink?: string;
 }
 
-export default function PageHeader({ subtitle, heading, description, buttonText, buttonLink }: PageHeaderProps) {
+export default function PageHeader({ namespace, buttonLink }: PageHeaderProps) {
+    const t = useTranslations(namespace);
+    const buttonText = t.has("buttonText") ? t("buttonText") : null;
+
     return (
         <section className="relative w-full bg-black overflow-hidden pt-16">
             {/* Content — same wrapper as HeroSection / BrandsSection */}
@@ -18,19 +23,19 @@ export default function PageHeader({ subtitle, heading, description, buttonText,
                     <div className="flex flex-col gap-2">
                         {/* Subtitle */}
                         <p className="text-[1.4rem] font-normal tracking-tight text-white/70 font-secondary">
-                            {subtitle}
+                            {t("subtitle")}
                         </p>
 
                         {/* Heading */}
                         <h1 className="text-[clamp(2.2rem,5vw,4rem)] leading-[0.95] tracking-tighter uppercase text-white">
-                            {heading}
+                            {t("heading")}
                         </h1>
                     </div>
 
                     {/* Right column — description */}
                     <div className="flex flex-col justify-center self-stretch max-w-[500px] gap-4 items-start">
                         <p className="text-base font-light leading-5 tracking-tight text-white text-left">
-                            {description}
+                            {t("description")}
                         </p>
                         {buttonText && buttonLink && (
                             <Button variant="default" render={<a href={buttonLink} />} nativeButton={false}>

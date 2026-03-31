@@ -1,22 +1,18 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 import PageHeader from "@/components/PageHeader";
 import TextSection from "@/components/TextSection";
 import ValueSlider from "@/components/ValueSlider";
 import DifferencesSection from "@/components/DifferencesSection";
 
 export default function AgencyPage() {
-    const t = useTranslations("AgencyPage");
     const locale = useLocale();
 
     return (
         <main>
             <PageHeader
-                subtitle={t("subtitle")}
-                heading={t("heading")}
-                description={t("description")}
-                buttonText={t("buttonText")}
+                namespace="AgencyPage"
                 buttonLink={`/${locale}/services`}
             />
 
