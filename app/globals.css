@@ -59,11 +59,10 @@ body {
 
 
 /* ══════════════════════════════════════════════════════════════════════
-   HERO — GSAP blob animation (kept as CSS, everything else is Tailwind)
+   ANIMATED BACKGROUND — reusable GSAP blob animation
 ══════════════════════════════════════════════════════════════════════ */
 
-/* ── Animated blob layer ── */
-.hero-bg {
+.animated-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -71,55 +70,43 @@ body {
   pointer-events: none;
 }
 
-.giant-blob {
+.animated-bg__blob {
   position: absolute;
   width: 140vw;
   height: 100vh;
   border-radius: 50%;
-  filter: blur(100px);
   top: 50%;
   left: 50%;
-  /* GSAP will drive x/y via quickTo; xPercent/yPercent centers the blob */
   will-change: transform;
   opacity: 0;
   transition: opacity 1.5s ease-out;
 }
 
-.hero-bg.blobs-ready .giant-blob {
+/* Static blobs (dark vignette) skip the fade-in */
+.animated-bg__blob--static {
+  opacity: 1;
+  transition: none;
+}
+
+.animated-bg.blobs-ready .animated-bg__blob {
   opacity: 1;
 }
 
-.blob-cyan {
-  background: radial-gradient(circle at center, var(--blob-cyan), transparent 65%);
-}
-
-.blob-purple {
-  background: radial-gradient(circle at center, var(--blob-purple), transparent 65%);
-}
-
-.blob-dark {
-  background: radial-gradient(circle at center, var(--blob-dark), transparent 50%);
-}
-
-/* ── Overlays ── */
-.hero-bottom-fade {
+.animated-bg__bottom-fade {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 400px;
   max-height: 50vh;
   pointer-events: none;
   z-index: 2;
-  background: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.9) 35%, transparent 100%);
 }
 
-.hero-noise {
+.animated-bg__noise {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.135;
   pointer-events: none;
 }
 
