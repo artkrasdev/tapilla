@@ -77,6 +77,26 @@
             "heading": "CREATING VALUE IN EVERY DIGITAL PROJECT",
             "description": "At Tapilla, our mission is to transform our clients' ambitions into lasting digital successes. We combine expertise, creativity and innovation to imagine high-performance e-commerce solutions, designed for today and ready for tomorrow. Driven by people, excellence and integrity, we design projects that engage, inspire and create real value."
         },
+        "Differences": {
+            "label": "Our differences",
+            "heading": "A SOLID EXPERIENCE, NOURISHED BY A CONSTANT CURIOSITY",
+            "description": "Growing from 30 to over 130 collaborators while keeping our lively and bold spirit — that's the challenge we meet every day. At Tapilla, we believe in evolving, never ceasing to question ourselves. Our capacity to innovate, learn and progress is an integral part of our DNA — and it's what makes us proud, as much as our achievements.",
+            "approach": {
+                "title": "Our approach",
+                "subtitle": "Combining performance and creativity",
+                "description": "At Tapilla, we believe that digital success is born from the balance between technical rigor and creative freedom. Every project is conceived as a unique collaboration, guided by high standards and attention to detail. We don't just create websites — we build platforms that bring brands to life and turn visitors into loyal customers. Our mission: to combine strategy, design and technology to create high-performing, sustainable and inspiring solutions."
+            },
+            "history": {
+                "title": "Our history",
+                "subtitle": "An expertise built on trust and time",
+                "description": "For over twenty years, we have been shaping digital projects with the same demand: that of work well done. Over the years, we have built precise methods, solid processes and a culture of detail that secure every stage of the projects we support. This experience, forged over time, allows us today to approach our clients' challenges with serenity, precision and vision."
+            },
+            "team": {
+                "title": "Our team",
+                "subtitle": "A collective adventure above all",
+                "description": "Behind each project, there are passionate women and men, driven by a shared desire: to help brands grow with meaning and creativity. Our richness is the diversity of our talents — developers, designers, strategists, marketers — who unite their know-how to build strong and lasting projects. At Tapilla, collaboration isn't just a buzzword — it's our way of thinking, creating and moving forward together."
+            }
+        },
         "Values": {
             "onTime": {
                 "title": "On Time",

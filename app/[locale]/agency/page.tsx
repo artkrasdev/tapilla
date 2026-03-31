@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import PageHeader from "@/components/PageHeader";
 import TextSection from "@/components/TextSection";
 import ValueSlider from "@/components/ValueSlider";
+import DifferencesSection from "@/components/DifferencesSection";
 
 export default function AgencyPage() {
     const t = useTranslations("AgencyPage");
@@ -35,6 +36,8 @@ export default function AgencyPage() {
 
             <TextSection />
             <ValueSlider />
+            <DifferencesSection namespace="AgencyPage.Differences" />
+
         </main>
     );
 }
