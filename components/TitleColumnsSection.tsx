@@ -12,7 +12,7 @@ export default function TitleColumnsSection({ namespace }: TitleColumnsSectionPr
     return (
         <section className="w-full bg-black">
             <div className="mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12">
-                <h2 className="text-[clamp(1.75rem,4vw,2.3rem)] font-medium leading-[0.95] tracking-tighter uppercase text-white mb-4 md:mb-6 lg:mb-8">
+                <h2 className="text-[clamp(1.75rem,4vw,2.3rem)] font-medium leading-[0.95] tracking-tighter uppercase text-white mb-8 md:mb-10">
                     {t("heading")}
                 </h2>
 

@@ -137,6 +137,102 @@
         "heading": "SERVICES DESIGNED TO SUPPORT YOUR PROJECTS",
         "description": "At Tapilla, every project starts with a story — yours. We imagine, design and develop tailor-made digital ecosystems — from e-commerce sites to marketing strategy, through design and content management. Our mission: create online experiences that reflect your world, serve your ambitions and sustainably support your growth."
     },
+    "UxUiPage": {
+        "subtitle": "Expertise UX.UI Design",
+        "heading": "ELEVATE YOUR BRAND\nAND MAXIMIZE CONVERSION",
+        "description": "Aesthetics without strategy is just decoration. Whether to sell or convince, we transform your visual identity into a digital performance lever (Sales & Lead Gen).",
+        "ctaPrimary": "I have a project",
+        "BrandComparison": {
+            "heading": "UX IS THE NEW BRAND.",
+            "headerParagraph": "On an e-commerce or corporate service site, UI serves UX — to streamline the journey, reassure the visitor and trigger action. We consider user experience as a strategic investment. A fluid UX transforms a simple visit into a business opportunity: a validated purchase or a submitted contact form.",
+            "obsolete": {
+                "title": "The market reality",
+                "point1": "A beautiful showcase site that generates no leads is a failure.",
+                "point2": "Complex navigation drives away 50% of B2B prospects.",
+                "point3": "Mobile is the first point of contact, even in B2B."
+            },
+            "axome": {
+                "title": "The Axome response",
+                "description": "We merge branding and efficiency across all technologies (Shopify, PrestaShop, WordPress, Webflow, custom development) to engage your users."
+            }
+        },
+        "BentoGrid": {
+            "heading": "OUR APPROACH TO DIGITAL DESIGN",
+            "description": "A rigorous methodology for e-merchants and service providers.",
+            "card1": {
+                "title": "Dual Competence: DA & Conversion",
+                "description": "Our AD doesn't just shape a graphic charter. It transforms it into a persuasion tool. Whether to validate a cart or encourage a quote request, our designers combine brand sensitivity and ROI-driven effectiveness."
+            },
+            "card2": {
+                "title": "Design System",
+                "description": "Visual consistency for your brand platforms, intranets or online stores."
+            },
+            "card3": {
+                "title": "CRO Optimization",
+                "description": "A/B tests and journey analysis to maximize the number of qualified contacts or sales."
+            },
+            "card4": {
+                "title": "Mobile First",
+                "description": "Your B2B or B2C clients now primarily consult you on mobile. Our approach goes beyond simple responsive design. We design native experiences thought for tactile use: bottom-of-screen navigation (Thumb Zone), enlarged CTAs, simplified sequential forms and swipe interactions."
+            }
+        },
+        "TimelineSection": {
+            "label": "Our differences",
+            "heading": "DESIGN FOR ALL,\nPERFORM EVERYWHERE",
+            "description": "We combine technical excellence with inclusive design to create experiences that work for everyone.",
+            "approach": {
+                "title": "Web Performance",
+                "subtitle": "Speed & Core Web Vitals",
+                "description": "Speed is essential for UX, conversion, and SEO. Our UI designers collaborate with developers to optimize assets, reduce DOM, and adhere to Google performance indicators for a fluid user experience."
+            },
+            "history": {
+                "title": "Accessibility",
+                "subtitle": "Inclusion & Digital Accessibility",
+                "description": "Ethical and inclusive design is at the heart of our approach. Digital accessibility standards are constantly evolving, and we integrate best practices from conception: sufficient color contrasts, readable typography, keyboard navigation, and semantic markup for screen readers—all while maintaining aesthetics."
+            }
+        },
+        "FaqSection": {
+            "subtitle": "Everything you need to know",
+            "heading": "UNDERSTANDING OUR DESIGN APPROACH FOR E-COMMERCE AND CORPORATE",
+            "description": "Before collaborating, it's normal to have questions. Here are the answers to the most frequent ones — and if you have others, contact us:",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "Why invest in UX/UI design for an e-commerce site?",
+                "a": "UX/UI design directly impacts conversion rates. A well-designed interface reduces friction, builds trust, and guides visitors toward purchase. Studies show that every $1 invested in UX returns $100 in ROI. For e-commerce, this means more sales, fewer abandoned carts, and higher customer lifetime value."
+            },
+            "faq2": {
+                "q": "What is the difference between UX and UI design?",
+                "a": "UX (User Experience) focuses on the overall journey and how users interact with your site—information architecture, user flows, and ease of use. UI (User Interface) is about the visual elements—colors, typography, buttons, and overall aesthetics. Both work together: UX ensures the site functions well, UI ensures it looks appealing and reflects your brand."
+            },
+            "faq3": {
+                "q": "How do you approach mobile-first design?",
+                "a": "We design for mobile first because that's where most users start. This means creating interfaces optimized for touch, smaller screens, and thumb-friendly navigation. We then scale up for desktop, ensuring a seamless experience across all devices. Mobile-first also improves SEO, as Google prioritizes mobile-friendly sites."
+            },
+            "faq4": {
+                "q": "Do you work with existing brands or only new projects?",
+                "a": "We work with both. For existing brands, we conduct UX audits to identify pain points and opportunities for improvement. We can redesign specific sections, optimize conversion funnels, or completely overhaul your digital presence. Our goal is to enhance your brand while respecting its heritage and business objectives."
+            },
+            "faq5": {
+                "q": "How do you measure the success of a UX/UI project?",
+                "a": "We define KPIs upfront: conversion rates, bounce rates, time on page, task completion rates, and user satisfaction scores. We use tools like Hotjar, Google Analytics, and user testing to gather data. Post-launch, we monitor performance and iterate based on real user behavior to continuously improve the experience."
+            },
+            "faq6": {
+                "q": "What is your process for UX/UI design projects?",
+                "a": "Our process typically includes: 1) Discovery—researching your users, competitors, and business goals; 2) Information Architecture—structuring content and user flows; 3) Wireframing—creating low-fidelity layouts; 4) UI Design—applying visual design and branding; 5) Prototyping—building interactive mockups; 6) Testing—validating with real users; 7) Handoff—delivering assets to developers."
+            }
+        },
+        "CTABanner": {
+            "heading": "READY TO TRANSFORM\nYOUR USERS'\nEXPERIENCE?",
+            "description": "Do you want to offer your users an exceptional visual and interactive experience while boosting your conversions? Contact us today to discuss your needs in DA, UI, UX, webdesign and CRO. Our creative team is ready to propel your website to success.",
+            "buttonLabel": "Contact the team!"
+        },
+        "ExpertiseSection": {
+            "heading": "THE AXOME EXPERTISE: DESIGN & CONVERSION FOR E-COMMERCE & INSTITUTIONAL WEBSITES",
+            "col1": "A website's performance isn't measured solely by immediate revenue, but by its ability to transform an anonymous visitor into a qualified lead or loyal customer. As a full-service digital agency, <b>Axome</b> applies a rigorous UX/UI methodology to all types of projects: e-commerce platforms (Shopify, WooCommerce, PrestaShop), showcase sites (WordPress, Webflow), or custom B2B portals. Our belief is simple: a presentation site must be as performant as an online store. If e-commerce targets the cart, the corporate site targets the <b>lead (form, call, download)</b>. In both cases, UX must eliminate friction and guide the user toward the defined objective.",
+            "col2": "Our <b>art direction (AD)</b> is dedicated to enhancing your brand image while reinforcing your credibility. For a service company or industrial player, UX design helps simplify complex offerings, structure the argument, and reassure the decision-maker. We integrate « <b>Mobile First</b> » codes because decision-making, even in B2B, often starts on a smartphone. Our designers work in synergy with <b>SEO experts</b> to ensure that information architecture favors positioning on search engines, guaranteeing visibility and qualified traffic.",
+            "col3": "Beyond the visual aspect, we work in depth on <b>Tone of Voice</b> and content strategy. A strong brand expresses itself with clarity and carries intelligible values. Our sharp knowledge of platforms (Shopify, PrestaShop) allows us to anticipate implementation challenges from the creation stage to guarantee web performance (<b>Core Web Vitals</b>). Once the <b>Brand Spirit</b> is completed, we activate acquisition levers (SEO, SEA, Social Ads) that capitalize on this new identity. Branding then becomes a real asset serving your ROI."
+        }
+    },
     "BrandingPage": {
         "subtitle": "Expertise Branding",
         "heading": "PRINT DRIVEN\nBY DATA.",

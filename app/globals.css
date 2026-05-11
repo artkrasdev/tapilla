@@ -247,6 +247,36 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════════
+   CTA BANNER — configurable gradient box with noise
+══════════════════════════════════════════════════════════════════════ */
+
+.cta-banner-section {
+  position: relative;
+}
+
+.cta-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.cta-banner-gradient-1 {
+  position: absolute;
+  inset: -40%;
+  animation: footer-drift-1 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.cta-banner-gradient-2 {
+  position: absolute;
+  inset: -40%;
+  animation: footer-drift-2 35s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* ══════════════════════════════════════════════════════════════════════
    FOOTER — accent-blue gradient box with noise
 ══════════════════════════════════════════════════════════════════════ */
 

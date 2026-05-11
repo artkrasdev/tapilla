@@ -6,21 +6,22 @@ import { useTranslations } from "next-intl";
 interface ServiceItem {
     key: string;
     hot?: boolean;
+    link: string;
 }
 
 const brandServices: ServiceItem[] = [
-    { key: "brand1" },
-    { key: "brand2" },
-    { key: "brand3", hot: true },
-    { key: "brand4" },
-    { key: "brand5" },
+    { key: "brand1", link: "/offer/branding" },
+    { key: "brand2", link: "/offer/ux-ui-webdesign" },
+    { key: "brand3", hot: true, link: "/offer/" },
+    { key: "brand4", link: "/offer/" },
+    { key: "brand5", link: "/offer/" },
 ];
 
 const techServices: ServiceItem[] = [
-    { key: "tech1" },
-    { key: "tech2" },
-    { key: "tech4" },
-    { key: "tech6" },
+    { key: "tech1", link: "/offer/" },
+    { key: "tech2", link: "/offer/" },
+    { key: "tech4", link: "/offer/" },
+    { key: "tech6", link: "/offer/" },
 ];
 
 /* ── Arrow icon (north-east) ───────────────────────────────────────── */
@@ -49,7 +50,7 @@ function ArrowNE({ className = "" }: { className?: string }) {
 function ServiceRow({ item, t, variant = "default" }: { item: ServiceItem; t: (key: string) => string; variant?: "default" | "card" }) {
     return (
         <a
-            href="#"
+            href={item.link}
             className={`group flex items-center justify-between gap-4 border-b border-white/10 last:border-b-0 ${variant === "card" ? "py-2" : "py-2.5"}`}
         >
             <span className="text-[0.85rem] italic font-light tracking-tight text-white duration-300 ease-out transition-colors group-hover:text-white/60">

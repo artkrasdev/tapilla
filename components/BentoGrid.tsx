@@ -39,7 +39,7 @@ export default function BentoGrid({ namespace }: BentoGridProps) {
             <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12">
 
                 {/* Header */}
-                <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16 max-w-2xl mx-auto">
+                <div className="flex flex-col items-center text-center gap-4 mb-8 md:mb-10 max-w-2xl mx-auto">
                     <h2 className="text-[clamp(1.8rem,4vw,2.5rem)] leading-[1.05] tracking-tighter uppercase text-white">
                         {t("heading")}
                     </h2>

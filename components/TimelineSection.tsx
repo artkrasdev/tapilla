@@ -8,20 +8,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Fixed key slots — the namespace must expose these keys
-const ITEM_KEYS = ["approach", "history", "team"] as const;
-const ITEM_ICONS = ["/brand-expieince.svg", "/tech-data.svg", "/our-history.svg"] as const;
-
 export interface TimelineSectionProps {
     /** next-intl namespace, e.g. "AgencyPage.Differences" */
     namespace: string;
+    /** Array of item keys to fetch from translations, e.g. ["approach", "history"] */
+    itemKeys?: string[];
+    /** Array of icon paths corresponding to each item */
+    itemIcons?: string[];
 }
 
-export default function TimelineSection({ namespace }: TimelineSectionProps) {
+const DEFAULT_ITEM_KEYS = ["approach", "history", "team"];
+const DEFAULT_ITEM_ICONS = ["/brand-expieince.svg", "/tech-data.svg", "/our-history.svg"];
+
+export default function TimelineSection({
+    namespace,
+    itemKeys = DEFAULT_ITEM_KEYS,
+    itemIcons = DEFAULT_ITEM_ICONS,
+}: TimelineSectionProps) {
     const t = useTranslations(namespace);
 
-    const timelineItems = ITEM_KEYS.map((key, i) => ({
-        icon: ITEM_ICONS[i],
+    const timelineItems = itemKeys.map((key, i) => ({
+        icon: itemIcons[i] || "/brand-expieince.svg",
         title: t(`${key}.title`),
         subtitle: t(`${key}.subtitle`),
         description: t(`${key}.description`),
