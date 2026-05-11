@@ -233,6 +233,134 @@
             "col3": "Beyond the visual aspect, we work in depth on <b>Tone of Voice</b> and content strategy. A strong brand expresses itself with clarity and carries intelligible values. Our sharp knowledge of platforms (Shopify, PrestaShop) allows us to anticipate implementation challenges from the creation stage to guarantee web performance (<b>Core Web Vitals</b>). Once the <b>Brand Spirit</b> is completed, we activate acquisition levers (SEO, SEA, Social Ads) that capitalize on this new identity. Branding then becomes a real asset serving your ROI."
         }
     },
+    "ImpactStatsSection": {
+        "subtitle": "In a few facts",
+        "heading": "OUR IMPACT IN FIGURES",
+        "description": "Measurable results on the consistency of your brand and the performance of your campaigns.",
+        "stat1Value": "-70%",
+        "stat1Label": "Production costs",
+        "stat2Value": "x10",
+        "stat2Label": "Declination speed",
+        "stat3Value": "100%",
+        "stat3Label": "Web & Print consistency"
+    },
+    "PackshotsSection": {
+        "subtitle": "Photography",
+        "heading": "PACKSHOTS\n& AI ATMOSPHERES",
+        "description": "Transform your standard packshots into high-end visuals. We create unique environments and immersive settings that reinforce your brand identity, all without a new photo shoot.",
+        "card1": {
+            "title": "Studio formatting",
+            "description": "Enhance your product images with studio layouts."
+        },
+        "card2": {
+            "title": "Decorative Art Direction",
+            "description": "Adapt your decorations with a precise artistic direction."
+        },
+        "card3": {
+            "title": "Brand universe",
+            "description": "Light, texture, everything to evoke worlds adapted to your brand."
+        }
+    },
+    "VideoCapsulesSection": {
+        "subtitle": "Videos",
+        "heading": "READY-TO-WEAR VIDEO CAPSULES",
+        "description": "From simple packshot photos or model photos, we generate short video clips that are highly faithful to the product. This innovation not only makes it possible to capture attention on social networks via the video format, but above all to visualize the \"fall\" of the product and the way in which the garment behaves in movement.",
+        "ctaHeading": "TAKE THE PLUNGE",
+        "ctaDescription": "Transform static photos into viral videos with Motion AI.",
+        "ctaButton": "START YOUR PROJECT"
+    },
+    "GenerativeAIPage": {
+        "subtitle": "Generative AI expertise",
+        "BrandComparison": {
+            "left": {
+                "title": "Visual inconsistency is hurting your brand.",
+                "section1": {
+                    "subtitle": "The fragmentation of the supports",
+                    "description": "Between the stock photos of the corporate site, the e-commerce packshots and the social media visuals, the brand identity is diluted. Creating visual unity is expensive in traditional art direction."
+                },
+                "section2": {
+                    "subtitle": "The lack of agility",
+                    "description": "Need to adapt a Print campaign for a Newsletter or a site Webflow ? You often have to start all over again or accept graphic compromises."
+                }
+            },
+            "right": {
+                "title": "The Axome answer: Global Hybrid AI.",
+                "section1": {
+                    "subtitle": "Sovereign Art Direction",
+                    "description": "Technology is at the service of vision. Either we create your Art Direction, or we scrupulously apply the proposed charter. AI does not invent your brand; it deploys it with absolute fidelity."
+                },
+                "section2": {
+                    "subtitle": "Multi-AI orchestration & flow",
+                    "description": "We combine the best AIs on the market according to their specificities (texture, creativity, fidelity). By controlling this composite flow, we ensure a meticulous quality of rendering and a perfect consistency of your products and characters over time."
+                }
+            }
+        },
+        
+        "heading": "AI DIRECTED BY\nHUMANS. PRAGMATIC\nREALISM.",
+        "description": "Stop talking about \"image generation\", talk about global studio production. We combine artistic direction and multi-AI power to create homogeneous visuals that can be used on all your supports.",
+        "ctaPrimary": "Audit your visual needs",
+        "FaqSection": {
+            "subtitle": "We clarify everything, without jargon",
+            "heading": "FREQUENTLY ASKED QUESTIONS ABOUT AI PRODUCTION",
+            "description": "Before collaborating, it's normal to have questions. Here are the most frequently asked answers — and if you have more, contact us:)",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "What is the difference between your AI images and image banks (Stock)?",
+                "a": "The image bank is generic and used by everyone. Our production is exclusive. We create a graphic style that belongs only to you, homogeneous on your institutional site as well as on your product sheets."
+            },
+            "faq2": {
+                "q": "Do you manage media other than the web (Print, POS)?",
+                "a": "Yes. Thanks to our Upscaling processes, we generate high definition files that can be used for paper printing (catalogs, posters, POS) without losing quality, guaranteeing perfect consistency with your digital media."
+            },
+            "faq3": {
+                "q": "Is it legally usable (Copyright/Copyright)?",
+                "a": "Yes. We work with secure environments and we give you full use of the final images delivered. Unlike public platforms, our 'Agency' workflows guarantee the confidentiality and uniqueness of assets."
+            },
+            "faq4": {
+                "q": "Do you integrate visuals on CMS such as Webflow or WordPress?",
+                "a": "Exactly. Our technical teams can directly integrate optimized assets (WebP, AVIF) into your environments Webflow, WordPress or Shopify, while respecting web performance best practices."
+            },
+            "faq5": {
+                "q": "Is AI replacing the photographer?",
+                "a": "No, it increases it. At Axome, artistic directors and photographers drive the AI. The human eye is essential for framing, emotion, and the final validation of realism. It's a collaboration, not a substitution."
+            },
+            "faq6": {
+                "q": "Do you also make videos and social media clips?",
+                "a": "Yes, we produce short video clips to boost your newsletters and social networks (Reels, TikTok). These animated formats capture attention much better than a static image."
+            }
+        },
+        "CTABanner": {
+            "heading": "INTERESTED IN\nCREATIVE INFINITY\nAI?",
+            "description": "Bring your boldest ideas to life. Generative AI does not replace creativity, it offers it new horizons. At Axome, we master the latest tools (Midjourney, DALL-E, Stable Diffusion) to produce unique, impactful visuals that are perfectly aligned with your brand identity.",
+            "buttonLabel": "EXPLORING THE FIELD OF POSSIBILITIES"
+        },
+        "ExpertiseSection": {
+            "heading": "AI EXPERTISE: FROM THE CORPORATE SITE TO THE 360 CAMPAIGN",
+            "col1": "Generative artificial intelligence is not limited to the production of e-commerce product sheets. At Axome, we use it as a powerful creative lever to build <b>corporate visual identities</b> strong and singular. No more uniformity in the image banks viewed and reviewed. We create tailor-made visuals for your showcase sites (Webflow, WordPress), integrating graphic effects, abstract textures or hyper-realistic settings that accurately reflect the values of your company. This visual homogeneity reinforces your credibility and the attachment to your brand.\n\nOur approach is resolutely <b>Omnichannel</b>. We know that an image doesn't just live on a computer screen. Our workflows integrate advanced upscaling processes to exploit AI creations on media <b>Print</b> (catalogs, displays, POS) with irreproachable quality. Likewise, we offer these worlds for your emailing campaigns (Newsletters) and your publications on social networks, guaranteeing total consistency regardless of the point of contact with your audience.",
+            "col2": "The studio is also exploring the viral potential of <b>Video capsules</b>. Thanks to video generation technologies (Text-to-Video, Image-to-Video), we animate your products or brand concepts to create short and impactful formats, perfectly adapted to mobile uses (Reels, TikTok, Stories). These dynamic contents make it possible to capture attention in a saturated social flow, while maintaining the artistic direction defined for your static media.\n\nTechnical integration is at the heart of our pragmatic method. That your ecosystem is based on a lightweight CMS like <b>Webflow</b> or <b>WordPress</b>, or on robust e-commerce solutions, we deliver assets optimized for the web (weight, format, SEO). We don't just deliver images; we support you in their strategic deployment to maximize the user experience (UX) and natural referencing.",
+            "col3": "This production flexibility allows <b>unprecedented reactivity</b>. A new commercial offer? A newsletter to be sent urgently? In a few hours, we can generate contextual visuals (seasonality, events) that integrate perfectly into your existing charter. This agility frees your marketing teams from traditional logistical constraints and allows you to quickly test new creative ideas (visual A/B testing).\n\nFinally, we ensure constant technological monitoring throughout the graphics chain. By choosing Axome, you have access to an innovation laboratory that masters both photorealistic rendering for retail and stylized illustration for corporate purposes. We transform the complexity of AI tools into a creative resource that is accessible, secure and directly actionable for your global communication."
+        },
+        "BentoGrid": {
+            "heading": "BRAND CONTENT, CORPORATE & RETAIL",
+            "description": "Our business verticals",
+            "card1": {
+                "title": "Visual identity & ambiance",
+                "description": "Beyond the product, we create complete graphic worlds. Material effects, light effects or abstract environments for your showcase and corporate sites."
+            },
+            "card2": {
+                "title": "Fashion & Lifestyle",
+                "description": "Inclusive ready-to-wear campaigns. Change the model or the decor to adapt your speech to each audience."
+            },
+            "card3": {
+                "title": "Video & Motion capsules",
+                "description": "Creation of \"snackable\" animated content to boost your social networks and website headers."
+            },
+            "card4": {
+                "title": "Omnichannel: Web, Print & Social",
+                "description": "We deliver optimized formats for all your media: sites (Webflow, WordPress), newsletters, Print catalogs and Social networks. A single AD, available everywhere."
+            }
+        }
+    },
     "BrandingPage": {
         "subtitle": "Expertise Branding",
         "heading": "PRINT DRIVEN\nBY DATA.",

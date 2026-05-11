@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export interface BrandComparisonProps {
     /** next-intl namespace, e.g. "BrandComparison" */
     namespace: string;
-    /** "stacked" (default): label + heading stacked; "split": heading left + headerParagraph right */
-    headerLayout?: "stacked" | "split";
+    /** "stacked" (default): label + heading stacked; "split": heading left + headerParagraph right; "twoPanel": two equal cards with icon+title+subsections */
+    headerLayout?: "stacked" | "split" | "twoPanel";
     /** Whether to render subtitle inside cards (default: true) */
     showCardSubtitle?: boolean;
     /** Whether to render description in the left card (default: true) */
@@ -23,6 +24,53 @@ export default function BrandComparison({
     rightCardVariant = "numbered",
 }: BrandComparisonProps) {
     const t = useTranslations(namespace);
+
+    if (headerLayout === "twoPanel") {
+        return (
+            <section className="relative w-full bg-black overflow-hidden">
+                <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-12 md:py-16 md:px-8 lg:px-12 border-t border-white/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {(["left", "right"] as const).map((side) => (
+                            <div key={side} className="flex flex-col gap-5 border border-white/10 rounded bg-white/3 backdrop-blur-sm p-6 md:p-7 lg:p-8">
+                                {/* Icon row */}
+                                <div className="flex items-center">
+                                    <Image
+                                        src={side === "left" ? "/our-history.svg" : "/identity.svg"}
+                                        alt={side === "left" ? "Our History" : "Identity"}
+                                        width={58}
+                                        height={31}
+                                        className="object-contain"
+                                    />
+                                </div>
+                                {/* Card title */}
+                                <h3 className="text-[clamp(1.1rem,2vw,1.45rem)] font-light leading-snug tracking-tight text-white">
+                                    {t(`${side}.title`)}
+                                </h3>
+                                {/* Section 1 */}
+                                <div className="flex flex-col gap-1.5">
+                                    <p className="text-[0.8rem] font-normal tracking-tight text-white/55">
+                                        {t(`${side}.section1.subtitle`)}
+                                    </p>
+                                    <p className="text-[0.82rem] font-light leading-[1.65] tracking-tight text-white/80">
+                                        {t(`${side}.section1.description`)}
+                                    </p>
+                                </div>
+                                {/* Section 2 */}
+                                <div className="flex flex-col gap-1.5">
+                                    <p className="text-[0.8rem] font-normal tracking-tight text-white/55">
+                                        {t(`${side}.section2.subtitle`)}
+                                    </p>
+                                    <p className="text-[0.82rem] font-light leading-[1.65] tracking-tight text-white/80">
+                                        {t(`${side}.section2.description`)}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
