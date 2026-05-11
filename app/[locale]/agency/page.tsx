@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import PageHeader from "@/components/PageHeader";
 import TextSection from "@/components/TextSection";
 import ValueSlider from "@/components/ValueSlider";
-import DifferencesSection from "@/components/DifferencesSection";
+import TimelineSection from "@/components/TimelineSection";
 
 export default function AgencyPage() {
     const locale = useLocale();
@@ -32,7 +32,7 @@ export default function AgencyPage() {
 
             <TextSection />
             <ValueSlider />
-            <DifferencesSection namespace="AgencyPage.Differences" />
+            <TimelineSection namespace="AgencyPage.Differences" />
 
         </main>
     );

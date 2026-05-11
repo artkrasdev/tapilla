@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Globe, ChevronDown, Check, Menu, X } from "lucide-react";
+import { handleAnchorClick } from "@/lib/scroll-utils";
 
 const LOCALES = [
     { code: "en", label: "English" },
@@ -201,7 +202,11 @@ export default function Header() {
                         </div>
 
                         {/* CTA button — visible on all sizes */}
-                        <Button variant="accent" render={<a href="#contact" />} nativeButton={false}>
+                        <Button 
+                            variant="accent" 
+                            render={<a href="#contact" onClick={(e) => handleAnchorClick(e, "contact")} />} 
+                            nativeButton={false}
+                        >
                             <span className="hidden sm:inline">{t("contact")}</span>
                             <span className="sm:hidden text-[0.7rem]">{t("contact")}</span>
                         </Button>
@@ -283,7 +288,10 @@ export default function Header() {
                         <Button
                             variant="default"
                             className="w-full py-5 text-sm"
-                            onClick={closeMobileMenu}
+                            onClick={(e) => {
+                                handleAnchorClick(e, "contact");
+                                closeMobileMenu();
+                            }}
                             render={<a href="#contact" />}
                             nativeButton={false}
                         >

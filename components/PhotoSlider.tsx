@@ -8,12 +8,14 @@ interface PhotoSliderProps {
     photos: string[];
     /** Scroll speed in seconds for one full cycle (default: 20) */
     speed?: number;
+    /** Additional classes */
+    className?: string;
 }
 
 // ── Component ────────────────────────────────────────────────────────────────
-export default function PhotoSlider({ photos, speed = 20 }: PhotoSliderProps) {
+export default function PhotoSlider({ photos, speed = 20, className = "" }: PhotoSliderProps) {
     return (
-        <section className="relative w-full bg-black overflow-hidden py-6">
+        <section className={`relative w-full bg-black overflow-hidden py-6 ${className}`}>
             <div
                 className="flex w-max"
                 style={{

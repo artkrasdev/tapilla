@@ -4,21 +4,24 @@ import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
+import { handleAnchorClick } from "@/lib/scroll-utils";
 
-/* ── FAQ keys (mapped to messages/en.json → FaqSection) ────────────── */
-const FAQ_KEYS = ["faq1", "faq2", "faq3", "faq4", "faq5"] as const;
+export interface FaqSectionProps {
+    namespace?: string;
+    count?: number;
+}
 
-export default function FaqSection() {
-    const t = useTranslations("FaqSection");
+export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqSectionProps) {
+    const t = useTranslations(namespace);
 
     /* Build items array from translations */
     const items: FaqItem[] = useMemo(
         () =>
-            FAQ_KEYS.map((key) => ({
-                question: t(`${key}.q`),
-                answer: t(`${key}.a`),
+            Array.from({ length: count }).map((_, i) => ({
+                question: t(`faq${i + 1}.q`),
+                answer: t(`faq${i + 1}.a`),
             })),
-        [t],
+        [t, count],
     );
 
     return (
@@ -46,7 +49,7 @@ export default function FaqSection() {
                         <div>
                             <Button
                                 variant="secondary"
-                                render={<a href="#contact" />}
+                                render={<a href="#contact" onClick={(e) => handleAnchorClick(e, "contact")} />}
                                 nativeButton={false}
                             >
                                 {t("cta")}

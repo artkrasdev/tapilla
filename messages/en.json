@@ -137,6 +137,112 @@
         "heading": "SERVICES DESIGNED TO SUPPORT YOUR PROJECTS",
         "description": "At Tapilla, every project starts with a story — yours. We imagine, design and develop tailor-made digital ecosystems — from e-commerce sites to marketing strategy, through design and content management. Our mission: create online experiences that reflect your world, serve your ambitions and sustainably support your growth."
     },
+    "BrandingPage": {
+        "subtitle": "Expertise Branding",
+        "heading": "PRINT DRIVEN\nBY DATA.",
+        "description": "Extend your digital strategy to paper effortlessly. Use the power of your structured product data (PIM, ERP, Shopify) to generate your catalogues automatically.",
+        "ctaPrimary": "Automate my production",
+        "ctaSecondary": "See the concept",
+        "WhyBranding": {
+            "label": "What we create",
+            "heading": "BRANDING, OBJECTIVES\nAND ROI.",
+            "description": "Why invest in a strong brand identity?",
+            "approach": {
+                "title": "Image & Values",
+                "subtitle": "Define identity",
+                "description": "A stronger image with your clients, in perfect alignment with your company values."
+            },
+            "history": {
+                "title": "Differentiation",
+                "subtitle": "Deploy the image",
+                "description": "A unique and differentiating brand universe, for better recognition and memorisation of your brand."
+            },
+            "team": {
+                "title": "Preference & ROI",
+                "subtitle": "Activate growth",
+                "description": "Create brand preference to convert better! A strong design is a direct growth lever."
+            }
+        },
+        "BentoGrid": {
+            "heading": "TOTAL COHERENCE",
+            "description": "Your brand image doesn't stop at a logo. We design a complete visual ecosystem that performs across all touchpoints.",
+            "card1": {
+                "title": "Visual Identity & Web Design",
+                "description": "Creation of responsive logos, typographic choices, and color palettes designed for screens and accessibility."
+            },
+            "card2": {
+                "title": "Tone of Voice",
+                "description": "Defining your editorial line to speak correctly to your audience. Copywriting, storytelling, micro-copy."
+            },
+            "card3": {
+                "title": "Social Media & Ads",
+                "description": "Adaptation of your brand guidelines for Instagram, LinkedIn, and Google Ads."
+            },
+            "card4": {
+                "title": "E-commerce Integration",
+                "description": "We don't just create images. We are technical experts. Your branding is designed to integrate natively on Shopify, PrestaShop, Webflow, WordPress, or your ERP tools."
+            }
+        },
+        "ExpertiseSection": {
+            "heading": "BRANDING EXPERTISE & GLOBAL DIGITAL STRATEGY",
+            "col1": "In a saturated digital ecosystem, brand identity goes far beyond a simple logo or graphic charter. At Tapilla, we approach the <b>global digital strategy</b> through the lens of Brand Sprint. Our methodology fuses the imperatives of emotional marketing with the constraints of today's web. Whether you are a pure e-commerce player or an industry in full digital transformation, your image must be a vector of immediate trust and support your conversion objectives.",
+            "col2": "We design <b>responsive visual identities</b>, conceived as 'mobile-first', capable of adapting as seamlessly in a Shopify header as in a dynamic Social Ads campaign. This rigor in artistic direction ensures that every touchpoint reinforces your positioning and memorability in the market. At the heart of our expertise lies the creation of <b>evolving Design Systems</b>. Rather than freezing your brand, we create libraries of living components — facilitating the work of your marketing teams and your developers.",
+            "col3": "Beyond the visual aspect, we work in depth on the <b>Tone of Voice</b> and brand content strategy. A strong brand expresses itself with clarity and carries intelligible values. Our in-depth knowledge of platforms (Shopify, PrestaShop) allows us to anticipate implementation challenges from the start to guarantee <b>web performance</b> (Core Web Vitals). Once the Brand Sprint is complete, we activate growth levers (SEO, Social Ads) that capitalise on this new identity. Branding then becomes a true asset in the service of your ROI."
+        },
+        "FaqSection": {
+            "subtitle": "Everything you need to know",
+            "heading": "FREQUENTLY ASKED\nQUESTIONS",
+            "description": "Any remaining doubts about the Brand Sprint? Find all the answers here to start your project with confidence.",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "What exactly is a Brand Sprint?",
+                "a": "It is a methodology inspired by Google Ventures' Design Sprints. Instead of spreading brand creation over months, we concentrate decision-making and creation into a short period (a few days to a few weeks) to obtain a concrete, actionable, and immediately testable result."
+            },
+            "faq2": {
+                "q": "What is the difference from a traditional branding agency?",
+                "a": "The traditional approach often delivers heavy theoretical documents. Axome is a hybrid technical and creative agency: our branding is designed for the web, code, and conversion. We don't just deliver a PDF, but assets ready to be integrated into your e-commerce site or social networks."
+            },
+            "faq3": {
+                "q": "What do you receive at the end of the sprint?",
+                "a": "You receive a complete Brand Book (Logos, palettes, typography, usage rules), social media adaptations, UI mockups for your website (Homepage, typical product page), and a Tone of Voice guide."
+            },
+            "faq4": {
+                "q": "Is it suitable for a redesign?",
+                "a": "Absolutely. It's even the ideal use case. If your current brand is aging poorly or no longer converting, the Brand Sprint allows you to modernize the image while preserving the historical DNA of the company, without paralyzing your activity for months."
+            },
+            "faq5": {
+                "q": "Do you integrate the brand on Shopify or WordPress?",
+                "a": "Yes. Axome has dedicated technical teams. Once the Brand Sprint is validated, our front-end developers can implement your new identity on Shopify, WordPress, Webflow, PrestaShop, or via custom development, ensuring technical performance."
+            },
+            "faq6": {
+                "q": "What budget should be planned?",
+                "a": "Our Brand Sprint offers are fixed-price to avoid unpleasant surprises. The budget varies depending on the depth of the deliverables (identity alone vs identity + complete web adaptations). Contact us for a precise estimate adapted to your needs."
+            }
+        }
+    },
+    "BrandComparison": {
+        "label": "Brand strategy",
+        "heading": "A NEW WAY TO BUILD YOUR BRAND",
+        "obsolete": {
+            "title": "The Obsolete Legacy",
+            "subtitle": "THE OLD METHOD NO LONGER WORKS",
+            "description": "Building a brand platform used to take months, resulting in 100-page PDF documents that were disconnected from the reality of websites or ad campaigns. Slow, costly, and not agile.",
+            "point1": "Production times too long (3 to 6 months)",
+            "point2": "Visual identity unsuited for mobile & web",
+            "point3": "Disconnection between branding and conversion"
+        },
+        "axome": {
+            "title": "The Tapilla Approach",
+            "subtitle": "THE BRAND SPRINT",
+            "description": "An intensive and collaborative method where targeted workshops align strategic vision with immediate graphic execution, ready for web integration.",
+            "point1Title": "Strategic alignment",
+            "point1Description": "Values, audiences, tone of voice.",
+            "point2Title": "Design system & UI",
+            "point2Description": "Creation of web-first graphic assets.",
+            "point3Title": "Global deployment",
+            "point3Description": "Social media, website, packaging."
+        }
+    },
     "Footer": {
         "pillar1": "Imagine\n& Create",
         "pillar2": "Develop &\nPropel",
@@ -166,5 +272,20 @@
         "copyright": "All rights reserved.",
         "legal1": "Privacy Policy",
         "legal2": "Legal Notice"
+    },
+    "ExpertisesSection": {
+        "title": "Three expertises, one single ambition: yours",
+        "brandTitle": "BRAND &\nEXPERIENCE",
+        "techTitle": "TECH &\nDATA",
+        "growthTitle": "GROWTH &\nPERFORMANCE",
+        "brand1": "Branding",
+        "brand2": "UX.UI Design",
+        "brand3": "Generative AI",
+        "brand4": "Content factory",
+        "brand5": "Edition, automated catalogue",
+        "tech1": "Shopify, Shopify B2B",
+        "tech2": "Prestashop",
+        "tech4": "Wordpress",
+        "tech6": "Automation, N8N & SI Interfaces"
     }
 }

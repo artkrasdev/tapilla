@@ -12,12 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 const ITEM_KEYS = ["approach", "history", "team"] as const;
 const ITEM_ICONS = ["/brand-expieince.svg", "/tech-data.svg", "/our-history.svg"] as const;
 
-export interface DifferencesSectionProps {
+export interface TimelineSectionProps {
     /** next-intl namespace, e.g. "AgencyPage.Differences" */
     namespace: string;
 }
 
-export default function DifferencesSection({ namespace }: DifferencesSectionProps) {
+export default function TimelineSection({ namespace }: TimelineSectionProps) {
     const t = useTranslations(namespace);
 
     const timelineItems = ITEM_KEYS.map((key, i) => ({

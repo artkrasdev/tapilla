@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Globe, Instagram, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { handleAnchorClick } from "@/lib/scroll-utils";
 
 /* ── Arrow NE icon ─────────────────────────────────────────────────── */
 function ArrowNE({ className = "" }: { className?: string }) {
@@ -29,12 +30,13 @@ function ArrowNE({ className = "" }: { className?: string }) {
 }
 
 /* ── Social pill link ──────────────────────────────────────────────── */
-function SocialPill({ icon, label, href }: { icon: React.ReactNode; label: string; href: string }) {
+function SocialPill({ icon, label, href, onClick }: { icon: React.ReactNode; label: string; href: string; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
     return (
         <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={onClick}
             className="group flex flex-1 min-w-0 items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-white/20 px-2 sm:px-4 py-2 text-[clamp(0.65rem,2.5vw,0.875rem)] text-white/90 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
         >
             <div className="shrink-0 scale-90 sm:scale-100">{icon}</div>
@@ -102,7 +104,7 @@ export default function Footer() {
                 <div className="relative z-10">
 
                     {/* ═══ TOP CTA ZONE ═══ */}
-                    <div className="flex flex-col items-center text-center px-6 pt-6 pb-16 md:pb-24">
+                    <div id="contact" className="flex flex-col items-center text-center px-6 pt-6 pb-16 md:pb-24">
                         {/* Three pillars */}
                         <div className="flex items-start justify-between w-full max-w-content px-2 mb-16 md:mb-24">
                             <span className="text-[0.65rem] uppercase tracking-[0.1em] text-white/50 font-medium text-left leading-tight max-w-[110px]">
@@ -138,6 +140,7 @@ export default function Footer() {
                         <a
                             href="#contact"
                             className={cn(buttonVariants({ variant: "default" }), "mt-8")}
+                            onClick={(e) => handleAnchorClick(e, "contact")}
                         >
                             {t("ctaButton")}
                         </a>
@@ -197,7 +200,7 @@ export default function Footer() {
                     </div>
 
                     {/* ═══ SOCIAL ROW ═══ */}
-                    <div className="mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-8 overflow-hidden">
+                    <div id="newsletter" className="mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-8 overflow-hidden">
                         <div className="flex flex-row flex-nowrap items-center justify-between gap-2 md:gap-4 w-full">
                             <SocialPill
                                 icon={<Instagram size={16} strokeWidth={1.5} />}
@@ -213,6 +216,10 @@ export default function Footer() {
                                 icon={<Globe size={16} strokeWidth={1.5} />}
                                 label="Newsletter"
                                 href="#newsletter"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    handleAnchorClick(e, "newsletter");
+                                }}
                             />
                         </div>
                     </div>
