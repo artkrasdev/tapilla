@@ -26,7 +26,11 @@ export default function BrandingPage() {
 
     return (
         <main className="bg-black">
-            <OffreHeader namespace="GenerativeAIPage" />
+            <OffreHeader
+                namespace="GenerativeAIPage"
+                primaryColor="rgba(6, 182, 212, 0.65)"
+                secondaryColor="rgba(99, 102, 241, 0.5)"
+            />
             <Image
                 src="/eye.webp"
                 alt="Eye"
@@ -53,8 +57,8 @@ export default function BrandingPage() {
             <FaqSection namespace="GenerativeAIPage.FaqSection" count={6} />
             <WhatWeDoSection
                 variant="card"
-                color1="rgba(244, 114, 182, 0.7)" // Custom pink color
-                color2="rgba(168, 85, 247, 0.5)" // Custom purple color
+                color1="rgba(6, 182, 212, 0.7)" // Cyan
+                color2="rgba(99, 102, 241, 0.5)" // Indigo
                 bgColor="#0b1221" // Base dark background
             />
             <TitleColumnsSection namespace="GenerativeAIPage.ExpertiseSection" />

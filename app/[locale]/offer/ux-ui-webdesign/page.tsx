@@ -22,7 +22,11 @@ export default function BrandingPage() {
 
     return (
         <main>
-            <OffreHeader namespace="UxUiPage" />
+            <OffreHeader
+                namespace="UxUiPage"
+                primaryColor="rgba(6, 182, 212, 0.65)"
+                secondaryColor="rgba(59, 130, 246, 0.5)"
+            />
             <PhotoSlider photos={examplePhotos} speed={25} />
             <BrandComparison
                 namespace="UxUiPage.BrandComparison"
@@ -48,8 +52,8 @@ export default function BrandingPage() {
             <FaqSection namespace="UxUiPage.FaqSection" count={6} />
             <WhatWeDoSection
                 variant="card"
-                color1="rgba(244, 114, 182, 0.7)" // Custom pink color
-                color2="rgba(168, 85, 247, 0.5)" // Custom purple color
+                color1="rgba(6, 182, 212, 0.7)" // Cyan
+                color2="rgba(59, 130, 246, 0.5)" // Blue
                 bgColor="#0b1221" // Base dark background
             />
             <TitleColumnsSection namespace="UxUiPage.ExpertiseSection" />

@@ -22,22 +22,22 @@ export default function BrandingPage() {
     return (
         <main>
             <OffreHeader
-                namespace="BrandingPage"
-                primaryColor="rgba(232, 74, 151, 0.65)"
-                secondaryColor="rgba(147, 51, 234, 0.5)"
+                namespace="ShopifyPage"
+                primaryColor="rgba(150, 191, 72, 0.65)"
+                secondaryColor="rgba(94, 142, 62, 0.5)"
             />
             <PhotoSlider photos={examplePhotos} speed={25} />
-            <BrandComparison namespace="BrandComparison" />
-            <TimelineSection namespace="BrandingPage.WhyBranding" />
-            <BentoGrid namespace="BrandingPage.BentoGrid" />
-            <FaqSection namespace="BrandingPage.FaqSection" count={6} />
+            <BentoGrid namespace="ShopifyPage.BentoGrid" />
+            <BrandComparison namespace="ShopifyPage.BrandComparison" headerLayout="twoPanel" />
+            <TimelineSection namespace="ShopifyPage.TimelineSection" itemKeys={["tma", "international", "emailing", "studio"]} itemIcons={["/identity.svg", "/our-history.svg", "/brand-expieince.svg", "/tech-data.svg"]} />
+            <FaqSection namespace="ShopifyPage.FaqSection" count={10} />
             <WhatWeDoSection
                 variant="card"
-                color1="rgba(232, 74, 151, 0.7)" // Magenta
-                color2="rgba(147, 51, 234, 0.5)" // Purple
+                color1="rgba(150, 191, 72, 0.7)" // Shopify green
+                color2="rgba(94, 142, 62, 0.5)" // Darker Shopify green
                 bgColor="#0b1221" // Base dark background
             />
-            <TitleColumnsSection namespace="BrandingPage.ExpertiseSection" />
+            <TitleColumnsSection namespace="ShopifyPage.ExpertiseSection" />
         </main>
     );
 }
