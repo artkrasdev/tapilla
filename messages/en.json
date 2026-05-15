@@ -828,5 +828,36 @@
             "axomeDescription": "Intelligent orchestration between n8n, Shopify Flow, and Make to maximize ROI.",
             "imageAlt": "Automation orchestration diagram showing connected nodes"
         }
+    },
+    "AgencyTabs": {
+        "tab0": {
+            "label": "E-commerce agency",
+            "title": "We are an e-commerce agency!",
+            "p1": "We work on the creation of eCommerce sites on Shopify, Prestashop as well as on the deployment of comprehensive marketing strategies.",
+            "p2": "Our global approach allows us to support numerous customers in all sectors of activity, from design to operational management, with particular attention to continuous optimization. Trust an agency that has been able to evolve with digital and retail, and that continues to innovate to ensure your online success.",
+            "p3": "Whether you are in the thinking phase, in the midst of developing your online store, or looking for post-launch optimization, we adapt our expertise to your specific needs.",
+            "p4": "We were born before the Internet and will be there to support you after the Internet! 🙂"
+        },
+        "tab1": {
+            "label": "Creative agency",
+            "title": "We are a creative, branding, UX and UI agency",
+            "p1": "As a creative agency, we focus on Branding, the UX and UI to shape unique and compelling experiences. Our goal is to create strong identities and intuitive interfaces that put the user at the heart of each project.",
+            "p2": "Performance and creativity are the drivers that guide us to offer you innovative and effective solutions. We work with Figma for a smooth and fast collaboration with our customers, from prototyping to final design.",
+            "p3": "Thanks to our expertise in Brand Sprint, we quickly build solid brand strategies. Finally, we develop powerful brand territories that reinforce your company's identity and resonate with your audience."
+        },
+        "tab2": {
+            "label": "Web agency",
+            "title": "We are a web, tech and nocode agency",
+            "p1": "Our expertise in CMS allows us to master low-code solutions as well as Webflow than open-source CMS like WordPress, offering efficiency for any web project.",
+            "p2": "We integrate a creative approach into each project, with an emphasis on adapted web design, strategic branding, and optimal user experience (UX) and user interface (UI).",
+            "p3": "These combined skills allow us to transform and align each site with your unique brand identity, while maximizing engagement and return on investment. They say that creativity is the form that brings the bottom up 🙂"
+        },
+        "tab3": {
+            "label": "Marketing agency",
+            "title": "We are a marketing agency",
+            "p1": "We can support you in digital marketing and marketing automation, working with historical partners such as Klaviyo, Nosto, Gorgias, Yotpo,... to provide you with extension solutions.",
+            "p2": "With more than 100 solutions that can be integrated via their applications, our expertise also extends to no-code development such as Make, as well as to more specific development with Symfony.",
+            "p3": "This diversity of skills allows us to orchestrate complex and personalized digital marketing campaigns that optimize customer engagement and maximize business results. For us, a project that finishes is a project that starts with our RUN & Marketing team 🙂"
+        }
     }
 }
