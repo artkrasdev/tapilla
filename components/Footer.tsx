@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Globe, Instagram, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -51,8 +52,28 @@ function SocialPill({ icon, label, href, onClick }: { icon: React.ReactNode; lab
 /* ═══════════════════════════════════════════════════════════════════════
    Footer
    ═══════════════════════════════════════════════════════════════════════ */
+const ROUTE_HEADING_MAP: Record<string, string> = {
+    "/": "ctaHeading_home",
+    "/agency": "ctaHeading_agency",
+    "/services": "ctaHeading_services",
+    "/offer/automation": "ctaHeading_automation",
+    "/offer/branding": "ctaHeading_branding",
+    "/offer/generative-ai": "ctaHeading_generative_ai",
+    "/offer/shopify": "ctaHeading_shopify",
+    "/offer/ux-ui-webdesign": "ctaHeading_ux_ui",
+    "/offer/wordpress": "ctaHeading_wordpress",
+};
+
+function getCtaHeadingKey(pathname: string): string {
+    // Strip locale prefix (e.g. "/en/agency" → "/agency", "/ru" → "/")
+    const stripped = pathname.replace(/^\/[a-z]{2}(\/|$)/, "/$1").replace(/\/$/, "") || "/";
+    return ROUTE_HEADING_MAP[stripped] ?? "ctaHeading";
+}
+
 export default function Footer() {
     const t = useTranslations("Footer");
+    const pathname = usePathname();
+    const ctaHeadingKey = getCtaHeadingKey(pathname);
 
     const services = [
         t("service1"),
@@ -120,7 +141,7 @@ export default function Footer() {
 
                         {/* Big heading */}
                         <h2 className="text-[clamp(2.8rem,8vw,7rem)] leading-[0.92] tracking-tighter text-white font-sans uppercase max-w-[1200px]">
-                            {t("ctaHeading").split("\n").map((line, i, arr) => (
+                            {t(ctaHeadingKey).split("\n").map((line, i, arr) => (
                                 <span key={i}>
                                     {line}
                                     {i < arr.length - 1 && <br />}
