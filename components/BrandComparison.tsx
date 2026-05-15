@@ -28,7 +28,27 @@ export default function BrandComparison({
     if (headerLayout === "twoPanel") {
         return (
             <section className="relative w-full bg-black overflow-hidden">
-                <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-12 md:py-16 md:px-8 lg:px-12 border-t border-white/10">
+                <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-12 md:py-16 md:px-8 lg:px-12 ">
+                    {/* Header */}
+                    {t.has("heading") && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 md:mb-10 items-end">
+                            <div className="flex flex-col gap-3">
+                                {t.has("label") && (
+                                    <p className="text-[1.1rem] md:text-[1.3rem] font-normal tracking-tight text-white/70 font-secondary">
+                                        {t("label")}
+                                    </p>
+                                )}
+                                <h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] leading-[1.05] tracking-tighter uppercase text-white">
+                                    {t("heading")}
+                                </h2>
+                            </div>
+                            {t.has("headerParagraph") && (
+                                <p className="text-[0.875rem] font-light leading-[1.6] tracking-tight text-white">
+                                    {t("headerParagraph")}
+                                </p>
+                            )}
+                        </div>
+                    )}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {(["left", "right"] as const).map((side) => (
                             <div key={side} className="flex flex-col gap-5 border border-white/10 rounded bg-white/3 backdrop-blur-sm p-6 md:p-7 lg:p-8">
@@ -74,7 +94,7 @@ export default function BrandComparison({
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
-            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-12 md:py-16 md:px-8 lg:px-12 border-t border-white/10">
+            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-12 md:py-16 md:px-8 lg:px-12 ">
 
                 {/* Section header */}
                 {headerLayout === "stacked" ? (

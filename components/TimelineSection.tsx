@@ -46,7 +46,7 @@ export default function TimelineSection({
                 scrollTrigger: {
                     trigger: ".timeline-container",
                     start: "top 70%",
-                    end: "bottom 60%",
+                    end: "bottom 85%",
                     scrub: 1,
                 },
             });
@@ -104,7 +104,7 @@ export default function TimelineSection({
                                             />
                                         </div>
 
-                                        {/* Connecting line (rendered for all 3 items to make exactly 3 lines) */}
+                                        {/* Connecting line */}
                                         <div className="relative w-px flex-1 my-2 min-h-[40px]">
                                             {/* Track (static bg) */}
                                             <div className="absolute inset-0 w-full h-full bg-white/10" />
@@ -118,7 +118,7 @@ export default function TimelineSection({
                                     </div>
 
                                     {/* ── Right Column: Text content ── */}
-                                    <div className={`flex flex-col gap-3 pb-10 md:pb-12 ${index === timelineItems.length - 1 ? 'pb-0 md:pb-0' : ''}`}>
+                                    <div className="flex flex-col gap-3 pb-10 md:pb-12">
                                         {/* Title */}
                                         <h3 className="text-[clamp(1.3rem,2.5vw,1.65rem)] font-medium tracking-tight text-white leading-tight mt-1">
                                             {item.title}

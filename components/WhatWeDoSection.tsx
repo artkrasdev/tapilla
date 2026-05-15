@@ -12,13 +12,11 @@ interface ServiceItem {
 const brandServices: ServiceItem[] = [
     { key: "brand1", link: "/offer/branding" },
     { key: "brand2", link: "/offer/ux-ui-webdesign" },
-    { key: "brand3", hot: true, link: "/offer/" },
-    { key: "brand4", link: "/offer/" },
-    { key: "brand5", link: "/offer/" },
+    { key: "brand3", hot: true, link: "/offer/generative-ai" }
 ];
 
 const techServices: ServiceItem[] = [
-    { key: "tech1", link: "/offer/" },
+    { key: "tech1", link: "/offer/shopify" },
     { key: "tech2", link: "/offer/" },
     { key: "tech4", link: "/offer/" },
     { key: "tech6", link: "/offer/" },

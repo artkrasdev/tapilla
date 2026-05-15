@@ -361,6 +361,138 @@
             }
         }
     },
+    "ShopifyPage": {
+        "subtitle": "Shopify Plus Partner & Global Strategy",
+        "heading": "PLATINUM CERTIFIED\nSHOPIFY PLUS AGENCY",
+        "description": "We are not just a web agency. Axome orchestrates your digital ecosystem: complex Shopify migration, tailor-made ERP connectors and global acquisition strategy to dominate your market.",
+        "ctaPrimary": "AUDIT MY ARCHITECTURE",
+        "ctaSecondary": "SEE OUR CUSTOMER CASES",
+        "TimelineSection": {
+            "label": "Shopify agency",
+            "heading": "PERFORMANCE & SUSTAINABILITY",
+            "description": "Beyond the launch, we manage your growth over the long term.",
+            "cta": "START YOUR PROJECT",
+            "tma": {
+                "title": "TMA & Technical Developments",
+                "subtitle": "Upsell, Bundles, Pre-order",
+                "description": "Your e-commerce platform must evolve as fast as your market. Our Maintenance department ensures monitoring, security updates and the continuous development of new functionalities (Upsell, Bundles, Pre-order) to maximize your average basket."
+            },
+            "international": {
+                "title": "International (Markets)",
+                "subtitle": "Multi-currency",
+                "description": "Multi-currency, multi-language deployment and local tax management. Reach new markets with Shopify Markets Pro."
+            },
+            "emailing": {
+                "title": "Emailing & CRM",
+                "subtitle": "A solid partner network",
+                "description": "Klaviyo expert setup. Automated flows, predictive segmentation and SMS marketing to retain your audience."
+            },
+            "studio": {
+                "title": "Studio & Branded Content",
+                "subtitle": "Art direction/Social media production",
+                "description": "Content is the fuel of your business. We produce visual assets (Shooting, Motion) and text assets optimized for SEO."
+            }
+        },
+        "FaqSection": {
+            "subtitle": "Learn more about Axome & Shopify",
+            "heading": "Why choose Axome as a Shopify Plus and Shopify Platinum agency?",
+            "description": "Find answers to the most common questions about our Shopify expertise, migration process, and e-commerce services.",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "Why should I consider redesigning my e-commerce site under Shopify?",
+                "a": "Shopify offers many advantages for online retailers: an intuitive interface, optimal technical performance, enhanced security, and scalability to manage both small shops and large sales volumes.\n\nAs a \"Shopify Platinum\" agency, we have found that sites migrated to Shopify generally benefit from a significant improvement in the conversion rate and a reduction in maintenance costs. Our methodical approach guarantees you a transition without business interruption and a redesign that respects your brand's DNA while optimizing the customer experience."
+            },
+            "faq2": {
+                "q": "What is the \"Shopify Platinum\" label and why is it important?",
+                "a": "The \"Shopify Platinum\" label is the highest distinction awarded by Shopify in France to its partners. Our agency is the first in France to have obtained this prestigious status, which testifies to our deep expertise, our extensive experience and our ability to deliver Shopify projects of the highest quality. By choosing a \"Shopify Platinum\" agency, you ensure that you are working with experts certified by Shopify themselves."
+            },
+            "faq3": {
+                "q": "How does a site redesign under Shopify actually take place?",
+                "a": "The redesign process generally consists of 6 steps:\n\n• Audit your current site and definition of objectives\n• Conception of the new architecture and design\n• Shopify store development\n• Data migration (products, customers, orders)\n• Extensive testing and optimizations\n• Launch and post-launch support\n\nWe support you every step of the way with a proven process."
+            },
+            "faq4": {
+                "q": "Will I lose my SEO by migrating to Shopify?",
+                "a": "No, as long as the migration is properly planned and executed. Our SEO expertise on Shopify allows us to set up an effective redirection strategy (301) and to optimize the new site for SEO.\n\nWe've even seen that most of our customers see their positioning improve after the migration, thanks to the superior technical performance of Shopify."
+            },
+            "faq5": {
+                "q": "Can Shopify manage large product catalogs?",
+                "a": "Absolutely. Shopify is perfectly capable of managing catalogs of several thousand products. Our \"Shopify Partner Premier\" status gives us access to advanced resources and techniques to optimize performance even with very large catalogs. In particular, we have carried out successful migrations for customers with more than 50,000 references."
+            },
+            "faq6": {
+                "q": "Is it possible to integrate my ERP/CRM/management software with Shopify?",
+                "a": "Yes, Shopify has a very rich ecosystem of integrations. Whether you use SAP, Salesforce, HubSpot, or any other management software, connectors generally exist. We've also developed our own integration solutions for less common systems. Our technical team has deep expertise in API development and can create custom connectors to sync your data between Shopify and your existing management tools. These integrations ensure the automation of your processes and eliminate double entries, allowing you to effectively manage your omnichannel business."
+            },
+            "faq7": {
+                "q": "Can I customize my Shopify site for my specific needs?",
+                "a": "Absolutely. Contrary to some preconceived ideas, Shopify allows a high level of personalization. Our \"Shopify Premier\" status testifies to our ability to create unique and tailor-made e-commerce experiences, while maintaining the performance and security advantages of the platform."
+            },
+            "faq8": {
+                "q": "What are the business sectors where Axome particularly excels?",
+                "a": "We offer several post-launch support packages, including technical maintenance, continuous optimizations, user support and strategic support. Our flexible support contracts guarantee fast response times (under 4 hours for emergencies) and privileged access to our team of experts. Our proactive support includes regular performance audits, security updates, and optimization recommendations based on the analysis of your data. We also provide you with a dedicated customer portal to follow up on your requests and access exclusive resources."
+            },
+            "faq9": {
+                "q": "Do you offer e-commerce growth services beyond development?",
+                "a": "Absolutely. Our approach goes well beyond simple technical creation. We offer comprehensive e-commerce support services including:\n\n• Data-based CRO (Conversion Rate Optimization) optimization\n• Digital marketing strategy adapted to your sector\n• Marketing automation and personalized customer journeys\n• Advanced analytics and custom dashboards\n• Technical SEO specific to Shopify\n• Omnichannel strategy advice and marketplace integration\n\nOur \"Shopify Premier\" status gives us access to exclusive resources and information to maximize your growth."
+            },
+            "faq10": {
+                "q": "What post-launch support do you offer?",
+                "a": "We offer several post-launch support packages, including technical maintenance, continuous optimizations, user support and strategic support. Our flexible support contracts guarantee fast response times (under 4 hours for emergencies) and privileged access to our team of experts."
+            }
+        },
+        "ExpertiseSection": {
+            "heading": "SHOPIFY PLUS AGENCY: TECHNICAL ARCHITECTURE & E-COMMERCE PERFORMANCE",
+            "col1": "Delivering code is not enough. As a Shopify Plus Partner agency, Axome merges technical engineering and business strategy. We build robust e-commerce architectures, calibrated to absorb your peak loads, eliminate technical debt, and support your frictionless scale-up.\n\n<b>ERP (SI) System Integration & Synchronization</b>\nThe reliability of your e-commerce depends on the backend. We are developing <b>custom connectors</b> (Private apps or Middleware) to streamline your operations. We ensure the connection <b>ERP & CRM</b> with solutions like Sage, Cegid, Netsuite or Salesforce. Integration <b>PIM</b> (Akeneo or Quable) makes it possible to centralize data, while the automation of <b>logistics (WMS)</b> optimizes your shipping flows.\n\n<b>Migrating to Shopify Plus: Securing SEO</b>\nRe-platforming from Magento or PrestaShop is a surgical operation. Our experts guarantee the maintenance of your <b>Google history</b>.",
+            "col2": "We conduct a Data audit to clean the databases, establish a <b>301 Redirect Plan</b> comprehensive to avoid 404 errors, and ensure a <b>Monitoring</b> accurate via the analysis of server logs and the Search Console.\n\nShopify Plus is no longer just B2C. We are deploying the native suite <b>Shopify B2B</b> to unify your sales channels. This includes the management of <b>personalized catalogs and rates</b> (Tiered pricing), specific payment terms (net terms, credit limits) as well as <b>Company Profiles</b> and the management of buyer permissions.\n\n<b>Custom Development & Checkout</b>\nWe use 100% of the capabilities of the Plus license to adapt the platform to your business rules. We use the <b>Checkout Extensibility</b> for your upsells and complex rules, <b>Shopify Functions</b> for custom backend logics, and can offer an approach <b>Headless</b> (Hydrogen) for ultra-specific UX.",
+            "col3": "<b>Web Performance & Core Web Vitals</b>\nSpeed is a direct factor in conversion and SEO ranking. We don't just do \"beautiful\" things, we do things fast. We are developing <b>Liquid 2.0 themes</b> lightweight, let's finely optimize the <b>Core Web Vitals</b> (LCP and CLS) and let's design a UX <b>Mobile First</b> priority.\n\n<b>Internationalization: Shopify Markets Pro</b>\nSell internationally without multiplying administrative complexity via <b>Shopify Markets</b>. Take advantage of the <b>Multi-currency and multi-language</b> native, of the automated management of Taxes and Customs Duties, and of the deployment of <b>Expansion stores</b> dedicated to your key markets."
+        },
+        "BrandComparison": {
+            "label": "E-commerce excellence",
+            "heading": "NO MORE DATA SILOS. MAKE WAY FOR UNIFICATION.",
+            "headerParagraph": "The growth of your e-commerce is often held back by invisible technical debt: disconnected ERP, poor PIM and unconverted UX.",
+            "left": {
+                "title": "ERP & PIM integration",
+                "section1": {
+                    "subtitle": "",
+                    "description": "Seamless connections with Sage, Cegid, Netsuite. Your stocks and orders synchronized in real time."
+                },
+                "section2": {
+                    "subtitle": "",
+                    "description": ""
+                }
+            },
+            "right": {
+                "title": "Frontend Performance",
+                "section1": {
+                    "subtitle": "",
+                    "description": "Highly optimized Shopify themes (Liquid) without the unnecessary complexity of Headless."
+                },
+                "section2": {
+                    "subtitle": "",
+                    "description": ""
+                }
+            }
+        },
+        "BentoGrid": {
+            "heading": "OUR HYBRID APPROACH",
+            "description": "We are merging software engineering and performance marketing.",
+            "card1": {
+                "title": "Shopify Redesign & Migration",
+                "description": "Secure transition from Magento, PrestaShop, or WooCommerce to Shopify Plus. Retention of SEO, migration of customer data and redesign of UX to maximize the conversion rate."
+            },
+            "card2": {
+                "title": "CRO & Data UX",
+                "description": "Complete audit, A/B testing and customizing the journey to transform traffic into recurring revenue."
+            },
+            "card3": {
+                "title": "SI connectivity",
+                "description": "Development of private Shopify apps and middleware to connect your ERP, WMS, and CRM without friction."
+            },
+            "card4": {
+                "title": "Global Acquisition Strategy",
+                "description": "Technical SEO, Google Ads, Social Ads and Emailing (Klaviyo). A unified vision to reduce your CAC and increase LTV.\n\nSemantic Audit/Max Performance Campaigns"
+            }
+        }
+    },
     "BrandingPage": {
         "subtitle": "Expertise Branding",
         "heading": "PRINT DRIVEN\nBY DATA.",
