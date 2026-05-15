@@ -493,6 +493,115 @@
             }
         }
     },
+    "WordPressPage": {
+        "subtitle": "WordPress development",
+        "heading": "WORDPRESS AGENCY:\nYOUR SITE DESIGNED\nTO LAST AND GROW\nWITH YOU",
+        "description": "+15 years of technical expertise. We combine the power of the most used CMS in the world with the Axome requirement to create secure, eco-designed and 100% manageable sites.",
+        "ctaPrimary": "I have a project",
+        "BrandsSection": {
+            "subtitle": "The observation",
+            "heading": "ARE YOU WORRIED ABOUT THE \"GAS FACTORY\" EFFECT?",
+            "description": "We are fighting the stereotypes of \"DIY\" WordPress that businesses rightly fear.",
+            "cta": "Start your project"
+        },
+        "BentoGrid": {
+            "card1": {
+                "title": "Degraded performance",
+                "description": "Your current site is slow, burdened by dozens of useless extensions and unoptimized code that penalizes your SEO and the user experience."
+            },
+            "card2": {
+                "title": "Critical safety",
+                "description": "Scared of hacks or updates that \"break\" the design? A poorly maintained WordPress is an open door to vulnerabilities."
+            },
+            "card3": {
+                "title": "Complex back office",
+                "description": "The back office is illegible and you don't dare touch anything anymore. You are losing your autonomy on a tool that is supposed to make your life easier."
+            }
+        },
+        "NumberedCardsGrid": {
+            "subtitle": "The Axome method",
+            "heading": "GLOBAL SUPPORT FROM A TO Z",
+            "card1": {
+                "title": "Strategy & Eco-design",
+                "description": "A successful site is played before the first line of code. We define a structure aligned with your business goals by prioritizing the essentials and digital sobriety."
+            },
+            "card2": {
+                "title": "UI/UX & Identity",
+                "description": "Emotion at the service of conversion. Our art directors design unique interfaces (UIs) and smooth user journeys (UX)."
+            },
+            "card3": {
+                "title": "Development & Integration",
+                "description": "We create a custom section library for clean, lightweight code and simple administration. We prefer Gutenberg, but we control the entire ecosystem (ACF, React, Elementor) to adapt to your constraints."
+            },
+            "card4": {
+                "title": "Sustainability & Serenity",
+                "description": "We guarantee a complete service: high availability hosting, security maintenance and dedicated support to ensure the evolution of your platform."
+            }
+        },
+        "CTABanner": {
+            "heading": "READY TO TRANSFORM YOUR\nDIGITAL PRESENCE?",
+            "description": "Whether for a redesign, a migration or a tailor-made creation, benefit from the support of a global agency.",
+            "buttonLabel": "Start your project"
+        },
+        "TimelineSection": {
+            "label": "",
+            "heading": "WHY WORDPRESS\nIS THE UNAVOIDABLE CHOICE",
+            "description": "The combination of Open Source and Axome technical rigor.",
+            "cta": "Consult our WordPress experts",
+            "freedom": {
+                "title": "Freedom & Open Source",
+                "subtitle": "",
+                "description": "You are 100% owner of your site and your data. Unlike SaaS, you don't rent the core of the technology."
+            },
+            "selection": {
+                "title": "The Axome selection",
+                "subtitle": "",
+                "description": "To avoid incompatibilities, we use a limited catalog of proven modules. We only recommend stable solutions to ensure safety."
+            },
+            "connectivity": {
+                "title": "Connectivity (API)",
+                "subtitle": "",
+                "description": "WordPress integrates perfectly with your information system. Via its native API, we connect your site to your business tools (CRM, ERP, HR, PIM)."
+            },
+            "seo": {
+                "title": "SEO, RGPD & Accessibility",
+                "subtitle": "",
+                "description": "An irreproachable technical structure: optimization for natural referencing (SEO), strict compliance with the RGPD and compliance with accessibility standards."
+            }
+        },
+        "FaqSection": {
+            "subtitle": "Candid answers to your technical questions",
+            "heading": "FREQUENTLY ASKED QUESTIONS ABOUT WORDPRESS DEVELOPMENT",
+            "description": "Before collaborating, it's normal to have questions. Here are the most frequently asked answers — and if you have more, contact us.",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "Will my site be secure against hacks?",
+                "a": "Yes. Safety is our priority. We don't install superfluous plugins that create flaws. We set up a robust server architecture, regular backups and ensure preventive maintenance."
+            },
+            "faq2": {
+                "q": "Is the site eco-responsible?",
+                "a": "Eco-design is at the heart of our approach. By using the native Gutenberg editor and avoiding unnecessary code overload, we produce lightweight sites that consume fewer server resources."
+            },
+            "faq3": {
+                "q": "Do I own my site?",
+                "a": "At 100%. Unlike rental platforms (SaaS), with WordPress at Axome, the code and the database belong entirely to you. You are free to change the host."
+            },
+            "faq4": {
+                "q": "Is it complicated to update?",
+                "a": "No. We set up the interface to be simple. We train you in delivery so that you are autonomous in content management. For technology, our maintenance takes care of everything."
+            },
+            "faq5": {
+                "q": "I already have a WordPress site, can you take it back?",
+                "a": "Yes, we first carry out a technical and security audit of the existing system. If the code meets the standards, we can provide maintenance (TMA) or carry out a gradual redesign."
+            }
+        },
+        "ExpertiseSection": {
+            "heading": "WORDPRESS AGENCY: CUSTOM TECHNICAL EXPERTISE & SUSTAINABLE PERFORMANCE",
+            "col1": "As <b>global digital agency</b>, Axome is positioned as the preferred partner for SMEs and major accounts for the design of platforms <b>Custom WordPress</b>. Our rigorous technical approach moves away from standard installations to favor efficient native development.\n\nWeb performance (Core Web Vitals) and<b>eco-design</b> are not options but prerequisites. By limiting technical debt and removing unnecessary dependencies, we ensure optimal load times. <b>GDPR compliance is built in by design.</b>",
+            "col2": "The security of your data is ensured by a high availability hosting architecture and preventive maintenance protocols. Using Axome means choosing the robustness of web engineering that has been tested for 15 years.\n\nAdministration often relies on <b>Gutenberg</b> or <b>ACF Pro</b> for total flexibility. Unlike \"page builders\" who add weight to the code, our custom blocks respect W3C standards and <b>accessibility standards (RGAA)</b>.",
+            "col3": "Beyond WordPress development, our strategy department supports you on the dimension <b>Globale</b> : traffic acquisition, data and functional evolution. Whether for a corporate site or a B2B platform, the Axome solution meets scalability requirements.\n\nOpt for an open-source, sovereign and 100% proprietary solution, maintained by a team of experts dedicated to your long-term digital growth."
+        }
+    },
     "BrandingPage": {
         "subtitle": "Expertise Branding",
         "heading": "PRINT DRIVEN\nBY DATA.",

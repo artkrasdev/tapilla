@@ -17,8 +17,7 @@ const brandServices: ServiceItem[] = [
 
 const techServices: ServiceItem[] = [
     { key: "tech1", link: "/offer/shopify" },
-    { key: "tech2", link: "/offer/" },
-    { key: "tech4", link: "/offer/" },
+    { key: "tech4", link: "/offer/wordpress" },
     { key: "tech6", link: "/offer/" },
 ];
 

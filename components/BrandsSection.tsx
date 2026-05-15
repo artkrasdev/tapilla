@@ -3,13 +3,18 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 
-export default function BrandsSection() {
-    const t = useTranslations("BrandsSection");
+interface BrandsSectionProps {
+    namespace?: string;
+    pb?: string;
+}
+
+export default function BrandsSection({ namespace = "BrandsSection", pb }: BrandsSectionProps) {
+    const t = useTranslations(namespace);
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
             {/* Content — same wrapper as HeroSection */}
-            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12">
+            <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-16 md:py-20 lg:py-24 md:px-8 lg:px-12" style={pb !== undefined ? { paddingBottom: pb } : undefined}>
                 <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between md:gap-12 lg:gap-20">
                     {/* Left column */}
                     <div className="flex flex-col gap-6">

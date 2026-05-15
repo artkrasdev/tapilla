@@ -77,11 +77,11 @@ export default function CTABanner({
 
                 {/* ── Content ── */}
                 <div className="relative z-10 w-full px-[5%] py-6 md:py-8 lg:py-10 md:px-8 lg:px-12">
-                    <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-16 xl:gap-24">
+                    <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8 xl:gap-12">
 
                         {/* Left — Heading */}
-                        <div className="lg:w-[48%] xl:w-[45%]">
-                            <h2 className="text-[clamp(2rem,4.5vw,3.8rem)] leading-none tracking-tighter uppercase text-white font-sans">
+                        <div className="lg:flex-1">
+                            <h2 className="text-[clamp(2rem,3.8vw,3.8rem)] leading-[1.05] tracking-tighter uppercase text-white font-sans w-full whitespace-nowrap">
                                 {t("heading").split("\n").map((line: string, i: number, arr: string[]) => (
                                     <span key={i}>
                                         {line}
