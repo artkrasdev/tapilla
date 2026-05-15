@@ -18,7 +18,7 @@ const brandServices: ServiceItem[] = [
 const techServices: ServiceItem[] = [
     { key: "tech1", link: "/offer/shopify" },
     { key: "tech4", link: "/offer/wordpress" },
-    { key: "tech6", link: "/offer/" },
+    { key: "tech6", link: "/offer/automation" },
 ];
 
 /* ── Arrow icon (north-east) ───────────────────────────────────────── */

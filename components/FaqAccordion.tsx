@@ -73,9 +73,7 @@ function FaqRow({
                 className="overflow-hidden transition-[height] duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]"
             >
                 <div ref={bodyRef} className="pb-6">
-                    <p className="text-[0.85rem] font-light leading-relaxed tracking-tight text-white">
-                        {item.answer}
-                    </p>
+                    <p className="text-[0.85rem] font-light leading-relaxed tracking-tight text-white [&_b]:font-semibold" dangerouslySetInnerHTML={{ __html: item.answer }} />
                 </div>
             </div>
         </div>

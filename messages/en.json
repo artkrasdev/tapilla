@@ -752,5 +752,81 @@
         "tech2": "Prestashop",
         "tech4": "Wordpress",
         "tech6": "Automation, N8N & SI Interfaces"
+    },
+    "AutomationPage": {
+        "subtitle": "Automation & Visual Development",
+        "heading": "ARCHITECTS OF YOUR FLOWS:\nN8N, SHOPIFY FLOW & AI",
+        "description": "Axome merges the agility of No-Code and the power of development. We orchestrate your processes with the best tools (n8n, Shopify Flow, Make) and accelerate development thanks to AI (Claude Code).",
+        "ctaPrimary": "Audit of your processes",
+        "ExpertiseSection": {
+            "heading": "AUTOMATION & VISUAL DEVELOPMENT AGENCY: OPERATIONAL EXCELLENCE",
+            "col1": "The era of monolithic code is over. Today, successful businesses are adopting <b>Visual Development and intelligent automation</b>. Axome is positioned as your strategic partner in navigating this complex ecosystem. We're not just integrators; we're flow architects. Our expertise extends to mainstream No-Code platforms such as <b>Zapier and Make</b> (ex-Integromat) up to native solutions like <b>Shopify Flow</b> and to powerful middleware like <b>N8n</b>. Our agnostic approach allows us to select the tool perfectly suited to each need.",
+            "col2": "Why pay for external automation when <b>Shopify Flow</b> can manage the tagging of your VIP customers or fraud detection for free? To synchronize thousands of product references between a Sage ERP and Shopify Plus, the power of <b>n8n hosted</b> is indispensable. We complement this expertise with <b>generative AI (Claude Code)</b> to develop tailor-made logic building blocks. This \"Hybrid\" methodology offers the best of both worlds: the free performance of Shopify Flow, the agility of Make for marketing, and the robustness of n8n for critical data.",
+            "col3": "As a technical agency, we apply <b>web development standards to automation</b>: versioning, recipe environments, error monitoring and documentation. Whether you are looking to automate your marketing, optimize your logistics or streamline your customer service, the Axome Automation team designs interconnected ecosystems. We free your teams from repetitive tasks so they can focus on their core business. Discover the power of visual development — connect <b>n8n, Shopify Flow, Make</b>, and your APIs with Axome expertise."
+        },
+        "FaqSection": {
+            "subtitle": "We clarify everything, without jargon",
+            "heading": "AUTOMATION QUESTIONS\n& VISUAL DEV",
+            "description": "Before working together, it's normal to have questions. Here are the answers to the most common ones — and if you have more, get in touch.",
+            "cta": "Contact us",
+            "faq1": {
+                "q": "Should you choose n8n, Make, or Shopify Flow?",
+                "a": "Each tool has its territory. <b>Shopify Flow</b> is unbeatable for actions internal to Shopify (customer tagging, order cancellation, fraud) because it is native, free and immediate. <b>Make</b> is great for marketing (connecting Facebook Leads to Slack). <b>n8n</b> is required for heavy operations, file processing and connection to ERPs, where Flow and Make show their technical or pricing limitations."
+            },
+            "faq2": {
+                "q": "What is Claude Code's role in your services?",
+                "a": "Claude Code is an advanced AI tool that our developers use to speed up the writing of scripts (Python, JS) within your n8n or Flow automations. Where a standard connector shows its limits, we use Claude to generate robust and tailor-made code."
+            },
+            "faq3": {
+                "q": "Is low-code reliable for a large company?",
+                "a": "Yes, if the architecture is mastered. \"Visual Development\" allows for easier maintenance than a \"black box\" of pure code. However, Axome adds a layer of rigor (error management, logs, tests) to ensure that your Make or n8n workflows are as stable as a traditional application."
+            },
+            "faq4": {
+                "q": "How do you ensure data sovereignty?",
+                "a": "For critical data, we prefer <b>n8n in self-hosted</b> on French servers. Unlike 100% American SaaS solutions (Zapier/Make), this ensures that your customer data does not leave your controlled infrastructure. Shopify Flow remains secure within the Shopify environment."
+            },
+            "faq5": {
+                "q": "Can you resume existing automations?",
+                "a": "Absolutely. We often audit Make or Zapier accounts that have become \"gas factories\". We streamline them, optimize costs, and often migrate expensive logic from Zapier to Shopify Flow (free) or n8n (flat rate)."
+            },
+            "faq6": {
+                "q": "What is the budget for an automation strategy?",
+                "a": "The hybrid approach allows you to adjust the budget. There's no licensing cost to use Shopify Flow. A simple Zapier workflow can cost little. A complete n8n architecture interconnecting ERP and e-Commerce represents a more substantial technical project. The advantage is the immediate ROI."
+            }
+        },
+        "CTABanner": {
+            "heading": "AUTOMATE\nYOUR GROWTH",
+            "description": "Free audit of your technical stack. Let's identify the automation levers together (n8n, Flow, Make).",
+            "buttonLabel": "Book an audit"
+        },
+        "BentoGrid": {
+            "heading": "VISUAL DEVELOPMENT\n& AUTOMATION",
+            "description": "360° expertise to streamline each layer of your business.",
+            "card1": {
+                "title": "Orchestration Middleware (N8N)",
+                "description": "The core of the reactor. We deploy dedicated n8n instances to manage your heavy synchronizations (Inventory, Orders, PIM). It is the robust bridge between your E-commerce and your ERP, designed to handle massive volumes.\n\nETL SQL/Postgres Webhooks"
+            },
+            "card2": {
+                "title": "Native & Rapid (Flow/Make)",
+                "description": "We operate Shopify Flow at 100% for internal logic (tagging, risks) in order to avoid external costs, and Make for fast marketing connectivity."
+            },
+            "card3": {
+                "title": "AI Coding (Claude Code)",
+                "description": "Our developers use Claude Code to generate custom Python/JS scripts, pushing the limits of standard nodes."
+            },
+            "card4": {
+                "title": "Audit & Data Architecture",
+                "description": "Before automating, you need to simplify. We analyze your Stack (legacy and modern) to define where to place the cursor: should you use Shopify Flow for free? switch to n8n? or a simple Zap?"
+            }
+        },
+        "RightTool": {
+            "heading": "THE RIGHT TOOL FOR THE RIGHT USE",
+            "description": "Don't lock yourself into a single technological dogma. At Axome, we believe in the hybrid approach. We mix the robustness of the code, the nativity of Shopify Flow and the agility of Make.",
+            "monolithicTitle": "Monolithic approach",
+            "monolithicDescription": "Code everything by hand or use expensive Shopify apps for each microfeature.",
+            "axomeTitle": "Axome Visual Approach",
+            "axomeDescription": "Intelligent orchestration between n8n, Shopify Flow, and Make to maximize ROI.",
+            "imageAlt": "Automation orchestration diagram showing connected nodes"
+        }
     }
 }
