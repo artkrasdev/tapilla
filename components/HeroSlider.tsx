@@ -78,13 +78,13 @@ export default function HeroSlider() {
 
             {/* Logo + name row */}
             <div className="absolute top-4 left-2 z-10 flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full overflow-hidden border-[1.5px] border-white/60 shrink-0">
+                <div className="w-6 h-6 flex items-center justify-center rounded-full overflow-hidden border-[1.5px] border-white/60 shrink-0">
                     <Image
-                        src="/tapilla-white.png"
+                        src="/favicon.png"
                         alt="Logo"
                         width={24}
                         height={24}
-                        className="object-cover w-full h-full"
+                        className="object-cover w-3/4 h-3/4"
                     />
                 </div>
                 <span className="text-xs font-medium text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.6)]">

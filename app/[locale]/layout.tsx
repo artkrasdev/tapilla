@@ -42,6 +42,11 @@ export async function generateMetadata({
 
     return {
         metadataBase: new URL("https://tapilla.com"),
+        icons: {
+            icon: "/favicon.png",
+            shortcut: "/favicon.png",
+            apple: "/favicon.png",
+        },
         title: {
             default: titles[locale] || titles.en,
             template: "%s | Tapilla",

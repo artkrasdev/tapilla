@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Globe, Instagram, Linkedin } from "lucide-react";
@@ -75,24 +75,25 @@ export default function Footer() {
     const pathname = usePathname();
     const ctaHeadingKey = getCtaHeadingKey(pathname);
 
-    const services = [
-        t("service1"),
-        t("service2"),
-        t("service3"),
-        t("service4"),
+    const locale = useLocale();
+    const base = `/${locale}`;
+
+    const brandLinks = [
+        { label: t("offer_branding"),      href: `${base}/offer/branding` },
+        { label: t("offer_ux_ui"),         href: `${base}/offer/ux-ui-webdesign` },
+        { label: t("offer_generative_ai"), href: `${base}/offer/generative-ai` },
     ];
 
-    const expertise = [
-        t("expertise1"),
-        t("expertise2"),
-        t("expertise3"),
+    const techLinks = [
+        { label: t("offer_shopify"),    href: `${base}/offer/shopify` },
+        { label: t("offer_wordpress"),  href: `${base}/offer/wordpress` },
+        { label: t("offer_automation"), href: `${base}/offer/automation` },
     ];
 
-    const quickAccess = [
-        t("quick1"),
-        t("quick2"),
-        t("quick3"),
-        t("quick4"),
+    const navLinks = [
+        { label: t("nav_agency"),   href: `${base}/agency` },
+        { label: t("nav_services"), href: `${base}/services` },
+        { label: t("nav_contact"),  href: `#contact` },
     ];
 
     return (
@@ -192,27 +193,27 @@ export default function Footer() {
 
                             {/* Cols 2-4 wrapper */}
                             <div className="contents lg:grid lg:grid-cols-3 lg:gap-16 xl:gap-24 2xl:gap-32">
-                                {/* Col 2 — Services */}
+                                {/* Col 2 — Brand & Creative */}
                                 <div className="flex flex-col gap-3">
-                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("servicesTitle")}</h4>
-                                    {services.map((s, i) => (
-                                        <a key={i} href="#" className="text-sm text-white hover:text-white/70 transition-colors duration-200">{s}</a>
+                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("brandTitle")}</h4>
+                                    {brandLinks.map((item, i) => (
+                                        <a key={i} href={item.href} className="text-sm text-white hover:text-white/70 transition-colors duration-200">{item.label}</a>
                                     ))}
                                 </div>
 
-                                {/* Col 3 — Expertise */}
+                                {/* Col 3 — Tech & Dev */}
                                 <div className="flex flex-col gap-3">
-                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("expertiseTitle")}</h4>
-                                    {expertise.map((e, i) => (
-                                        <a key={i} href="#" className="text-sm text-white hover:text-white/70 transition-colors duration-200">{e}</a>
+                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("techTitle")}</h4>
+                                    {techLinks.map((item, i) => (
+                                        <a key={i} href={item.href} className="text-sm text-white hover:text-white/70 transition-colors duration-200">{item.label}</a>
                                     ))}
                                 </div>
 
-                                {/* Col 4 — Quick access */}
+                                {/* Col 4 — Navigation */}
                                 <div className="flex flex-col gap-3">
-                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("quickTitle")}</h4>
-                                    {quickAccess.map((q, i) => (
-                                        <a key={i} href="#" className="text-sm text-white hover:text-white/70 transition-colors duration-200">{q}</a>
+                                    <h4 className="font-secondary text-xl text-white tracking-tight mb-1">{t("navigationTitle")}</h4>
+                                    {navLinks.map((item, i) => (
+                                        <a key={i} href={item.href} className="text-sm text-white hover:text-white/70 transition-colors duration-200">{item.label}</a>
                                     ))}
                                 </div>
                             </div>
@@ -253,8 +254,8 @@ export default function Footer() {
                                 © {new Date().getFullYear()} Tapilla. {t("copyright")}
                             </span>
                             <div className="flex items-center gap-6">
-                                <a href="#" className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal1")}</a>
-                                <a href="#" className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal2")}</a>
+                                <a href={`${base}/privacy-policy`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal1")}</a>
+                                <a href={`${base}/legal-notice`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal2")}</a>
                             </div>
                         </div>
                     </div>
