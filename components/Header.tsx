@@ -174,7 +174,7 @@ export default function Header() {
 
                                 {langOpen && (
                                     <div
-                                        className="w-full px-1 pb-1 animate-in fade-in slide-in-from-top-2 duration-300"
+                                        className="w-full px-1 pb-1 flex flex-col gap-1 animate-in fade-in slide-in-from-top-2 duration-300"
                                         role="listbox"
                                         aria-label="Language options"
                                     >
