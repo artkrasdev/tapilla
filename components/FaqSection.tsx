@@ -35,7 +35,7 @@ export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqS
                         <div className="relative aspect-square w-full overflow-hidden rounded-sm">
                             <img
                                 src="/faq-image.webp"
-                                alt=""
+                                alt="Tapilla agency team discussing digital strategy and e-commerce solutions"
                                 className="h-full w-full object-cover"
                             />
                         </div>

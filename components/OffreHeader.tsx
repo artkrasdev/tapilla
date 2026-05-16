@@ -51,12 +51,12 @@ export default function OffreHeader({
                     {t("subtitle")}
                 </p>
 
-                {/* Heading — large bold uppercase */}
-                <h1 className="text-[clamp(2.5rem,10vw,5.625rem)] leading-[0.95] tracking-tighter uppercase text-white [text-shadow:10px_8px_12px_rgba(0,0,0,0.20)]">
-                    {t("heading").split("\n").map((line, i, arr) => (
-                        <span key={i}>
+                {/* Heading — large bold */}
+                <h1 className="text-[clamp(2.5rem,10vw,5.625rem)] leading-[0.95] tracking-tighter text-white [text-shadow:10px_8px_12px_rgba(0,0,0,0.20)]">
+                    <span className="sr-only">Tapilla — </span>
+                    {t("heading").split("\n").map((line, i) => (
+                        <span key={i} className="block uppercase">
                             {line}
-                            {i < arr.length - 1 && <br />}
                         </span>
                     ))}
                 </h1>

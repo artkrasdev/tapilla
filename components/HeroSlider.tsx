@@ -6,7 +6,11 @@ import { AnimatePresence, motion } from "framer-motion";
 
 // ── Slider config ────────────────────────────────────────────────────────────
 const SLIDE_DURATION = 5000; // ms per slide
-const SLIDE_IMAGES = ["/hero-card.jpg", "/hero-card.jpg", "/hero-card.jpg"];
+const SLIDE_IMAGES = [
+  { src: "/hero-card.jpg", alt: "Tapilla e-commerce project showcase - premium web design portfolio" },
+  { src: "/hero-card.jpg", alt: "Shopify Plus development project by Tapilla agency" },
+  { src: "/hero-card.jpg", alt: "UX/UI design excellence - Tapilla digital agency work" },
+];
 
 export default function HeroSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -33,8 +37,8 @@ export default function HeroSlider() {
                         className="absolute inset-0"
                     >
                         <Image
-                            src={SLIDE_IMAGES[activeSlide]}
-                            alt={`Slide ${activeSlide + 1}`}
+                            src={SLIDE_IMAGES[activeSlide].src}
+                            alt={SLIDE_IMAGES[activeSlide].alt}
                             fill
                             className="object-cover"
                             priority={activeSlide === 0}
@@ -53,7 +57,7 @@ export default function HeroSlider() {
                         key={i}
                         onClick={() => goToSlide(i)}
                         className="relative h-[2px] flex-1 rounded-full bg-white/30 overflow-hidden cursor-pointer"
-                        aria-label={`Go to slide ${i + 1}`}
+                        aria-label={`Go to ${SLIDE_IMAGES[i].alt}`}
                     >
                         {i === activeSlide && (
                             <span
