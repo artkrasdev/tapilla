@@ -82,7 +82,6 @@ export default async function UxUiPage({ params }: PageProps) {
         />
         <CTABanner
           namespace="UxUiPage.CTABanner"
-          buttonHref="#contact"
           colors={{
             color1: "rgba(6, 182, 212, 0.6)",
             color2: "rgba(99, 102, 241, 0.5)",

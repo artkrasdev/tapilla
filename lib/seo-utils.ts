@@ -160,4 +160,22 @@ export const seoConfigs = {
     keywords: ["WordPress development", "custom WordPress", "WordPress agency", "CMS development"],
     path: "/offer/wordpress",
   },
+  contact: {
+    title: {
+      en: "Contact Us | Get in Touch | Tapilla Digital Agency",
+      ru: "Связаться с нами | Свяжитесь с нами | Tapilla Digital Agency",
+    },
+    description: {
+      en: "Get in touch with Tapilla to discuss your e-commerce project. Contact our team for Shopify development, UX/UI design, branding, and digital transformation services.",
+      ru: "Свяжитесь с Tapilla, чтобы обсудить ваш проект электронной коммерции. Свяжитесь с нашей командой для разработки Shopify, UX/UI дизайна, брендинга и цифровой трансформации.",
+    },
+    keywords: [
+      "contact",
+      "get in touch",
+      "digital agency contact",
+      "e-commerce agency",
+      "project inquiry",
+    ],
+    path: "/contact",
+  },
 } satisfies Record<string, PageSeoConfig>;

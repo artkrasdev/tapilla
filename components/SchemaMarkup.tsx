@@ -1,7 +1,7 @@
 import { routing } from "@/i18n/routing";
 
 interface SchemaMarkupProps {
-  type: "LocalBusiness" | "WebSite" | "Service" | "FAQPage";
+  type: "LocalBusiness" | "WebSite" | "Service" | "FAQPage" | "ContactPage";
   locale: string;
   url: string;
   data?: Record<string, unknown>;
@@ -83,6 +83,26 @@ export default function SchemaMarkup({ type, locale, url, data = {} }: SchemaMar
       schema = {
         ...schema,
         mainEntity: data.questions || [],
+      };
+      break;
+
+    case "ContactPage":
+      schema = {
+        ...schema,
+        "@type": "ContactPage",
+        name: data.name || (locale === "ru" ? "Связаться с нами" : "Contact Us"),
+        description: data.description,
+        url: `https://tapilla.com${url}`,
+        mainEntity: {
+          "@type": "Organization",
+          name: "Tapilla",
+          url: "https://tapilla.com",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: locale === "ru" ? "Поддержка клиентов" : "Customer Support",
+            availableLanguage: ["English", "Russian"],
+          },
+        },
       };
       break;
   }

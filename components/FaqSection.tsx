@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
@@ -13,6 +13,7 @@ export interface FaqSectionProps {
 
 export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqSectionProps) {
     const t = useTranslations(namespace);
+    const locale = useLocale();
 
     /* Build items array from translations */
     const items: FaqItem[] = useMemo(
@@ -49,7 +50,7 @@ export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqS
                         <div>
                             <Button
                                 variant="secondary"
-                                render={<a href="#contact" onClick={(e) => handleAnchorClick(e, "contact")} />}
+                                render={<a href={`/${locale}/contact`} />}
                                 nativeButton={false}
                             >
                                 {t("cta")}

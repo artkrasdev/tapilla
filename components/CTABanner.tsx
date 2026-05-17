@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -29,11 +29,13 @@ const DEFAULT_COLORS: Required<CTABannerColors> = {
 
 export default function CTABanner({
     namespace,
-    buttonHref = "#contact",
+    buttonHref,
     colors = {},
     className,
 }: CTABannerProps) {
     const t = useTranslations(namespace);
+    const locale = useLocale();
+    const resolvedHref = buttonHref ?? `/${locale}/contact`;
     const c: Required<CTABannerColors> = { ...DEFAULT_COLORS, ...colors };
 
     const bg1 = `radial-gradient(circle at 30% 30%, ${c.color1}, transparent 50%), radial-gradient(circle at 70% 70%, ${c.color2}, transparent 50%), radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0.7), transparent 40%)`;
@@ -98,7 +100,7 @@ export default function CTABanner({
                             </p>
                             <div>
                                 <a
-                                    href={buttonHref}
+                                    href={resolvedHref}
                                     className={cn(buttonVariants({ variant: "default" }))}
                                 >
                                     {t("buttonLabel")}

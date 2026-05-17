@@ -93,7 +93,7 @@ export default function Footer() {
     const navLinks = [
         { label: t("nav_agency"),   href: `${base}/agency` },
         { label: t("nav_services"), href: `${base}/services` },
-        { label: t("nav_contact"),  href: `#contact` },
+        { label: t("nav_contact"),  href: `${base}/contact` },
     ];
 
     return (
@@ -160,9 +160,8 @@ export default function Footer() {
 
                         {/* CTA button */}
                         <a
-                            href="#contact"
+                            href={`/${locale}/contact`}
                             className={cn(buttonVariants({ variant: "default" }), "mt-8")}
-                            onClick={(e) => handleAnchorClick(e, "contact")}
                         >
                             {t("ctaButton")}
                         </a>

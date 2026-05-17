@@ -74,7 +74,7 @@ export default function Header() {
 
     const navLinks = [
         { label: t("agency"), href: `/${locale}/agency` },
-        { label: t("whatWeDo"), href: `/${locale}/services` },
+        { label: t("whatWeDo"), href: `/${locale}/services` }
     ];
 
     return (
@@ -204,7 +204,7 @@ export default function Header() {
                         {/* CTA button — visible on all sizes */}
                         <Button 
                             variant="accent" 
-                            render={<a href="#contact" onClick={(e) => handleAnchorClick(e, "contact")} />} 
+                            render={<a href={`/${locale}/contact`} />} 
                             nativeButton={false}
                         >
                             <span className="hidden sm:inline">{t("contact")}</span>
@@ -288,11 +288,8 @@ export default function Header() {
                         <Button
                             variant="default"
                             className="w-full py-5 text-sm"
-                            onClick={(e) => {
-                                handleAnchorClick(e, "contact");
-                                closeMobileMenu();
-                            }}
-                            render={<a href="#contact" />}
+                            onClick={closeMobileMenu}
+                            render={<a href={`/${locale}/contact`} />}
                             nativeButton={false}
                         >
                             {t("startProject")}

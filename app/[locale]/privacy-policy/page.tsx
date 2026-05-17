@@ -26,6 +26,15 @@ export default async function PrivacyPolicyPage({ params }: PageProps) {
         { title: t("s5Title"), body: t("s5Body") },
         { title: t("s6Title"), body: t("s6Body") },
         { title: t("s7Title"), body: t("s7Body") },
+        { title: t("s8Title"), body: t("s8Body") },
+        { title: t("s9Title"), body: t("s9Body") },
+        { title: t("s10Title"), body: t("s10Body") },
+        { title: t("s11Title"), body: t("s11Body") },
+        { title: t("s12Title"), body: t("s12Body") },
+        { title: t("s13Title"), body: t("s13Body") },
+        { title: t("s14Title"), body: t("s14Body") },
+        { title: t("s15Title"), body: t("s15Body") },
+        { title: t("s16Title"), body: t("s16Body") },
     ];
 
     return (

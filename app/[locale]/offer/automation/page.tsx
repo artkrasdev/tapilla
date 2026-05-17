@@ -68,7 +68,6 @@ export default async function AutomationPage({ params }: PageProps) {
         <BentoGrid namespace="AutomationPage.BentoGrid" />
         <CTABanner
           namespace="AutomationPage.CTABanner"
-          buttonHref="#contact"
           colors={{
             color1: "rgba(255, 109, 0, 0.75)",
             color2: "rgba(255, 145, 0, 0.6)",

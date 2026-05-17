@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 
 const exampleVideos = [
@@ -11,6 +11,7 @@ const exampleVideos = [
 
 export default function VideoCapsulesSection() {
     const t = useTranslations("VideoCapsulesSection");
+    const locale = useLocale();
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
@@ -88,7 +89,7 @@ export default function VideoCapsulesSection() {
                             </p>
                             <Button
                                 variant="secondary"
-                                render={<a href="#contact" />}
+                                render={<a href={`/${locale}/contact`} />}
                                 nativeButton={false}
                                 className="text-[10px] uppercase tracking-wider px-4 py-2"
                             >
