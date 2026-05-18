@@ -32,9 +32,10 @@ export default function PhotoSlider({ photos, speed = 20, className = "" }: Phot
                             <Image
                                 src={src}
                                 alt={`Slide ${i + 1}`}
-                                width={416}
-                                height={312}
-                                className="object-cover w-full h-full"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, 416px"
+                                loading="eager"
                             />
                         </div>
                     ))}
@@ -50,9 +51,10 @@ export default function PhotoSlider({ photos, speed = 20, className = "" }: Phot
                             <Image
                                 src={src}
                                 alt=""
-                                width={416}
-                                height={312}
-                                className="object-cover w-full h-full"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 640px) 280px, (max-width: 768px) 340px, 416px"
+                                loading="lazy"
                             />
                         </div>
                     ))}

@@ -45,11 +45,13 @@ export default async function AgencyPage({ params }: PageProps) {
           <div className="mx-auto w-full max-w-content">
             <video
               src="/theagency.webm"
+              poster="/web-agency.webp"
               autoPlay
               muted
               loop
               playsInline
-              className="w-full aspect-4/3 sm:aspect-2/1 md:aspect-21/9 lg:aspect-3/1 rounded-xl object-cover"
+              preload="metadata"
+              className="w-full aspect-4/3 sm:aspect-2/1 md:aspect-21/9 lg:aspect-3/1 rounded-xl object-cover bg-neutral-900"
             />
           </div>
         </section>

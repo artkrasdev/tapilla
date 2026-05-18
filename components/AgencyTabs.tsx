@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface TabData {
     key: string;
@@ -97,12 +98,17 @@ export default function AgencyTabs() {
                                     >
                                         {/* Image — inset, rounded, full height with aspect ratio preserved */}
                                         <div
-                                            className="flex-shrink-0 overflow-hidden rounded-xl flex items-center justify-center max-w-[400px]"
+                                            className="shrink-0 overflow-hidden rounded-xl flex items-center justify-center max-w-100 relative"
+                                            style={{ width: "400px", height: "300px" }}
                                         >
-                                            <img
+                                            <Image
                                                 src={tab.image}
                                                 alt={t(`${tab.key}.label`)}
-                                                className="w-full h-full object-contain"
+                                                fill
+                                                className="object-contain"
+                                                sizes="400px"
+                                                loading={isActive ? "eager" : "lazy"}
+                                                priority={isActive}
                                                 draggable={false}
                                             />
                                         </div>

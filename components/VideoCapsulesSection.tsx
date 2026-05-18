@@ -2,12 +2,62 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { useEffect, useRef, useState } from "react";
 
-const exampleVideos = [
-    "/examples-ai/example-ai-1.mp4",
-    "/examples-ai/example-ai-2.mp4",
-    "/examples-ai/example-ai-3.mp4",
+interface VideoData {
+    src: string;
+    poster: string;
+}
+
+const exampleVideos: VideoData[] = [
+    { src: "/examples-ai/example-ai-1.mp4", poster: "/examples-ai/example-ai-1.webp" },
+    { src: "/examples-ai/example-ai-2.mp4", poster: "/examples-ai/example-ai-2.webp" },
+    { src: "/examples-ai/example-ai-3.mp4", poster: "/examples-ai/example-ai-3.webp" },
 ];
+
+function LazyVideo({ src, poster }: VideoData) {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isInView, setIsInView] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsInView(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "50px", threshold: 0.1 }
+        );
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div className="relative aspect-[3/4] rounded-lg overflow-hidden bg-[#1a1a1a]">
+            {!isLoaded && (
+                <div className="absolute inset-0 bg-neutral-800 animate-pulse" />
+            )}
+            <video
+                ref={videoRef}
+                src={isInView ? src : undefined}
+                poster={poster}
+                autoPlay={isInView}
+                muted
+                loop
+                playsInline
+                preload="none"
+                className="absolute inset-0 w-full h-full object-cover"
+                onLoadedData={() => setIsLoaded(true)}
+            />
+        </div>
+    );
+}
 
 export default function VideoCapsulesSection() {
     const t = useTranslations("VideoCapsulesSection");
@@ -38,21 +88,9 @@ export default function VideoCapsulesSection() {
 
                 {/* Video Cards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {/* Video Cards */}
+                    {/* Video Cards with Lazy Loading */}
                     {exampleVideos.map((video, index) => (
-                        <div
-                            key={index}
-                            className="relative aspect-[3/4] rounded-lg overflow-hidden bg-[#1a1a1a]"
-                        >
-                            <video
-                                src={video}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                className="absolute inset-0 w-full h-full object-cover"
-                            />
-                        </div>
+                        <LazyVideo key={index} src={video.src} poster={video.poster} />
                     ))}
 
                     {/* CTA Card with Animated Background */}
