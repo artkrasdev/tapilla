@@ -7,6 +7,7 @@ import { Globe, Instagram, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { handleAnchorClick } from "@/lib/scroll-utils";
+import { showCookieBanner } from "@/lib/cookie-consent";
 
 /* ── Arrow NE icon ─────────────────────────────────────────────────── */
 function ArrowNE({ className = "" }: { className?: string }) {
@@ -253,6 +254,12 @@ export default function Footer() {
                                 © {new Date().getFullYear()} Tapilla. {t("copyright")}
                             </span>
                             <div className="flex items-center gap-6">
+                                <button
+                                    onClick={showCookieBanner}
+                                    className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200 cursor-pointer"
+                                >
+                                    {t("cookieSettings")}
+                                </button>
                                 <a href={`${base}/privacy-policy`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal1")}</a>
                                 <a href={`${base}/legal-notice`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal2")}</a>
                             </div>

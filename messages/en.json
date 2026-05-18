@@ -744,7 +744,8 @@
         "nav_contact": "Contact us",
         "copyright": "All rights reserved.",
         "legal1": "Privacy Policy",
-        "legal2": "Legal Notice"
+        "legal2": "Legal Notice",
+        "cookieSettings": "Cookie Settings"
     },
     "ContactPage": {
         "subtitle": "Your next big idea is taking shape",
@@ -936,5 +937,27 @@
             "p2": "With more than 100 solutions that can be integrated via their applications, our expertise also extends to no-code development such as Make, as well as to more specific development with Symfony.",
             "p3": "This diversity of skills allows us to orchestrate complex and personalized digital marketing campaigns that optimize customer engagement and maximize business results. For us, a project that finishes is a project that starts with our RUN & Marketing team 🙂"
         }
+    },
+    "CookieBanner": {
+        "title": "Cookie Consent",
+        "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Accept All', you consent to our use of cookies in accordance with our Privacy Policy.",
+        "acceptAll": "Accept All",
+        "rejectNonEssential": "Reject Non-Essential",
+        "preferences": "Preferences",
+        "preferencesTitle": "Cookie Preferences",
+        "preferencesDescription": "Customize your cookie preferences below. Necessary cookies are always enabled as they are essential for the website to function.",
+        "savePreferences": "Save Preferences",
+        "cancel": "Cancel",
+        "close": "Close",
+        "required": "Required",
+        "necessary": "Necessary",
+        "necessaryDescription": "Essential cookies required for the website to function properly. These cannot be disabled.",
+        "analytics": "Analytics",
+        "analyticsDescription": "Cookies that help us understand how visitors interact with our website by collecting anonymous data.",
+        "marketing": "Marketing",
+        "marketingDescription": "Cookies used to deliver personalized advertisements and track their effectiveness.",
+        "iconAccessibleLabel": "Manage cookie preferences",
+        "enable": "Enable {type}",
+        "disable": "Disable {type}"
     }
 }

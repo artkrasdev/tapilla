@@ -4,6 +4,7 @@ import "../globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -130,6 +131,7 @@ export default async function LocaleLayout({
                     <Header />
                     {children}
                     <Footer />
+                    <CookieBanner />
                 </NextIntlClientProvider>
             </body>
         </html>
