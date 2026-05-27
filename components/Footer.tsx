@@ -3,52 +3,10 @@
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { Globe, Instagram, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { handleAnchorClick } from "@/lib/scroll-utils";
 import { showCookieBanner } from "@/lib/cookie-consent";
 
-/* ── Arrow NE icon ─────────────────────────────────────────────────── */
-function ArrowNE({ className = "" }: { className?: string }) {
-    return (
-        <svg
-            width="11"
-            height="11"
-            viewBox="0 0 12 12"
-            fill="none"
-            className={className}
-            aria-hidden="true"
-        >
-            <path
-                d="M1 11L11 1M11 1H3M11 1V9"
-                stroke="currentColor"
-                strokeWidth="1.4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </svg>
-    );
-}
-
-/* ── Social pill link ──────────────────────────────────────────────── */
-function SocialPill({ icon, label, href, onClick }: { icon: React.ReactNode; label: string; href: string; onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void }) {
-    return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={onClick}
-            className="group flex flex-1 min-w-0 items-center justify-center gap-1.5 sm:gap-2 rounded-full border border-white/20 px-2 sm:px-4 py-2 text-[clamp(0.65rem,2.5vw,0.875rem)] text-white/90 transition-all duration-300 hover:bg-white/10 hover:border-white/40"
-        >
-            <div className="shrink-0 scale-90 sm:scale-100">{icon}</div>
-            <span className="font-medium tracking-wide truncate">{label}</span>
-            <div className="shrink-0 hidden sm:block">
-                <ArrowNE className="text-white/60 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-            </div>
-        </a>
-    );
-}
 
 /* ═══════════════════════════════════════════════════════════════════════
    Footer
@@ -221,30 +179,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* ═══ SOCIAL ROW ═══ */}
-                    <div id="newsletter" className="mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-8 overflow-hidden">
-                        <div className="flex flex-row flex-nowrap items-center justify-between gap-2 md:gap-4 w-full">
-                            <SocialPill
-                                icon={<Instagram size={16} strokeWidth={1.5} />}
-                                label="Instagram"
-                                href="https://instagram.com"
-                            />
-                            <SocialPill
-                                icon={<Linkedin size={16} strokeWidth={1.5} />}
-                                label="LinkedIn"
-                                href="https://linkedin.com"
-                            />
-                            <SocialPill
-                                icon={<Globe size={16} strokeWidth={1.5} />}
-                                label="Newsletter"
-                                href="#newsletter"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    handleAnchorClick(e, "newsletter");
-                                }}
-                            />
-                        </div>
-                    </div>
 
                     {/* ═══ COPYRIGHT BAR ═══ */}
                     <div className="relative mx-auto w-full max-w-content px-6 md:px-8 lg:px-12 py-6">
