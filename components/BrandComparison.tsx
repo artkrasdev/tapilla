@@ -160,34 +160,34 @@ export default function BrandComparison({
                         </div>
                     </div>
 
-                    {/* Right card — Axome */}
+                    {/* Right card — Tapilla */}
                     <div className="flex flex-col gap-6 border border-white/20 rounded bg-white/5 backdrop-blur-sm p-6 md:p-7 lg:p-8">
                         <div className="flex flex-col gap-3">
                             {showCardSubtitle ? (
                                 <p className="text-[1.1rem] md:text-[1.2rem] font-normal tracking-tight text-white font-secondary">
-                                    {t("axome.title")}
+                                    {t("tapilla.title")}
                                 </p>
                             ) : (
                                 <h3 className="text-[clamp(1.1rem,2vw,1.35rem)] font-medium tracking-tight text-white leading-tight">
-                                    {t("axome.title")}
+                                    {t("tapilla.title")}
                                 </h3>
                             )}
                             {showCardSubtitle && (
                                 <p className="text-[clamp(1.2rem,2.5vw,1.6rem)] font-semibold tracking-tight text-white uppercase leading-tight">
-                                    {t("axome.subtitle")}
+                                    {t("tapilla.subtitle")}
                                 </p>
                             )}
                             <p className="text-base font-light leading-5 tracking-tight text-white/80">
-                                {t("axome.description")}
+                                {t("tapilla.description")}
                             </p>
                         </div>
 
                         {rightCardVariant === "numbered" && (
                             <div className="flex flex-col gap-4">
                                 {[
-                                    { title: t("axome.point1Title"), desc: t("axome.point1Description") },
-                                    { title: t("axome.point2Title"), desc: t("axome.point2Description") },
-                                    { title: t("axome.point3Title"), desc: t("axome.point3Description") },
+                                    { title: t("tapilla.point1Title"), desc: t("tapilla.point1Description") },
+                                    { title: t("tapilla.point2Title"), desc: t("tapilla.point2Description") },
+                                    { title: t("tapilla.point3Title"), desc: t("tapilla.point3Description") },
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-start gap-4">
                                         <div className="w-6 h-6 bg-white/8 border border-white/10 rounded flex items-center justify-center shrink-0">

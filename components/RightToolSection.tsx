@@ -38,13 +38,13 @@ export default function RightToolSection({ namespace = "RightToolSection" }: Rig
                                 </p>
                             </div>
 
-                            {/* Axome Visual Approach */}
+                            {/* Tapilla Visual Approach */}
                             <div className="flex flex-col gap-2">
                                 <h3 className="font-secondary text-[1.4rem] font-normal text-white">
-                                    {t("axomeTitle")}
+                                    {t("tapillaTitle")}
                                 </h3>
                                 <p className="text-sm font-light leading-4 tracking-tight text-white/60">
-                                    {t("axomeDescription")}
+                                    {t("tapillaDescription")}
                                 </p>
                             </div>
                         </div>

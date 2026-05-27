@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 // ── Slider config ────────────────────────────────────────────────────────────
 const SLIDE_VIDEOS = [
@@ -15,22 +15,32 @@ export default function HeroSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [timerKey, setTimerKey] = useState(0);
     const [slideDuration, setSlideDuration] = useState(5000); // ms, will be updated from video
+    const [isHovered, setIsHovered] = useState(false);
     const slideCount = SLIDE_VIDEOS.length;
-    const videoRef = useRef<HTMLVideoElement>(null);
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
     useEffect(() => {
-        const video = videoRef.current;
-        if (!video) return;
-        video.load();
-        video.play().catch(() => {});
-    }, [activeSlide]);
+        SLIDE_VIDEOS.forEach((_, i) => {
+            const video = videoRefs.current[i];
+            if (!video) return;
+            if (i === activeSlide) {
+                if (isHovered) {
+                    video.pause();
+                } else {
+                    video.play().catch(() => {});
+                }
+            } else {
+                video.pause();
+            }
+        });
+    }, [activeSlide, isHovered]);
 
-    const handleLoadedMetadata = useCallback(() => {
-        const video = videoRef.current;
-        if (video && video.duration) {
+    const handleLoadedMetadata = useCallback((index: number) => () => {
+        const video = videoRefs.current[index];
+        if (video && video.duration && index === activeSlide) {
             setSlideDuration(video.duration * 1000); // Convert to ms
         }
-    }, []);
+    }, [activeSlide]);
 
     const goToSlide = useCallback((index: number) => {
         setActiveSlide(index);
@@ -38,33 +48,33 @@ export default function HeroSlider() {
     }, []);
 
     return (
-        <div className="hidden md:flex shrink-0 relative overflow-hidden rounded-lg w-[220px] lg:w-[280px] min-h-[340px] lg:min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex-col group">
+        <div
+            className="hidden md:flex shrink-0 relative overflow-hidden rounded-lg w-[220px] lg:w-[280px] min-h-[340px] lg:min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.6)] flex-col group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
 
             {/* Slides */}
             <div className="relative flex-1">
-                <AnimatePresence mode="sync">
+                {SLIDE_VIDEOS.map((slide, i) => (
                     <motion.div
-                        key={activeSlide}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
+                        key={i}
+                        animate={{ opacity: i === activeSlide ? 1 : 0 }}
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="absolute inset-0"
                     >
                         <video
-                            ref={videoRef}
-                            key={SLIDE_VIDEOS[activeSlide].src}
-                            src={SLIDE_VIDEOS[activeSlide].src}
-                            aria-label={SLIDE_VIDEOS[activeSlide].alt}
-                            autoPlay
+                            ref={(el) => { videoRefs.current[i] = el; }}
+                            src={slide.src}
+                            aria-label={slide.alt}
                             muted
                             loop
                             playsInline
-                            onLoadedMetadata={handleLoadedMetadata}
+                            onLoadedMetadata={handleLoadedMetadata(i)}
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                     </motion.div>
-                </AnimatePresence>
+                ))}
             </div>
 
             {/* Top gradient for timer visibility */}
@@ -82,9 +92,13 @@ export default function HeroSlider() {
                         {i === activeSlide && (
                             <span
                                 key={timerKey}
-                                className="absolute inset-0 rounded-full bg-white origin-left group-hover:paused!"
+                                className="absolute inset-0 rounded-full bg-white origin-left"
                                 style={{
-                                    animation: `timer-fill ${slideDuration}ms linear forwards`,
+                                    animationName: 'timer-fill',
+                                    animationDuration: `${slideDuration}ms`,
+                                    animationTimingFunction: 'linear',
+                                    animationFillMode: 'forwards',
+                                    animationPlayState: isHovered ? 'paused' : 'running',
                                 }}
                                 onAnimationEnd={() => goToSlide((activeSlide + 1) % slideCount)}
                             />

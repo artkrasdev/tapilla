@@ -151,7 +151,7 @@
                 "point2": "Complex navigation drives away 50% of B2B prospects.",
                 "point3": "Mobile is the first point of contact, even in B2B."
             },
-            "axome": {
+            "tapilla": {
                 "title": "The Tapilla response",
                 "description": "We merge branding and efficiency across all technologies (Shopify, PrestaShop, WordPress, Webflow, custom development) to engage your users."
             }
@@ -395,16 +395,16 @@
         },
         "FaqSection": {
             "subtitle": "Learn more about Tapilla & Shopify",
-            "heading": "Why choose Tapilla as a Shopify Plus and Shopify Platinum agency?",
+            "heading": "Why choose Tapilla as a Shopify Plus agency?",
             "description": "Find answers to the most common questions about our Shopify expertise, migration process, and e-commerce services.",
             "cta": "Contact us",
             "faq1": {
                 "q": "Why should I consider redesigning my e-commerce site under Shopify?",
-                "a": "Shopify offers many advantages for online retailers: an intuitive interface, optimal technical performance, enhanced security, and scalability to manage both small shops and large sales volumes.\n\nAs a \"Shopify Platinum\" agency, we have found that sites migrated to Shopify generally benefit from a significant improvement in the conversion rate and a reduction in maintenance costs. Our methodical approach guarantees you a transition without business interruption and a redesign that respects your brand's DNA while optimizing the customer experience."
+                "a": "Shopify offers many advantages for online retailers: an intuitive interface, optimal technical performance, enhanced security, and scalability to manage both small shops and large sales volumes.\n\nAs a Shopify Plus agency, we have found that sites migrated to Shopify generally benefit from a significant improvement in the conversion rate and a reduction in maintenance costs. Our methodical approach guarantees you a transition without business interruption and a redesign that respects your brand's DNA while optimizing the customer experience."
             },
             "faq2": {
-                "q": "What is the \"Shopify Platinum\" label and why is it important?",
-                "a": "The \"Shopify Platinum\" label is the highest distinction awarded by Shopify in France to its partners. Our agency is the first in France to have obtained this prestigious status, which testifies to our deep expertise, our extensive experience and our ability to deliver Shopify projects of the highest quality. By choosing a \"Shopify Platinum\" agency, you ensure that you are working with experts certified by Shopify themselves."
+                "q": "What is the Shopify Plus label and why is it important?",
+                "a": "Shopify Plus is the enterprise-level platform for high-volume merchants. As certified Shopify Plus Partners, we have demonstrated deep expertise, extensive experience and the ability to deliver Shopify projects of the highest quality. By choosing a Shopify Plus Partner agency, you ensure that you are working with experts certified by Shopify themselves."
             },
             "faq3": {
                 "q": "How does a site redesign under Shopify actually take place?",
@@ -696,7 +696,7 @@
             "point2": "Visual identity unsuited for mobile & web",
             "point3": "Disconnection between branding and conversion"
         },
-        "axome": {
+        "tapilla": {
             "title": "The Tapilla Approach",
             "subtitle": "THE BRAND SPRINT",
             "description": "An intensive and collaborative method where targeted workshops align strategic vision with immediate graphic execution, ready for web integration.",
@@ -727,7 +727,7 @@
         "coordinates": "45°25'17\"N 04°22'07\"E",
         "madeBy": "Made by Tapilla",
         "phone": "+33 1 23 456 789",
-        "companyDescription": "Tapilla serves clients worldwide. Our team is based in Paris and Lyon, France.",
+        "companyDescription": "Tapilla serves clients worldwide. We're a fully distributed team working remotely.",
         "email": "hello@tapilla.com",
         "brandTitle": "Brand & Creative",
         "techTitle": "Tech & Dev",
@@ -844,8 +844,8 @@
             "description": "Don't lock yourself into a single technological dogma. At Tapilla, we believe in the hybrid approach. We mix the robustness of the code, the nativity of Shopify Flow and the agility of Make.",
             "monolithicTitle": "Monolithic approach",
             "monolithicDescription": "Code everything by hand or use expensive Shopify apps for each microfeature.",
-            "axomeTitle": "Tapilla Visual Approach",
-            "axomeDescription": "Intelligent orchestration between n8n, Shopify Flow, and Make to maximize ROI.",
+            "tapillaTitle": "Tapilla Visual Approach",
+            "tapillaDescription": "Intelligent orchestration between n8n, Shopify Flow, and Make to maximize ROI.",
             "imageAlt": "Automation orchestration diagram showing connected nodes"
         }
     },
