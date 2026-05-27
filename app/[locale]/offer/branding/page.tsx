@@ -36,7 +36,7 @@ export default async function BrandingPage({ params }: PageProps) {
   const t = await getTranslations("BrandingPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "BrandingPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "FaqSection");
 
   return (
     <>

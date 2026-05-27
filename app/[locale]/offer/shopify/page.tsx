@@ -36,7 +36,7 @@ export default async function ShopifyPage({ params }: PageProps) {
   const t = await getTranslations("ShopifyPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "ShopifyPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "FaqSection");
 
   return (
     <>

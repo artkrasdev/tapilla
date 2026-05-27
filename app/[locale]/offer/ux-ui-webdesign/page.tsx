@@ -37,7 +37,7 @@ export default async function UxUiPage({ params }: PageProps) {
   const t = await getTranslations("UxUiPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "UxUiPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "FaqSection");
 
   return (
     <>

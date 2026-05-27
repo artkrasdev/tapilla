@@ -30,7 +30,7 @@ export default async function GenerativeAiPage({ params }: PageProps) {
   const t = await getTranslations("GenerativeAIPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "GenerativeAIPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "FaqSection");
 
   return (
     <>

@@ -38,7 +38,7 @@ export default async function WordPressPage({ params }: PageProps) {
   const t = await getTranslations("WordPressPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 5, "WordPressPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 5, "FaqSection");
 
   return (
     <>

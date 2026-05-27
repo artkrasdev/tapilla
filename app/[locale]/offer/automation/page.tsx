@@ -27,7 +27,7 @@ export default async function AutomationPage({ params }: PageProps) {
   const t = await getTranslations("AutomationPage");
 
   // Build FAQ schema for this page
-  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "AutomationPage");
+  const faqQuestions = buildFaqSchema(t as unknown as (key: string) => string, 6, "FaqSection");
 
   return (
     <>
