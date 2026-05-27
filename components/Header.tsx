@@ -123,11 +123,11 @@ export default function Header() {
                         aria-label="Tapilla — home"
                     >
                         <Image
-                            src="/tapilla-white.png"
+                            src={locale === "ru" ? "/tapilla-ru-white.png" : "/tapilla-white.png"}
                             alt="Tapilla"
                             width={548}
                             height={206}
-                            className="h-8 w-auto lg:h-8"
+                            className={locale === "ru" ? "h-10 w-auto lg:h-10" : "h-8 w-auto lg:h-8"}
                             priority
                         />
                     </a>
@@ -242,11 +242,11 @@ export default function Header() {
                 <div className="flex px-6 pt-10 pb-2 shrink-0 relative">
                     <a href="/" aria-label="Tapilla — home" onClick={closeMobileMenu}>
                         <Image
-                            src="/tapilla-white.png"
+                            src={locale === "ru" ? "/tapilla-ru-white.png" : "/tapilla-white.png"}
                             alt="Tapilla"
                             width={548}
                             height={206}
-                            className="h-10 w-auto"
+                            className={locale === "ru" ? "h-12 w-auto" : "h-10 w-auto"}
                         />
                     </a>
                     <button

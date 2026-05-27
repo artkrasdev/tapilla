@@ -1,16 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
 interface OffreHeaderProps {
-    /** next-intl namespace that exposes: subtitle, heading, description, ctaPrimary, ctaSecondary */
+    /** next-intl namespace that exposes: subtitle, heading, description, ctaPrimary */
     namespace: string;
-    /** Link for the primary CTA button */
+    /** Link for the CTA button (defaults to localized /contact) */
     primaryLink?: string;
-    /** Link for the secondary CTA button */
-    secondaryLink?: string;
     /** Primary blob color override for AnimatedBackground */
     primaryColor?: string;
     /** Secondary blob color override for AnimatedBackground */
@@ -19,15 +17,15 @@ interface OffreHeaderProps {
 
 export default function OffreHeader({
     namespace,
-    primaryLink = "#",
-    secondaryLink = "#",
+    primaryLink,
     primaryColor = "rgba(34,120,80,0.65)",
     secondaryColor = "rgba(16,70,48,0.5)",
 }: OffreHeaderProps) {
     const t = useTranslations(namespace);
+    const locale = useLocale();
 
+    const contactLink = primaryLink ?? `/${locale}/contact`;
     const hasPrimary = t.has("ctaPrimary");
-    const hasSecondary = t.has("ctaSecondary");
 
     return (
         <section className="relative w-full min-h-[85vh] md:min-h-[75vh] overflow-hidden isolate bg-[#0a0f1e] flex items-center justify-center">
@@ -66,19 +64,12 @@ export default function OffreHeader({
                     {t("description")}
                 </p>
 
-                {/* CTAs */}
-                {(hasPrimary || hasSecondary) && (
-                    <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-                        {hasPrimary && (
-                            <Button render={<a href={primaryLink} />} nativeButton={false}>
-                                {t("ctaPrimary")}
-                            </Button>
-                        )}
-                        {hasSecondary && (
-                            <Button variant="secondary" render={<a href={secondaryLink} />} nativeButton={false}>
-                                {t("ctaSecondary")}
-                            </Button>
-                        )}
+                {/* CTA */}
+                {hasPrimary && (
+                    <div className="pt-2">
+                        <Button render={<a href={contactLink} />} nativeButton={false}>
+                            {t("ctaPrimary")}
+                        </Button>
                     </div>
                 )}
             </div>

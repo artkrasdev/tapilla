@@ -26,7 +26,7 @@ export default function SchemaMarkup({ type, locale, url, data = {} }: SchemaMar
             ? "Сертифицированное агентство Shopify Plus, специализирующееся на веб-дизайне электронной коммерции, UX/UI и цифровой трансформации."
             : "Certified Shopify Plus agency specializing in e-commerce web design, UX/UI, and digital transformation.",
         url: "https://tapilla.com",
-        logo: "https://tapilla.com/tapilla-white.png",
+        logo: locale === "ru" ? "https://tapilla.com/tapilla-ru-white.png" : "https://tapilla.com/tapilla-white.png",
         sameAs: [
           "https://www.linkedin.com/company/tapilla",
           "https://www.instagram.com/tapilla",

@@ -1,21 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 // ── Slider config ────────────────────────────────────────────────────────────
-const SLIDE_DURATION = 5000; // ms per slide
-const SLIDE_IMAGES = [
-  { src: "/hero-card.jpg", alt: "Tapilla e-commerce project showcase - premium web design portfolio" },
-  { src: "/hero-card.jpg", alt: "Shopify Plus development project by Tapilla agency" },
-  { src: "/hero-card.jpg", alt: "UX/UI design excellence - Tapilla digital agency work" },
+const SLIDE_VIDEOS = [
+  { src: "/videos/hero-video-1.webm", alt: "Tapilla e-commerce project showcase - premium web design portfolio" },
+  { src: "/videos/hero-video-2.webm", alt: "Shopify Plus development project by Tapilla agency" },
+  { src: "/videos/hero-video-3.webm", alt: "UX/UI design excellence - Tapilla digital agency work" },
 ];
 
 export default function HeroSlider() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [timerKey, setTimerKey] = useState(0);
-    const slideCount = SLIDE_IMAGES.length;
+    const [slideDuration, setSlideDuration] = useState(5000); // ms, will be updated from video
+    const slideCount = SLIDE_VIDEOS.length;
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.load();
+        video.play().catch(() => {});
+    }, [activeSlide]);
+
+    const handleLoadedMetadata = useCallback(() => {
+        const video = videoRef.current;
+        if (video && video.duration) {
+            setSlideDuration(video.duration * 1000); // Convert to ms
+        }
+    }, []);
 
     const goToSlide = useCallback((index: number) => {
         setActiveSlide(index);
@@ -36,12 +51,17 @@ export default function HeroSlider() {
                         transition={{ duration: 0.8, ease: "easeInOut" }}
                         className="absolute inset-0"
                     >
-                        <Image
-                            src={SLIDE_IMAGES[activeSlide].src}
-                            alt={SLIDE_IMAGES[activeSlide].alt}
-                            fill
-                            className="object-cover"
-                            priority={activeSlide === 0}
+                        <video
+                            ref={videoRef}
+                            key={SLIDE_VIDEOS[activeSlide].src}
+                            src={SLIDE_VIDEOS[activeSlide].src}
+                            aria-label={SLIDE_VIDEOS[activeSlide].alt}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            onLoadedMetadata={handleLoadedMetadata}
+                            className="absolute inset-0 w-full h-full object-cover"
                         />
                     </motion.div>
                 </AnimatePresence>
@@ -52,19 +72,19 @@ export default function HeroSlider() {
 
             {/* Timer pagination — top */}
             <div className="absolute top-0 left-0 right-0 z-10 flex items-center gap-1 px-2 pt-2">
-                {SLIDE_IMAGES.map((_, i) => (
+                {SLIDE_VIDEOS.map((_, i) => (
                     <button
                         key={i}
                         onClick={() => goToSlide(i)}
                         className="relative h-[2px] flex-1 rounded-full bg-white/30 overflow-hidden cursor-pointer"
-                        aria-label={`Go to ${SLIDE_IMAGES[i].alt}`}
+                        aria-label={`Go to ${SLIDE_VIDEOS[i].alt}`}
                     >
                         {i === activeSlide && (
                             <span
                                 key={timerKey}
                                 className="absolute inset-0 rounded-full bg-white origin-left group-hover:paused!"
                                 style={{
-                                    animation: `timer-fill ${SLIDE_DURATION}ms linear forwards`,
+                                    animation: `timer-fill ${slideDuration}ms linear forwards`,
                                 }}
                                 onAnimationEnd={() => goToSlide((activeSlide + 1) % slideCount)}
                             />

@@ -134,11 +134,11 @@ export default function Footer() {
                             {/* Col 1 — Company info */}
                             <div className="flex flex-col gap-4 lg:max-w-[280px]">
                                 <Image
-                                    src="/tapilla-white.png"
+                                    src={locale === "ru" ? "/tapilla-ru-white.png" : "/tapilla-white.png"}
                                     alt="Tapilla"
                                     width={548}
                                     height={206}
-                                    className="h-8 w-fit mix-blend-plus-lighter opacity-90"
+                                    className={locale === "ru" ? "h-10 w-fit mix-blend-plus-lighter opacity-90" : "h-8 w-fit mix-blend-plus-lighter opacity-90"}
                                 />
                                 <span className="text-sm text-white">{t("phone")}</span>
                                 <p className="text-xs leading-relaxed text-white max-w-[220px]">

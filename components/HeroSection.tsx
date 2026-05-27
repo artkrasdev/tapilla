@@ -43,7 +43,7 @@ export default function HeroSection() {
                         <Button render={<a href={`/${locale}/contact`} />} nativeButton={false}>
                             {t("ctaPrimary")}
                         </Button>
-                        <Button variant="secondary" render={<a href={`/${locale}/contact`} />} nativeButton={false}>
+                        <Button variant="secondary" render={<a href={`/${locale}/services`} />} nativeButton={false}>
                             {t("ctaSecondary")}
                         </Button>
                     </div>
