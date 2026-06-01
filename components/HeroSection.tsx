@@ -5,10 +5,12 @@ import { useTranslations, useLocale } from "next-intl";
 import HeroSlider from "@/components/HeroSlider";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { handleAnchorClick } from "@/lib/scroll-utils";
+import { useAnalytics } from "@/lib/analytics";
 
 export default function HeroSection() {
     const t = useTranslations("HeroSection");
     const locale = useLocale();
+    const { track } = useAnalytics();
 
     return (
         <section
@@ -40,10 +42,19 @@ export default function HeroSection() {
                     <p className="max-w-[600px] text-base font-light leading-5 tracking-tight text-white">{t("description")}</p>
 
                     <div className="flex flex-wrap items-center gap-4 pt-2">
-                        <Button render={<a href={`/${locale}/contact`} />} nativeButton={false}>
+                        <Button
+                            render={<a href={`/${locale}/contact`} />}
+                            nativeButton={false}
+                            onClick={() => track("start_project_click", { section: "hero", locale })}
+                        >
                             {t("ctaPrimary")}
                         </Button>
-                        <Button variant="secondary" render={<a href={`/${locale}/services`} />} nativeButton={false}>
+                        <Button
+                            variant="secondary"
+                            render={<a href={`/${locale}/services`} />}
+                            nativeButton={false}
+                            onClick={() => track("services_click", { section: "hero", locale })}
+                        >
                             {t("ctaSecondary")}
                         </Button>
                     </div>

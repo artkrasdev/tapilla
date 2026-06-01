@@ -8,6 +8,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
 import { Globe, ChevronDown, Check, Menu, X } from "lucide-react";
 import { handleAnchorClick } from "@/lib/scroll-utils";
+import { useAnalytics } from "@/lib/analytics";
 
 const LOCALES = [
     { code: "en", label: "English" },
@@ -22,6 +23,7 @@ export default function Header() {
     const dropdownRef = useRef<HTMLDivElement>(null);
     const t = useTranslations("Header");
     const locale = useLocale();
+    const { track, trackPageView } = useAnalytics();
     const router = useRouter();
     const pathname = usePathname();
 
@@ -64,6 +66,8 @@ export default function Header() {
         const newPath = pathname.replace(`/${locale}`, `/${code}`);
         router.push(newPath);
         setLangOpen(false);
+        track("language_switch", { from: locale, to: code });
+        trackPageView(newPath);
     }
 
     const closeMobileMenu = useCallback(() => {
@@ -97,7 +101,10 @@ export default function Header() {
                     {/* ═══ MOBILE: Burger button (left) ═══ */}
                     <button
                         className="lg:hidden flex items-center justify-center w-10 h-10 -ml-2 cursor-pointer"
-                        onClick={() => setMobileMenuOpen(true)}
+                        onClick={() => {
+                            setMobileMenuOpen(true);
+                            track("mobile_menu_open", { locale });
+                        }}
                         aria-label="Open menu"
                     >
                         <Menu className="text-white" />
@@ -109,6 +116,7 @@ export default function Header() {
                             <a
                                 key={link.label}
                                 href={link.href}
+                                onClick={() => track("nav_click", { label: link.label, href: link.href, locale })}
                                 className="text-base font-normal -tracking-[0.025em] text-white no-underline capitalize transition-colors duration-200 hover:text-white/75"
                             >
                                 {link.label}
@@ -202,10 +210,11 @@ export default function Header() {
                         </div>
 
                         {/* CTA button — visible on all sizes */}
-                        <Button 
-                            variant="accent" 
-                            render={<a href={`/${locale}/contact`} />} 
+                        <Button
+                            variant="accent"
+                            render={<a href={`/${locale}/contact`} />}
                             nativeButton={false}
+                            onClick={() => track("start_project_click", { section: "header", locale })}
                         >
                             <span className="hidden sm:inline">{t("contact")}</span>
                             <span className="sm:hidden text-[0.7rem]">{t("contact")}</span>

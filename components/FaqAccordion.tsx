@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
+import { useAnalytics } from "@/lib/analytics";
 
 /* ── Types ─────────────────────────────────────────────────────────── */
 export interface FaqItem {
@@ -83,10 +84,19 @@ function FaqRow({
 /* ── Accordion ─────────────────────────────────────────────────────── */
 export default function FaqAccordion({ items }: FaqAccordionProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const { track } = useAnalytics();
 
     const toggle = useCallback(
-        (i: number) => setOpenIndex((prev) => (prev === i ? null : i)),
-        [],
+        (i: number) => {
+            setOpenIndex((prev) => {
+                const isOpening = prev !== i;
+                if (isOpening) {
+                    track("faq_expand", { index: i, question: items[i]?.question?.slice(0, 80) });
+                }
+                return prev === i ? null : i;
+            });
+        },
+        [items, track],
     );
 
     return (

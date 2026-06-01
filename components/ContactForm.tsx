@@ -7,6 +7,7 @@ import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { useAnalytics } from "@/lib/analytics";
 
 interface ContactFormProps {
   className?: string;
@@ -22,6 +23,7 @@ const EMAILJS_CONFIG = {
 export default function ContactForm({ className }: ContactFormProps) {
   const t = useTranslations("ContactPage");
   const locale = useLocale();
+  const { track } = useAnalytics();
   const formRef = useRef<HTMLFormElement>(null);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,11 +54,16 @@ export default function ContactForm({ className }: ContactFormProps) {
       );
 
       setSubmitStatus("success");
+      track("contact_form_submit", {
+        locale,
+        deadline: formRef.current?.deadline?.value || "",
+      });
       formRef.current.reset();
       setConsentGiven(false);
     } catch (error) {
       console.error("EmailJS Error:", error);
       setSubmitStatus("error");
+      track("contact_form_error", { locale });
     } finally {
       setIsSubmitting(false);
     }

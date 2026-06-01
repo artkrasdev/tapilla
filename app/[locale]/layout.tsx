@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
@@ -132,6 +133,7 @@ export default async function LocaleLayout({
                     {children}
                     <Footer />
                     <CookieBanner />
+                    <AnalyticsProvider locale={locale} />
                 </NextIntlClientProvider>
             </body>
         </html>

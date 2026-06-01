@@ -6,6 +6,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { showCookieBanner } from "@/lib/cookie-consent";
+import { useAnalytics } from "@/lib/analytics";
 
 
 /* ═══════════════════════════════════════════════════════════════════════
@@ -33,6 +34,7 @@ export default function Footer() {
     const t = useTranslations("Footer");
     const pathname = usePathname();
     const ctaHeadingKey = getCtaHeadingKey(pathname);
+    const { track } = useAnalytics();
 
     const locale = useLocale();
     const base = `/${locale}`;
@@ -121,6 +123,7 @@ export default function Footer() {
                         <a
                             href={`/${locale}/contact`}
                             className={cn(buttonVariants({ variant: "default" }), "mt-8")}
+                            onClick={() => track("start_project_click", { section: "footer", locale })}
                         >
                             {t("ctaButton")}
                         </a>
@@ -143,13 +146,13 @@ export default function Footer() {
                                 <p className="text-xs leading-relaxed text-white max-w-[220px]">
                                     {t("companyDescription")}
                                 </p>
-                                <a href="https://t.me/tapilla_chat" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white hover:text-white/70 transition-colors duration-200">
+                                <a href="https://t.me/tapilla_chat" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white hover:text-white/70 transition-colors duration-200" onClick={() => track("footer_link_click", { type: "telegram", href: "https://t.me/tapilla_chat" })}>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4.5 h-4.5" aria-hidden="true">
                                         <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                                     </svg>
                                     {t("telegram")}
                                 </a>
-                                <a href={`mailto:${t("email")}`} className="inline-flex items-center gap-2 text-sm text-white hover:text-white/70 transition-colors duration-200">
+                                <a href={`mailto:${t("email")}`} className="inline-flex items-center gap-2 text-sm text-white hover:text-white/70 transition-colors duration-200" onClick={() => track("footer_link_click", { type: "email", href: `mailto:${t("email")}` })}>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
                                         <rect width="20" height="16" x="2" y="4" rx="2"/>
                                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -198,13 +201,16 @@ export default function Footer() {
                             </span>
                             <div className="flex items-center gap-6">
                                 <button
-                                    onClick={showCookieBanner}
+                                    onClick={() => {
+                                        showCookieBanner();
+                                        track("cookie_settings_click", { locale });
+                                    }}
                                     className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200 cursor-pointer"
                                 >
                                     {t("cookieSettings")}
                                 </button>
-                                <a href={`${base}/privacy-policy`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal1")}</a>
-                                <a href={`${base}/legal-notice`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200">{t("legal2")}</a>
+                                <a href={`${base}/privacy-policy`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200" onClick={() => track("privacy_policy_click", { locale })}>{t("legal1")}</a>
+                                <a href={`${base}/legal-notice`} className="text-[0.7rem] text-white/30 hover:text-white/60 uppercase tracking-[0.08em] transition-colors duration-200" onClick={() => track("legal_notice_click", { locale })}>{t("legal2")}</a>
                             </div>
                         </div>
                     </div>

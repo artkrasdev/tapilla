@@ -1,7 +1,8 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { useAnalytics } from "@/lib/analytics";
 
 interface BrandsSectionProps {
     namespace?: string;
@@ -10,6 +11,8 @@ interface BrandsSectionProps {
 
 export default function BrandsSection({ namespace = "BrandsSection", pb }: BrandsSectionProps) {
     const t = useTranslations(namespace);
+    const locale = useLocale();
+    const { track } = useAnalytics();
 
     return (
         <section className="relative w-full bg-black overflow-hidden">
@@ -30,7 +33,12 @@ export default function BrandsSection({ namespace = "BrandsSection", pb }: Brand
 
                         {/* CTA — same primary Button as HeroSection */}
                         <div className="mt-2">
-                            <Button variant="secondary" render={<a href="#" />} nativeButton={false}>
+                            <Button
+                                variant="secondary"
+                                render={<a href="#" />}
+                                nativeButton={false}
+                                onClick={() => track("view_cases_click", { section: "brands", locale })}
+                            >
                                 {t("cta")}
                             </Button>
                         </div>

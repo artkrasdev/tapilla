@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
 import { handleAnchorClick } from "@/lib/scroll-utils";
+import { useAnalytics } from "@/lib/analytics";
 
 export interface FaqSectionProps {
     namespace?: string;
@@ -14,6 +15,7 @@ export interface FaqSectionProps {
 export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqSectionProps) {
     const t = useTranslations(namespace);
     const locale = useLocale();
+    const { track } = useAnalytics();
 
     /* Build items array from translations */
     const items: FaqItem[] = useMemo(
@@ -52,6 +54,7 @@ export default function FaqSection({ namespace = "FaqSection", count = 5 }: FaqS
                                 variant="secondary"
                                 render={<a href={`/${locale}/contact`} />}
                                 nativeButton={false}
+                                onClick={() => track("contact_cta_click", { section: "faq", locale })}
                             >
                                 {t("cta")}
                             </Button>

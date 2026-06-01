@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useAnalytics } from "@/lib/analytics";
 
 interface TabData {
     key: string;
@@ -37,7 +38,18 @@ const TABS: TabData[] = [
 
 export default function AgencyTabs() {
     const t = useTranslations("AgencyTabs");
+    const { track } = useAnalytics();
     const [activeTab, setActiveTab] = useState(0);
+
+    const handleTabChange = useCallback(
+        (index: number) => {
+            if (index !== activeTab) {
+                setActiveTab(index);
+                track("tab_switch", { tab: TABS[index]?.key, index });
+            }
+        },
+        [activeTab, track]
+    );
 
     return (
         <section className="relative w-full bg-black py-8 md:py-10 px-[5%] md:px-8 lg:px-12">
@@ -54,7 +66,7 @@ export default function AgencyTabs() {
                         return (
                             <div
                                 key={tab.key}
-                                onMouseEnter={() => setActiveTab(index)}
+                                onMouseEnter={() => handleTabChange(index)}
                                 className={[
                                     "relative flex flex-row overflow-hidden",
                                     "transition-all duration-700 ease-in-out",

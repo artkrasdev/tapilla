@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useAnalytics } from "@/lib/analytics";
 
 /* ── Service-list data ─────────────────────────────────────────────── */
 interface ServiceItem {
@@ -44,10 +45,11 @@ function ArrowNE({ className = "" }: { className?: string }) {
 }
 
 /* ── Service row ───────────────────────────────────────────────────── */
-function ServiceRow({ item, t, variant = "default" }: { item: ServiceItem; t: (key: string) => string; variant?: "default" | "card" }) {
+function ServiceRow({ item, t, variant = "default", onClick }: { item: ServiceItem; t: (key: string) => string; variant?: "default" | "card"; onClick?: () => void }) {
     return (
         <a
             href={item.link}
+            onClick={onClick}
             className={`group flex items-center justify-between gap-4 border-b border-white/10 last:border-b-0 ${variant === "card" ? "py-2" : "py-2.5"}`}
         >
             <span className="text-[0.85rem] italic font-light tracking-tight text-white duration-300 ease-out transition-colors group-hover:text-white/60">
@@ -83,6 +85,11 @@ export default function WhatWeDoSection({
     const tDefault = useTranslations("WhatWeDoSection");
     const tCard = useTranslations("ExpertisesSection");
     const t = variant === "card" ? tCard : tDefault;
+    const { track } = useAnalytics();
+
+    const handleServiceClick = (key: string, link: string) => {
+        track("service_click", { service: key, link });
+    };
 
     /* ── Card variant ────────────────────────────────────────────────── */
     if (variant === "card") {
@@ -148,7 +155,7 @@ export default function WhatWeDoSection({
                                 </div>
                                 <div className="flex flex-col w-full mt-auto pt-4">
                                     {brandServices.map((s) => (
-                                        <ServiceRow key={s.key} item={s} t={t} variant="card" />
+                                        <ServiceRow key={s.key} item={s} t={t} variant="card" onClick={() => handleServiceClick(s.key, s.link)} />
                                     ))}
                                 </div>
                             </div>
@@ -168,7 +175,7 @@ export default function WhatWeDoSection({
                                 </div>
                                 <div className="flex flex-col w-full mt-auto pt-4">
                                     {techServices.map((s) => (
-                                        <ServiceRow key={s.key} item={s} t={t} variant="card" />
+                                        <ServiceRow key={s.key} item={s} t={t} variant="card" onClick={() => handleServiceClick(s.key, s.link)} />
                                     ))}
                                 </div>
                             </div>
@@ -214,7 +221,7 @@ export default function WhatWeDoSection({
                             {/* Service list */}
                             <div className="flex flex-col pt-1">
                                 {brandServices.map((s) => (
-                                    <ServiceRow key={s.key} item={s} t={t} />
+                                    <ServiceRow key={s.key} item={s} t={t} onClick={() => handleServiceClick(s.key, s.link)} />
                                 ))}
                             </div>
                         </div>
@@ -237,7 +244,7 @@ export default function WhatWeDoSection({
                             {/* Service list */}
                             <div className="flex flex-col pt-1">
                                 {techServices.map((s) => (
-                                    <ServiceRow key={s.key} item={s} t={t} />
+                                    <ServiceRow key={s.key} item={s} t={t} onClick={() => handleServiceClick(s.key, s.link)} />
                                 ))}
                             </div>
                         </div>

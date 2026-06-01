@@ -178,19 +178,19 @@ export default function CookieBanner() {
                             <div className="flex flex-nowrap gap-2">
                                 <button
                                     onClick={handleAcceptAll}
-                                    className="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors whitespace-nowrap"
+                                    className="px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors whitespace-nowrap cursor-pointer"
                                 >
                                     {t("acceptAll")}
                                 </button>
                                 <button
                                     onClick={handleRejectNonEssential}
-                                    className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+                                    className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors whitespace-nowrap cursor-pointer"
                                 >
                                     {t("rejectNonEssential")}
                                 </button>
                                 <button
                                     onClick={handleOpenPreferences}
-                                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center"
+                                    className="px-3 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center cursor-pointer"
                                     aria-label={t("preferences")}
                                 >
                                     <Settings className="w-4 h-4" />
@@ -236,7 +236,7 @@ export default function CookieBanner() {
                         </div>
                         <button
                             onClick={handleClosePreferences}
-                            className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                            className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors cursor-pointer"
                             aria-label={t("close")}
                         >
                             <X className="w-5 h-5" />
@@ -261,7 +261,7 @@ export default function CookieBanner() {
                                     ) : (
                                         <button
                                             onClick={() => handleToggleConsent(type.id)}
-                                            className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors ${
+                                            className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors cursor-pointer ${
                                                 consent[type.id]
                                                     ? "bg-gray-900 dark:bg-white border-gray-900 dark:border-white"
                                                     : "border-gray-300 dark:border-gray-600 hover:border-gray-400"
@@ -300,13 +300,13 @@ export default function CookieBanner() {
                     <div className="flex gap-2">
                         <button
                             onClick={handleSavePreferences}
-                            className="flex-1 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                            className="flex-1 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-md text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors cursor-pointer"
                         >
                             {t("savePreferences")}
                         </button>
                         <button
                             onClick={handleClosePreferences}
-                            className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                            className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
                         >
                             {t("cancel")}
                         </button>
