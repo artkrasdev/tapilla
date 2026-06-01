@@ -40,11 +40,37 @@ export default function AnalyticsProvider({ locale }: AnalyticsProviderProps) {
         return () => window.removeEventListener("cookieConsentUpdate", handler);
     }, [checkConsent]);
 
-    if (!analyticsGranted) {
-        return null;
-    }
+    /* ── Consent update effect (EN only) ──
+       Push to dataLayer so gtag processes it even if not loaded yet. */
+    useEffect(() => {
+        if (isRu) return;
+        if (typeof window === "undefined") return;
 
-    /* ── English: GA4 + Vercel Speed Insights ── */
+        const w = window as any;
+        w.dataLayer = w.dataLayer || [];
+
+        if (analyticsGranted) {
+            w.dataLayer.push([
+                "consent", "update", {
+                    ad_user_data: "granted",
+                    ad_personalization: "granted",
+                    ad_storage: "granted",
+                    analytics_storage: "granted",
+                }
+            ]);
+        } else {
+            w.dataLayer.push([
+                "consent", "update", {
+                    ad_user_data: "denied",
+                    ad_personalization: "denied",
+                    ad_storage: "denied",
+                    analytics_storage: "denied",
+                }
+            ]);
+        }
+    }, [analyticsGranted, isRu]);
+
+    /* ── English: GA4 (always loaded) + Vercel Speed Insights (consent-gated) ── */
     if (!isRu) {
         return (
             <>
@@ -59,23 +85,31 @@ export default function AnalyticsProvider({ locale }: AnalyticsProviderProps) {
                         __html: `
                             window.dataLayer = window.dataLayer || [];
                             function gtag(){dataLayer.push(arguments);}
+                            gtag('consent', 'default', {
+                                'ad_storage': 'denied',
+                                'ad_user_data': 'denied',
+                                'ad_personalization': 'denied',
+                                'analytics_storage': 'denied',
+                                'wait_for_update': 500
+                            });
                             gtag('js', new Date());
                             gtag('config', '${GA4_MEASUREMENT_ID}', {
                                 page_path: window.location.pathname,
                                 send_page_view: true
                             });
-                            gtag('consent', 'update', {
-                                analytics_storage: 'granted'
-                            });
                         `,
                     }}
                 />
-                <SpeedInsights />
+                {analyticsGranted && <SpeedInsights />}
             </>
         );
     }
 
-    /* ── Russian: Yandex Metrica only ── */
+    /* ── Russian: Yandex Metrica only (consent-gated) ── */
+    if (!analyticsGranted) {
+        return null;
+    }
+
     return (
         <>
             <Script
