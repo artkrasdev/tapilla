@@ -38,8 +38,8 @@ export default async function ContactPage({ params }: PageProps) {
         <section className="relative w-full overflow-hidden pt-16 md:pt-20">
           <div className="relative z-10 mx-auto w-full max-w-content px-[5%] py-8 md:py-12 md:px-8 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-stretch">
-              {/* Left column - Header + Cards */}
-              <div className="flex flex-col gap-8 h-full">
+              {/* Header block — top on mobile, top-left on desktop */}
+              <div className="order-1 lg:col-start-1 lg:row-start-1">
                 <div className="flex flex-col gap-4">
                   <p className="text-[1.4rem] font-normal tracking-tight text-white/70 font-secondary">
                     {t("subtitle")}
@@ -51,12 +51,18 @@ export default async function ContactPage({ params }: PageProps) {
                     {t("description")}
                   </p>
                 </div>
-                <ContactCards className="flex-1" />
               </div>
 
-              {/* Right column - Form */}
-              <div className="lg:pt-4 flex flex-col h-full">
-                <ContactForm />
+              {/* Form — second on mobile, right column on desktop */}
+              <div className="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+                <div className="lg:pt-4 flex flex-col h-full">
+                  <ContactForm />
+                </div>
+              </div>
+
+              {/* Cards — third on mobile, bottom-left on desktop */}
+              <div className="order-3 lg:col-start-1 lg:row-start-2">
+                <ContactCards className="flex-1" />
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function ContactCards({ className }: ContactCardsProps) {
 
   return (
     <div className={cn("grid grid-rows-2 gap-3 h-full", className)}>
-      {/* Top row - Email and Phone side by side */}
+      {/* Top row - Email and Telegram side by side */}
       <div className="grid grid-cols-2 gap-3 h-full">
         {/* Email Card */}
         <div className="flex flex-col gap-3 border border-white/10 rounded bg-white/3 backdrop-blur-sm p-4 h-full">
@@ -42,12 +42,12 @@ export default function ContactCards({ className }: ContactCardsProps) {
           </a>
         </div>
 
-        {/* Phone Card */}
+        {/* Telegram Card */}
         <div className="flex flex-col gap-3 border border-white/10 rounded bg-white/3 backdrop-blur-sm p-4 h-full">
           <div className="flex items-center">
             <Image
               src="/brand-expieince.svg"
-              alt="Phone"
+              alt="Telegram"
               width={40}
               height={22}
               className="object-contain opacity-70"
@@ -55,17 +55,19 @@ export default function ContactCards({ className }: ContactCardsProps) {
           </div>
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-[1.1rem] font-medium tracking-tight text-white leading-tight">
-              {locale === "ru" ? "По телефону" : "By phone"}
+              {locale === "ru" ? "В Telegram" : "On Telegram"}
             </h3>
             <span className="text-[0.8rem] font-normal tracking-tight text-white/50">
-              {locale === "ru" ? "Звонок" : "A phone call"}
+              {locale === "ru" ? "Сообщение" : "A message"}
             </span>
           </div>
           <a
-            href="tel:+33123456789"
+            href="https://t.me/tapilla_chat"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[0.95rem] font-light tracking-tight text-white/90 hover:text-white transition-colors"
           >
-            +33 1 23 45 67 89
+            @tapilla_chat
           </a>
         </div>
       </div>
