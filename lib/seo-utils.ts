@@ -38,8 +38,8 @@ export const seoConfigs = {
       ru: "Tapilla — Веб-агентство электронной коммерции | Партнер Shopify Plus",
     },
     description: {
-      en: "Tapilla is a certified Shopify Plus agency specializing in e-commerce web design, UX/UI, and digital transformation. 25+ years of expertise building high-converting online stores for ambitious brands.",
-      ru: "Tapilla — сертифицированное агентство Shopify Plus, специализирующееся на веб-дизайне электронной коммерции, UX/UI и цифровой трансформации. Более 25 лет опыта создания высококонверсионных интернет-магазинов.",
+      en: "Tapilla is a Shopify Plus agency specializing in e-commerce web design, UX/UI, and digital transformation. 10+ years of expertise building high-converting online stores for ambitious brands.",
+      ru: "Tapilla — агентство Shopify Plus, специализирующееся на веб-дизайне интернет магазинов, UX/UI и цифровой трансформации. Более 10 лет опыта создания высококонверсионных интернет-магазинов.",
     },
     keywords: [
       "e-commerce agency",
@@ -51,12 +51,12 @@ export const seoConfigs = {
   },
   agency: {
     title: {
-      en: "The Agency | Tapilla — 25+ Years of Digital Excellence",
-      ru: "Агентство | Tapilla — Более 25 лет цифрового совершенства",
+      en: "The Agency | Tapilla — 10+ Years of Digital Excellence",
+      ru: "Агентство | Tapilla — Более 10 лет цифрового совершенства",
     },
     description: {
-      en: "Discover Tapilla: a passionate team dedicated to brands and digital transformation. 25+ years of expertise in e-commerce, UX/UI design, and Shopify development.",
-      ru: "Откройте Tapilla: увлеченная команда, посвященная брендам и цифровой трансформации. Более 25 лет опыта в электронной коммерции, UX/UI дизайне и разработке Shopify.",
+      en: "Discover Tapilla: a passionate team dedicated to brands and digital transformation. 10+ years of expertise in e-commerce, UX/UI design, and Shopify development.",
+      ru: "Откройте Tapilla: увлеченная команда, посвященная брендам и цифровой трансформации. Более 10 лет опыта в электронной коммерции, UX/UI дизайне и разработке Shopify.",
     },
     path: "/agency",
   },
